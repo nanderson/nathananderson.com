@@ -24,7 +24,7 @@ description: Just a dude with a dream.
 # List of links in the navigation bar
 navbar-links:
   About Me: "about"
-  Author's Blog: "http://taooffoo.com"
+  Nathan's Blog: "http://taooffoo.com"
 
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
@@ -147,6 +147,7 @@ exclude:
   - Vagrantfile
   - Dockerfile
   - makefile
+  - s3_website.yml
 
 # prose.io config
 prose:
