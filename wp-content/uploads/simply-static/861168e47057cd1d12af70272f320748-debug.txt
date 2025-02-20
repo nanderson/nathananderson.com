@@ -1,0 +1,1099 @@
+[2025-02-20 03:14:47] [class-ss-archive-creation-job.php:97] Starting a job; no job is presently running
+[2025-02-20 03:14:47] [class-ss-archive-creation-job.php:98] Here's our task list: setup, fetch_urls, create_zip_archive, wrapup
+[2025-02-20 03:14:47] [class-ss-archive-creation-job.php:116] Pushing first task to queue: setup
+[2025-02-20 03:14:50] [class-ss-archive-creation-job.php:172] Current task: setup
+[2025-02-20 03:14:50] [class-ss-archive-creation-job.php:182] Performing task: setup
+[2025-02-20 03:14:50] [class-ss-task.php:44] Status message: [setup] Setting up
+[2025-02-20 03:14:50] [class-ss-setup-task.php:33] Creating archive directory: /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/
+[2025-02-20 03:14:50] [class-ss-setup-task.php:72] Adding origin URL to queue: https://nathananderson.com/
+[2025-02-20 03:14:50] [class-aio-seo-integration.php:80] Adding sitemap URL to queue: https://nathananderson.com/sitemap.xml
+[2025-02-20 03:14:50] [class-aio-seo-integration.php:80] Adding sitemap URL to queue: https://nathananderson.com/post-sitemap.xml
+[2025-02-20 03:14:50] [class-aio-seo-integration.php:80] Adding sitemap URL to queue: https://nathananderson.com/page-sitemap.xml
+[2025-02-20 03:14:50] [class-aio-seo-integration.php:80] Adding sitemap URL to queue: https://nathananderson.com/attachment-sitemap.xml
+[2025-02-20 03:14:50] [class-aio-seo-integration.php:80] Adding sitemap URL to queue: https://nathananderson.com/neve_custom_layouts-sitemap.xml
+[2025-02-20 03:14:50] [class-aio-seo-integration.php:80] Adding sitemap URL to queue: https://nathananderson.com/uo-recipe-sitemap.xml
+[2025-02-20 03:14:50] [class-aio-seo-integration.php:80] Adding sitemap URL to queue: https://nathananderson.com/category-sitemap.xml
+[2025-02-20 03:14:50] [class-aio-seo-integration.php:80] Adding sitemap URL to queue: https://nathananderson.com/post_tag-sitemap.xml
+[2025-02-20 03:14:50] [class-jetpack-integration.php:40] Adding Jetpack file to queue: https://nathananderson.com/wp-content/plugins/jetpack/_inc/build/carousel/swiper-bundle.min.js
+[2025-02-20 03:14:50] [class-jetpack-integration.php:40] Adding Jetpack file to queue: https://nathananderson.com/wp-content/plugins/jetpack/_inc/blocks/swiper.css
+[2025-02-20 03:14:50] [class-ss-archive-creation-job.php:204] We've found our next task: fetch_urls
+[2025-02-20 03:14:50] [class-ss-archive-creation-job.php:172] Current task: fetch_urls
+[2025-02-20 03:14:50] [class-ss-archive-creation-job.php:182] Performing task: fetch_urls
+[2025-02-20 03:14:50] [class-ss-fetch-urls-task.php:66] Total pages: 11; Pages remaining: 11
+[2025-02-20 03:14:50] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/
+[2025-02-20 03:14:50] [class-ss-task.php:58] [PAGES STATUS] Remaining:11; Total: 11
+[2025-02-20 03:14:50] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:14:50] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e2a23a55-DIzjRV.tmp
+[2025-02-20 03:14:50] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/?simply_static_page=1
+[2025-02-20 03:14:50] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/?simply_static_page=1
+[2025-02-20 03:14:53] [class-ss-url-fetcher.php:103] Filesize: 99940 bytes
+[2025-02-20 03:14:53] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:14:53] [class-ss-url-fetcher.php:233] New filename for static page: index.html
+[2025-02-20 03:14:53] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e2a23a55-DIzjRV.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/index.html
+[2025-02-20 03:14:53] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:14:53] [class-ss-fetch-urls-task.php:155] Adding 24 URLs to the queue
+[2025-02-20 03:14:53] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:14:53] [class-ss-page.php:119] Checking Content Identical:c3b5859053b421110087e5a23bcc06394a2d8ea4===. Value: FALSE
+[2025-02-20 03:14:53] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/sitemap.xml
+[2025-02-20 03:14:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:10; Total: 11
+[2025-02-20 03:14:53] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:14:53] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e2dca544-kbmDLK.tmp
+[2025-02-20 03:14:53] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/sitemap.xml?simply_static_page=2
+[2025-02-20 03:14:53] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/sitemap.xml?simply_static_page=2
+[2025-02-20 03:14:55] [class-ss-url-fetcher.php:103] Filesize: 1143 bytes
+[2025-02-20 03:14:55] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/xml; charset=UTF-8
+[2025-02-20 03:14:55] [class-ss-url-fetcher.php:233] New filename for static page: sitemap.xml
+[2025-02-20 03:14:55] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e2dca544-kbmDLK.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/sitemap.xml
+[2025-02-20 03:14:55] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:14:55] [class-ss-fetch-urls-task.php:155] Adding 6 URLs to the queue
+[2025-02-20 03:14:56] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:14:56] [class-ss-page.php:119] Checking Content Identical:b73fc56ef72f5b415e6eff1880dee2f050c7c72f===. Value: FALSE
+[2025-02-20 03:14:56] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/post-sitemap.xml
+[2025-02-20 03:14:56] [class-ss-task.php:58] [PAGES STATUS] Remaining:9; Total: 11
+[2025-02-20 03:14:56] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:14:56] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e3009a36-MTY2rz.tmp
+[2025-02-20 03:14:56] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/post-sitemap.xml?simply_static_page=3
+[2025-02-20 03:14:56] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/post-sitemap.xml?simply_static_page=3
+[2025-02-20 03:14:57] [class-ss-url-fetcher.php:103] Filesize: 1083 bytes
+[2025-02-20 03:14:57] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/xml; charset=UTF-8
+[2025-02-20 03:14:57] [class-ss-url-fetcher.php:233] New filename for static page: post-sitemap.xml
+[2025-02-20 03:14:57] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e3009a36-MTY2rz.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/post-sitemap.xml
+[2025-02-20 03:14:57] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:14:57] [class-ss-fetch-urls-task.php:155] Adding 4 URLs to the queue
+[2025-02-20 03:14:57] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:14:57] [class-ss-page.php:119] Checking Content Identical:0bda57fd59ae29eda8a3b52837ee7576e0fd415f===. Value: FALSE
+[2025-02-20 03:14:57] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/page-sitemap.xml
+[2025-02-20 03:14:57] [class-ss-task.php:58] [PAGES STATUS] Remaining:8; Total: 11
+[2025-02-20 03:14:57] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:14:57] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e31db7e7-pxERCg.tmp
+[2025-02-20 03:14:57] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/page-sitemap.xml?simply_static_page=4
+[2025-02-20 03:14:57] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/page-sitemap.xml?simply_static_page=4
+[2025-02-20 03:14:59] [class-ss-url-fetcher.php:103] Filesize: 2624 bytes
+[2025-02-20 03:14:59] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/xml; charset=UTF-8
+[2025-02-20 03:14:59] [class-ss-url-fetcher.php:233] New filename for static page: page-sitemap.xml
+[2025-02-20 03:14:59] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e31db7e7-pxERCg.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/page-sitemap.xml
+[2025-02-20 03:14:59] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:14:59] [class-ss-fetch-urls-task.php:155] Adding 13 URLs to the queue
+[2025-02-20 03:15:00] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:00] [class-ss-page.php:119] Checking Content Identical:533470238d9b37aacb7981b984447d43d63e2a98===. Value: FALSE
+[2025-02-20 03:15:00] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/attachment-sitemap.xml
+[2025-02-20 03:15:00] [class-ss-task.php:58] [PAGES STATUS] Remaining:7; Total: 11
+[2025-02-20 03:15:00] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:00] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e342e96e-WrcfKJ.tmp
+[2025-02-20 03:15:00] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/attachment-sitemap.xml?simply_static_page=5
+[2025-02-20 03:15:00] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/attachment-sitemap.xml?simply_static_page=5
+[2025-02-20 03:15:04] [class-ss-url-fetcher.php:103] Filesize: 478 bytes
+[2025-02-20 03:15:04] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/xml; charset=UTF-8
+[2025-02-20 03:15:04] [class-ss-url-fetcher.php:233] New filename for static page: attachment-sitemap.xml
+[2025-02-20 03:15:04] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e342e96e-WrcfKJ.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/attachment-sitemap.xml
+[2025-02-20 03:15:04] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:04] [class-ss-fetch-urls-task.php:155] Adding 1 URLs to the queue
+[2025-02-20 03:15:04] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:04] [class-ss-page.php:119] Checking Content Identical:f4c4c23835a0184b309986e10c580a3a556f8137===. Value: FALSE
+[2025-02-20 03:15:04] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/neve_custom_layouts-sitemap.xml
+[2025-02-20 03:15:04] [class-ss-task.php:58] [PAGES STATUS] Remaining:6; Total: 11
+[2025-02-20 03:15:04] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:04] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e38ad2e0-ALcDj0.tmp
+[2025-02-20 03:15:04] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/neve_custom_layouts-sitemap.xml?simply_static_page=6
+[2025-02-20 03:15:04] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/neve_custom_layouts-sitemap.xml?simply_static_page=6
+[2025-02-20 03:15:08] [class-ss-url-fetcher.php:103] Filesize: 487 bytes
+[2025-02-20 03:15:08] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/xml; charset=UTF-8
+[2025-02-20 03:15:08] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:08] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e3c6bc5e-2krSpf.tmp
+[2025-02-20 03:15:08] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/neve_custom_layouts-sitemap.xml
+[2025-02-20 03:15:10] [class-ss-url-fetcher.php:103] Filesize: 487 bytes
+[2025-02-20 03:15:10] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/xml; charset=UTF-8
+[2025-02-20 03:15:10] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:10] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/uo-recipe-sitemap.xml
+[2025-02-20 03:15:10] [class-ss-task.php:58] [PAGES STATUS] Remaining:5; Total: 11
+[2025-02-20 03:15:10] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:10] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e3ef0b5c-vUg5eG.tmp
+[2025-02-20 03:15:10] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/uo-recipe-sitemap.xml?simply_static_page=7
+[2025-02-20 03:15:10] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/uo-recipe-sitemap.xml?simply_static_page=7
+[2025-02-20 03:15:13] [class-ss-url-fetcher.php:103] Filesize: 715 bytes
+[2025-02-20 03:15:13] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/xml; charset=UTF-8
+[2025-02-20 03:15:13] [class-ss-url-fetcher.php:233] New filename for static page: uo-recipe-sitemap.xml
+[2025-02-20 03:15:13] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e3ef0b5c-vUg5eG.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/uo-recipe-sitemap.xml
+[2025-02-20 03:15:13] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:13] [class-ss-fetch-urls-task.php:155] Adding 2 URLs to the queue
+[2025-02-20 03:15:13] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:13] [class-ss-page.php:119] Checking Content Identical:58e3ba8fb57d3335f57758eaa654f27eca2ca929===. Value: FALSE
+[2025-02-20 03:15:13] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/category-sitemap.xml
+[2025-02-20 03:15:13] [class-ss-task.php:58] [PAGES STATUS] Remaining:4; Total: 11
+[2025-02-20 03:15:13] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:13] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e418d2e9-YUwmNM.tmp
+[2025-02-20 03:15:13] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/category-sitemap.xml?simply_static_page=8
+[2025-02-20 03:15:13] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/category-sitemap.xml?simply_static_page=8
+[2025-02-20 03:15:16] [class-ss-url-fetcher.php:103] Filesize: 713 bytes
+[2025-02-20 03:15:16] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/xml; charset=UTF-8
+[2025-02-20 03:15:16] [class-ss-url-fetcher.php:233] New filename for static page: category-sitemap.xml
+[2025-02-20 03:15:16] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e418d2e9-YUwmNM.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/category-sitemap.xml
+[2025-02-20 03:15:16] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:16] [class-ss-fetch-urls-task.php:155] Adding 2 URLs to the queue
+[2025-02-20 03:15:16] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:16] [class-ss-page.php:119] Checking Content Identical:058619b3f59608fbab500d3e412d64b86b974915===. Value: FALSE
+[2025-02-20 03:15:16] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/post_tag-sitemap.xml
+[2025-02-20 03:15:16] [class-ss-task.php:58] [PAGES STATUS] Remaining:3; Total: 11
+[2025-02-20 03:15:16] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:16] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e445b963-O0Jhxq.tmp
+[2025-02-20 03:15:16] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/post_tag-sitemap.xml?simply_static_page=9
+[2025-02-20 03:15:16] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/post_tag-sitemap.xml?simply_static_page=9
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:103] Filesize: 922 bytes
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/xml; charset=UTF-8
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:233] New filename for static page: post_tag-sitemap.xml
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e445b963-O0Jhxq.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/post_tag-sitemap.xml
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:155] Adding 3 URLs to the queue
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:18] [class-ss-page.php:119] Checking Content Identical:93a72746426a7b5c32b30a76a7a93e873606ad11===. Value: FALSE
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/jetpack/_inc/build/carousel/swiper-bundle.min.js
+[2025-02-20 03:15:18] [class-ss-task.php:58] [PAGES STATUS] Remaining:2; Total: 11
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e465be24-8kNqbI.tmp
+[2025-02-20 03:15:18] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/jetpack/_inc/build/carousel/swiper-bundle.min.js?simply_static_page=10
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/jetpack/_inc/build/carousel/swiper-bundle.min.js?simply_static_page=10
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:103] Filesize: 99908 bytes
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: application/javascript
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/jetpack/_inc/build/carousel/swiper-bundle.min.js
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e465be24-8kNqbI.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/jetpack/_inc/build/carousel/swiper-bundle.min.js
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:18] [class-ss-page.php:119] Checking Content Identical:c96b4cae46cdc456a0c6fcedce47dcb705185e1f===. Value: FALSE
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/jetpack/_inc/blocks/swiper.css
+[2025-02-20 03:15:18] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 11
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e469a8e5-XCz4Fy.tmp
+[2025-02-20 03:15:18] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/jetpack/_inc/blocks/swiper.css?simply_static_page=11
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/jetpack/_inc/blocks/swiper.css?simply_static_page=11
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:103] Filesize: 12987 bytes
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/jetpack/_inc/blocks/swiper.css
+[2025-02-20 03:15:18] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e469a8e5-XCz4Fy.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/jetpack/_inc/blocks/swiper.css
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:18] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:18] [class-ss-page.php:119] Checking Content Identical:5a11078178655597b5fbea044446d2cf2eb2989d===. Value: FALSE
+[2025-02-20 03:15:18] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 0 of 11 pages/files
+[2025-02-20 03:15:18] [class-ss-archive-creation-job.php:212] We're not done with the fetch_urls task yet
+[2025-02-20 03:15:21] [class-ss-archive-creation-job.php:172] Current task: fetch_urls
+[2025-02-20 03:15:21] [class-ss-archive-creation-job.php:182] Performing task: fetch_urls
+[2025-02-20 03:15:21] [class-ss-fetch-urls-task.php:66] Total pages: 59; Pages remaining: 48
+[2025-02-20 03:15:21] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/about/
+[2025-02-20 03:15:21] [class-ss-task.php:58] [PAGES STATUS] Remaining:48; Total: 59
+[2025-02-20 03:15:21] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:21] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e492ad83-M4jlKm.tmp
+[2025-02-20 03:15:21] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/about/?simply_static_page=12
+[2025-02-20 03:15:21] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/about/?simply_static_page=12
+[2025-02-20 03:15:23] [class-ss-url-fetcher.php:103] Filesize: 99006 bytes
+[2025-02-20 03:15:23] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:23] [class-ss-url-fetcher.php:233] New filename for static page: about/index.html
+[2025-02-20 03:15:23] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e492ad83-M4jlKm.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/about/index.html
+[2025-02-20 03:15:23] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:23] [class-ss-fetch-urls-task.php:155] Adding 22 URLs to the queue
+[2025-02-20 03:15:23] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:23] [class-ss-page.php:119] Checking Content Identical:2a852f63b1fa8310820c14b33d0b1bd9c8c83dc3===. Value: FALSE
+[2025-02-20 03:15:23] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/blog/
+[2025-02-20 03:15:23] [class-ss-task.php:58] [PAGES STATUS] Remaining:47; Total: 59
+[2025-02-20 03:15:23] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:23] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e4b63630-OvGdhL.tmp
+[2025-02-20 03:15:23] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/blog/?simply_static_page=13
+[2025-02-20 03:15:23] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/blog/?simply_static_page=13
+[2025-02-20 03:15:26] [class-ss-url-fetcher.php:103] Filesize: 87520 bytes
+[2025-02-20 03:15:26] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:26] [class-ss-url-fetcher.php:233] New filename for static page: blog/index.html
+[2025-02-20 03:15:26] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e4b63630-OvGdhL.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/blog/index.html
+[2025-02-20 03:15:26] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:26] [class-ss-fetch-urls-task.php:155] Adding 23 URLs to the queue
+[2025-02-20 03:15:26] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:26] [class-ss-page.php:119] Checking Content Identical:9acb27766a990379c755882d07365a11b5e4aa30===. Value: FALSE
+[2025-02-20 03:15:26] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/contact/
+[2025-02-20 03:15:26] [class-ss-task.php:58] [PAGES STATUS] Remaining:46; Total: 59
+[2025-02-20 03:15:26] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:26] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e4e7a4c0-xacSfL.tmp
+[2025-02-20 03:15:26] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/contact/?simply_static_page=14
+[2025-02-20 03:15:26] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/contact/?simply_static_page=14
+[2025-02-20 03:15:28] [class-ss-url-fetcher.php:103] Filesize: 91101 bytes
+[2025-02-20 03:15:28] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:28] [class-ss-url-fetcher.php:233] New filename for static page: contact/index.html
+[2025-02-20 03:15:28] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e4e7a4c0-xacSfL.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/contact/index.html
+[2025-02-20 03:15:28] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:28] [class-ss-fetch-urls-task.php:155] Adding 22 URLs to the queue
+[2025-02-20 03:15:28] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:28] [class-ss-page.php:119] Checking Content Identical:89d23d6e2123e4f4a54bfa322f692bd083dc6a96===. Value: FALSE
+[2025-02-20 03:15:28] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/about
+[2025-02-20 03:15:28] [class-ss-task.php:58] [PAGES STATUS] Remaining:45; Total: 59
+[2025-02-20 03:15:29] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:29] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e5100bdb-L6j7Lp.tmp
+[2025-02-20 03:15:29] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/about?simply_static_page=15
+[2025-02-20 03:15:29] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/about?simply_static_page=15
+[2025-02-20 03:15:31] [class-ss-url-fetcher.php:103] Filesize: 0 bytes
+[2025-02-20 03:15:31] [class-ss-url-fetcher.php:119] http_status_code: 301 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:31] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:31] [class-ss-fetch-urls-task.php:200] redirect_url: https://nathananderson.com/about/
+[2025-02-20 03:15:31] [class-ss-fetch-urls-task.php:209] This is a redirect to a trailing slashed version of the same page; adding new URL to the queue
+[2025-02-20 03:15:31] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/contact
+[2025-02-20 03:15:31] [class-ss-task.php:58] [PAGES STATUS] Remaining:44; Total: 59
+[2025-02-20 03:15:31] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:31] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e533788e-vRPkza.tmp
+[2025-02-20 03:15:31] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/contact?simply_static_page=16
+[2025-02-20 03:15:31] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/contact?simply_static_page=16
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:103] Filesize: 0 bytes
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:119] http_status_code: 301 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:200] redirect_url: https://nathananderson.com/contact/
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:209] This is a redirect to a trailing slashed version of the same page; adding new URL to the queue
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/js/zcga.js
+[2025-02-20 03:15:33] [class-ss-task.php:58] [PAGES STATUS] Remaining:43; Total: 59
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e555864a-eLQ7p0.tmp
+[2025-02-20 03:15:33] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/js/zcga.js?simply_static_page=17
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/js/zcga.js?simply_static_page=17
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:103] Filesize: 4180 bytes
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: application/javascript
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/zoho-crm-forms/assets/js/zcga.js
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e555864a-eLQ7p0.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/zoho-crm-forms/assets/js/zcga.js
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:33] [class-ss-page.php:119] Checking Content Identical:d6969376058763208207573b4baf130b859345ec===. Value: FALSE
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/genesis-blocks/dist/assets/js/dismiss.js
+[2025-02-20 03:15:33] [class-ss-task.php:58] [PAGES STATUS] Remaining:42; Total: 59
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e558f899-QGyR8Z.tmp
+[2025-02-20 03:15:33] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/genesis-blocks/dist/assets/js/dismiss.js?simply_static_page=18
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/genesis-blocks/dist/assets/js/dismiss.js?simply_static_page=18
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:103] Filesize: 923 bytes
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: application/javascript
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/genesis-blocks/dist/assets/js/dismiss.js
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e558f899-QGyR8Z.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/genesis-blocks/dist/assets/js/dismiss.js
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:33] [class-ss-page.php:119] Checking Content Identical:8fb3c325a327c5bea03a05547453ee95d1f7619e===. Value: FALSE
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/themes/neve/assets/js/build/modern/frontend.js
+[2025-02-20 03:15:33] [class-ss-task.php:58] [PAGES STATUS] Remaining:41; Total: 59
+[2025-02-20 03:15:33] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e55c7707-3HUpvI.tmp
+[2025-02-20 03:15:33] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/themes/neve/assets/js/build/modern/frontend.js?simply_static_page=19
+[2025-02-20 03:15:33] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/themes/neve/assets/js/build/modern/frontend.js?simply_static_page=19
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:103] Filesize: 7189 bytes
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: application/javascript
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/themes/neve/assets/js/build/modern/frontend.js
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e55c7707-3HUpvI.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/themes/neve/assets/js/build/modern/frontend.js
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:34] [class-ss-page.php:119] Checking Content Identical:6a3c3aef4ff68d3ad76fe492f44cc398322e56c7===. Value: FALSE
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/neve-pro-addon/includes/modules/scroll_to_top/assets/js/build/script.js
+[2025-02-20 03:15:34] [class-ss-task.php:58] [PAGES STATUS] Remaining:40; Total: 59
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e5609be1-y3lQUM.tmp
+[2025-02-20 03:15:34] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/neve-pro-addon/includes/modules/scroll_to_top/assets/js/build/script.js?simply_static_page=20
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/neve-pro-addon/includes/modules/scroll_to_top/assets/js/build/script.js?simply_static_page=20
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:103] Filesize: 1245 bytes
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: application/javascript
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/neve-pro-addon/includes/modules/scroll_to_top/assets/js/build/script.js
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e5609be1-y3lQUM.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/neve-pro-addon/includes/modules/scroll_to_top/assets/js/build/script.js
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:34] [class-ss-page.php:119] Checking Content Identical:b637eab94c7338ba71b316ed308e24db2985005e===. Value: FALSE
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/feed/
+[2025-02-20 03:15:34] [class-ss-task.php:58] [PAGES STATUS] Remaining:39; Total: 59
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/feed/
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/comments/feed/
+[2025-02-20 03:15:34] [class-ss-task.php:58] [PAGES STATUS] Remaining:38; Total: 59
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/comments/feed/
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/genesis-blocks/dist/style-blocks.build.css
+[2025-02-20 03:15:34] [class-ss-task.php:58] [PAGES STATUS] Remaining:37; Total: 59
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e5654942-hhwzCv.tmp
+[2025-02-20 03:15:34] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/genesis-blocks/dist/style-blocks.build.css?simply_static_page=23
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/genesis-blocks/dist/style-blocks.build.css?simply_static_page=23
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:103] Filesize: 41469 bytes
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/genesis-blocks/dist/style-blocks.build.css
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e5654942-hhwzCv.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/genesis-blocks/dist/style-blocks.build.css
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:34] [class-ss-page.php:119] Checking Content Identical:506a865f5d9031711eff58e87ae7314f98d9fcf7===. Value: FALSE
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/superb-blocks/assets/css/patterns.min.css
+[2025-02-20 03:15:34] [class-ss-task.php:58] [PAGES STATUS] Remaining:36; Total: 59
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e568aa09-1TCWAn.tmp
+[2025-02-20 03:15:34] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/superb-blocks/assets/css/patterns.min.css?simply_static_page=24
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/superb-blocks/assets/css/patterns.min.css?simply_static_page=24
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:103] Filesize: 1745 bytes
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/superb-blocks/assets/css/patterns.min.css
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e568aa09-1TCWAn.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/superb-blocks/assets/css/patterns.min.css
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:34] [class-ss-page.php:119] Checking Content Identical:552f2e1347fb9a4d3d7020d99ba12f7ce60ca836===. Value: FALSE
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/superb-blocks/assets/css/enhancements.min.css
+[2025-02-20 03:15:34] [class-ss-task.php:58] [PAGES STATUS] Remaining:35; Total: 59
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e56c20af-oUebgN.tmp
+[2025-02-20 03:15:34] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/superb-blocks/assets/css/enhancements.min.css?simply_static_page=25
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/superb-blocks/assets/css/enhancements.min.css?simply_static_page=25
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:103] Filesize: 203 bytes
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/superb-blocks/assets/css/enhancements.min.css
+[2025-02-20 03:15:34] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e56c20af-oUebgN.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/superb-blocks/assets/css/enhancements.min.css
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:34] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:34] [class-ss-page.php:119] Checking Content Identical:f8c9828045758e7e4147273407bc47b20ea3f7f1===. Value: FALSE
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/themes/neve/style-main-new.min.css
+[2025-02-20 03:15:35] [class-ss-task.php:58] [PAGES STATUS] Remaining:34; Total: 59
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e5704801-ZcUgOF.tmp
+[2025-02-20 03:15:35] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/themes/neve/style-main-new.min.css?simply_static_page=26
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/themes/neve/style-main-new.min.css?simply_static_page=26
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:103] Filesize: 39013 bytes
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/themes/neve/style-main-new.min.css
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e5704801-ZcUgOF.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/themes/neve/style-main-new.min.css
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:35] [class-ss-page.php:119] Checking Content Identical:6193b4c82bef495d512ece6b38176e327fbde5c6===. Value: FALSE
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/neve-pro-addon/includes/modules/blog_pro/assets/style.min.css
+[2025-02-20 03:15:35] [class-ss-task.php:58] [PAGES STATUS] Remaining:33; Total: 59
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e573a4e8-K2YvM7.tmp
+[2025-02-20 03:15:35] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/neve-pro-addon/includes/modules/blog_pro/assets/style.min.css?simply_static_page=27
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/neve-pro-addon/includes/modules/blog_pro/assets/style.min.css?simply_static_page=27
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:103] Filesize: 6304 bytes
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/neve-pro-addon/includes/modules/blog_pro/assets/style.min.css
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e573a4e8-K2YvM7.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/neve-pro-addon/includes/modules/blog_pro/assets/style.min.css
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:35] [class-ss-page.php:119] Checking Content Identical:0d600edd55151ff7f7376ed0a83f34ed6fbb7eba===. Value: FALSE
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/jquery-ui.css
+[2025-02-20 03:15:35] [class-ss-task.php:58] [PAGES STATUS] Remaining:32; Total: 59
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e5770001-GC660j.tmp
+[2025-02-20 03:15:35] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/jquery-ui.css?simply_static_page=28
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/jquery-ui.css?simply_static_page=28
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:103] Filesize: 37326 bytes
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/zoho-crm-forms/assets/css/jquery-ui.css
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e5770001-GC660j.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/zoho-crm-forms/assets/css/jquery-ui.css
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:155] Adding 12 URLs to the queue
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:35] [class-ss-page.php:119] Checking Content Identical:6b80811724853ac6301a0d88c2e9df9827c9c926===. Value: FALSE
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/frontendstyles.css
+[2025-02-20 03:15:35] [class-ss-task.php:58] [PAGES STATUS] Remaining:31; Total: 59
+[2025-02-20 03:15:35] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e57c4e76-NKRykO.tmp
+[2025-02-20 03:15:35] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/frontendstyles.css?simply_static_page=29
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/frontendstyles.css?simply_static_page=29
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:103] Filesize: 604 bytes
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/zoho-crm-forms/assets/css/frontendstyles.css
+[2025-02-20 03:15:35] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e57c4e76-NKRykO.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/zoho-crm-forms/assets/css/frontendstyles.css
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:36] [class-ss-page.php:119] Checking Content Identical:2a68955a8b9244b727eea898e3f966dfc7f72f64===. Value: FALSE
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/neve-pro-addon/includes/modules/header_footer_grid/assets/style.min.css
+[2025-02-20 03:15:36] [class-ss-task.php:58] [PAGES STATUS] Remaining:30; Total: 59
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:36] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e5803c50-URrF2Y.tmp
+[2025-02-20 03:15:36] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/neve-pro-addon/includes/modules/header_footer_grid/assets/style.min.css?simply_static_page=30
+[2025-02-20 03:15:36] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/neve-pro-addon/includes/modules/header_footer_grid/assets/style.min.css?simply_static_page=30
+[2025-02-20 03:15:36] [class-ss-url-fetcher.php:103] Filesize: 5481 bytes
+[2025-02-20 03:15:36] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/css
+[2025-02-20 03:15:36] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/neve-pro-addon/includes/modules/header_footer_grid/assets/style.min.css
+[2025-02-20 03:15:36] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e5803c50-URrF2Y.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/neve-pro-addon/includes/modules/header_footer_grid/assets/style.min.css
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:36] [class-ss-page.php:119] Checking Content Identical:f1b3e72c25bb3634a9044f132c5c695d700cc13c===. Value: FALSE
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-json/
+[2025-02-20 03:15:36] [class-ss-task.php:58] [PAGES STATUS] Remaining:29; Total: 59
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/wp-json/
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-json/wp/v2/pages/5
+[2025-02-20 03:15:36] [class-ss-task.php:58] [PAGES STATUS] Remaining:28; Total: 59
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/wp-json/wp/v2/pages/5
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/xmlrpc.php
+[2025-02-20 03:15:36] [class-ss-task.php:58] [PAGES STATUS] Remaining:27; Total: 59
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/xmlrpc.php
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-json/oembed/1.0/embed
+[2025-02-20 03:15:36] [class-ss-task.php:58] [PAGES STATUS] Remaining:26; Total: 59
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/wp-json/oembed/1.0/embed
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/default-sitemap.xsl
+[2025-02-20 03:15:36] [class-ss-task.php:58] [PAGES STATUS] Remaining:25; Total: 59
+[2025-02-20 03:15:36] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:36] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e58427c0-WOFdIJ.tmp
+[2025-02-20 03:15:36] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/default-sitemap.xsl?simply_static_page=35
+[2025-02-20 03:15:36] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/default-sitemap.xsl?simply_static_page=35
+[2025-02-20 03:15:38] [class-ss-url-fetcher.php:103] Filesize: 13702 bytes
+[2025-02-20 03:15:38] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/xml; charset=UTF-8
+[2025-02-20 03:15:38] [class-ss-url-fetcher.php:233] New filename for static page: default-sitemap.xsl
+[2025-02-20 03:15:38] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69e58427c0-WOFdIJ.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/default-sitemap.xsl
+[2025-02-20 03:15:38] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:15:38] [class-ss-fetch-urls-task.php:155] Adding 2 URLs to the queue
+[2025-02-20 03:15:38] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:15:38] [class-ss-page.php:119] Checking Content Identical:632c7f397567759db532e26e74451fc35090d344===. Value: FALSE
+[2025-02-20 03:15:38] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/post-sitemap.xml]]>
+[2025-02-20 03:15:38] [class-ss-task.php:58] [PAGES STATUS] Remaining:24; Total: 59
+[2025-02-20 03:15:38] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:38] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e5a08ed5-WU5JqK.tmp
+[2025-02-20 03:15:38] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/post-sitemap.xml]]>?simply_static_page=36
+[2025-02-20 03:15:38] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/post-sitemap.xml]]>?simply_static_page=36
+[2025-02-20 03:15:40] [class-ss-url-fetcher.php:103] Filesize: 83269 bytes
+[2025-02-20 03:15:40] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:40] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:40] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e5c5bb88-UpGHqX.tmp
+[2025-02-20 03:15:40] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/post-sitemap.xml]]>
+[2025-02-20 03:15:42] [class-ss-url-fetcher.php:103] Filesize: 83269 bytes
+[2025-02-20 03:15:42] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:42] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:42] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/page-sitemap.xml]]>
+[2025-02-20 03:15:42] [class-ss-task.php:58] [PAGES STATUS] Remaining:23; Total: 59
+[2025-02-20 03:15:42] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:42] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e5e5b0f1-eP1jhr.tmp
+[2025-02-20 03:15:42] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/page-sitemap.xml]]>?simply_static_page=37
+[2025-02-20 03:15:42] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/page-sitemap.xml]]>?simply_static_page=37
+[2025-02-20 03:15:44] [class-ss-url-fetcher.php:103] Filesize: 83269 bytes
+[2025-02-20 03:15:44] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:44] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e60c1019-4ZcfYn.tmp
+[2025-02-20 03:15:44] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/page-sitemap.xml]]>
+[2025-02-20 03:15:46] [class-ss-url-fetcher.php:103] Filesize: 83269 bytes
+[2025-02-20 03:15:46] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:46] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:46] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/uo-recipe-sitemap.xml]]>
+[2025-02-20 03:15:46] [class-ss-task.php:58] [PAGES STATUS] Remaining:22; Total: 59
+[2025-02-20 03:15:46] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:46] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e62e8c42-xPTbq8.tmp
+[2025-02-20 03:15:46] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/uo-recipe-sitemap.xml]]>?simply_static_page=38
+[2025-02-20 03:15:46] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/uo-recipe-sitemap.xml]]>?simply_static_page=38
+[2025-02-20 03:15:49] [class-ss-url-fetcher.php:103] Filesize: 83304 bytes
+[2025-02-20 03:15:49] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:49] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:49] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e653cc01-M82pRx.tmp
+[2025-02-20 03:15:49] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/uo-recipe-sitemap.xml]]>
+[2025-02-20 03:15:51] [class-ss-url-fetcher.php:103] Filesize: 83304 bytes
+[2025-02-20 03:15:51] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:51] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:51] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/category-sitemap.xml]]>
+[2025-02-20 03:15:51] [class-ss-task.php:58] [PAGES STATUS] Remaining:21; Total: 59
+[2025-02-20 03:15:51] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:51] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e6784dc8-TpNIuL.tmp
+[2025-02-20 03:15:51] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/category-sitemap.xml]]>?simply_static_page=39
+[2025-02-20 03:15:51] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/category-sitemap.xml]]>?simply_static_page=39
+[2025-02-20 03:15:53] [class-ss-url-fetcher.php:103] Filesize: 83297 bytes
+[2025-02-20 03:15:53] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:53] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:53] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e69baaff-jSb7g3.tmp
+[2025-02-20 03:15:53] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/category-sitemap.xml]]>
+[2025-02-20 03:15:56] [class-ss-url-fetcher.php:103] Filesize: 83297 bytes
+[2025-02-20 03:15:56] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:56] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:56] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/post_tag-sitemap.xml]]>
+[2025-02-20 03:15:56] [class-ss-task.php:58] [PAGES STATUS] Remaining:20; Total: 59
+[2025-02-20 03:15:56] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:15:56] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e6c0ade1-b5G68b.tmp
+[2025-02-20 03:15:56] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/post_tag-sitemap.xml]]>?simply_static_page=40
+[2025-02-20 03:15:56] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/post_tag-sitemap.xml]]>?simply_static_page=40
+[2025-02-20 03:15:57] [class-ss-url-fetcher.php:103] Filesize: 83297 bytes
+[2025-02-20 03:15:57] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:15:57] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:15:57] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e6ddb600-K5l0q6.tmp
+[2025-02-20 03:15:57] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/post_tag-sitemap.xml]]>
+[2025-02-20 03:16:01] [class-ss-url-fetcher.php:103] Filesize: 83297 bytes
+[2025-02-20 03:16:01] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:01] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:01] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/blog/]]>
+[2025-02-20 03:16:01] [class-ss-task.php:58] [PAGES STATUS] Remaining:19; Total: 59
+[2025-02-20 03:16:01] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:01] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e71ea629-qh0YVN.tmp
+[2025-02-20 03:16:01] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/blog/]]>?simply_static_page=41
+[2025-02-20 03:16:01] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/blog/]]>?simply_static_page=41
+[2025-02-20 03:16:05] [class-ss-url-fetcher.php:103] Filesize: 83199 bytes
+[2025-02-20 03:16:05] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:05] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:05] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e75b5a59-wbfpbM.tmp
+[2025-02-20 03:16:05] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/blog/]]>
+[2025-02-20 03:16:09] [class-ss-url-fetcher.php:103] Filesize: 83199 bytes
+[2025-02-20 03:16:09] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:09] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:09] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/open-for-business/]]>
+[2025-02-20 03:16:09] [class-ss-task.php:58] [PAGES STATUS] Remaining:18; Total: 59
+[2025-02-20 03:16:09] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:09] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e793f919-ZZFuGb.tmp
+[2025-02-20 03:16:09] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/open-for-business/]]>?simply_static_page=42
+[2025-02-20 03:16:09] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/open-for-business/]]>?simply_static_page=42
+[2025-02-20 03:16:11] [class-ss-url-fetcher.php:103] Filesize: 83290 bytes
+[2025-02-20 03:16:11] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:11] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:11] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e7bed25e-QnnUi1.tmp
+[2025-02-20 03:16:11] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/open-for-business/]]>
+[2025-02-20 03:16:14] [class-ss-url-fetcher.php:103] Filesize: 83290 bytes
+[2025-02-20 03:16:14] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:14] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:14] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/uploads/2024/03/ian-schneider-TamMbr4okv4-unsplash.jpg]]>
+[2025-02-20 03:16:14] [class-ss-task.php:58] [PAGES STATUS] Remaining:17; Total: 59
+[2025-02-20 03:16:14] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:14] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e7e4f302-O8Fn5V.tmp
+[2025-02-20 03:16:14] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/uploads/2024/03/ian-schneider-TamMbr4okv4-unsplash.jpg]]>?simply_static_page=43
+[2025-02-20 03:16:14] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2024/03/ian-schneider-TamMbr4okv4-unsplash.jpg]]>?simply_static_page=43
+[2025-02-20 03:16:16] [class-ss-url-fetcher.php:103] Filesize: 83640 bytes
+[2025-02-20 03:16:16] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:16] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:16] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e80bd4ae-kC5CDM.tmp
+[2025-02-20 03:16:16] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2024/03/ian-schneider-TamMbr4okv4-unsplash.jpg]]>
+[2025-02-20 03:16:19] [class-ss-url-fetcher.php:103] Filesize: 83640 bytes
+[2025-02-20 03:16:19] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:19] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:19] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/]]>
+[2025-02-20 03:16:19] [class-ss-task.php:58] [PAGES STATUS] Remaining:16; Total: 59
+[2025-02-20 03:16:19] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:19] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e8338d3d-HDp3V3.tmp
+[2025-02-20 03:16:19] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/]]>?simply_static_page=44
+[2025-02-20 03:16:19] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/]]>?simply_static_page=44
+[2025-02-20 03:16:21] [class-ss-url-fetcher.php:103] Filesize: 83157 bytes
+[2025-02-20 03:16:21] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:21] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:21] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e85adc72-nDW01C.tmp
+[2025-02-20 03:16:21] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/]]>
+[2025-02-20 03:16:24] [class-ss-url-fetcher.php:103] Filesize: 83157 bytes
+[2025-02-20 03:16:24] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:24] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:24] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/uploads/2020/07/web-design-studio-01.jpg.jpg]]>
+[2025-02-20 03:16:24] [class-ss-task.php:58] [PAGES STATUS] Remaining:15; Total: 59
+[2025-02-20 03:16:24] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:24] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e88b72cc-xfayFm.tmp
+[2025-02-20 03:16:24] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/uploads/2020/07/web-design-studio-01.jpg.jpg]]>?simply_static_page=45
+[2025-02-20 03:16:24] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/07/web-design-studio-01.jpg.jpg]]>?simply_static_page=45
+[2025-02-20 03:16:27] [class-ss-url-fetcher.php:103] Filesize: 83570 bytes
+[2025-02-20 03:16:27] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:27] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:27] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e8babe51-BhQDWt.tmp
+[2025-02-20 03:16:27] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/07/web-design-studio-01.jpg.jpg]]>
+[2025-02-20 03:16:31] [class-ss-url-fetcher.php:103] Filesize: 83570 bytes
+[2025-02-20 03:16:31] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:31] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:31] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-03.png]]>
+[2025-02-20 03:16:31] [class-ss-task.php:58] [PAGES STATUS] Remaining:14; Total: 59
+[2025-02-20 03:16:31] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:31] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e8fa7dce-fFRGzo.tmp
+[2025-02-20 03:16:31] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-03.png]]>?simply_static_page=46
+[2025-02-20 03:16:31] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-03.png]]>?simply_static_page=46
+[2025-02-20 03:16:34] [class-ss-url-fetcher.php:103] Filesize: 83542 bytes
+[2025-02-20 03:16:34] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:34] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:34] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e92741db-ubgEZ3.tmp
+[2025-02-20 03:16:34] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-03.png]]>
+[2025-02-20 03:16:37] [class-ss-url-fetcher.php:103] Filesize: 83542 bytes
+[2025-02-20 03:16:37] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:37] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:37] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-04.png]]>
+[2025-02-20 03:16:37] [class-ss-task.php:58] [PAGES STATUS] Remaining:13; Total: 59
+[2025-02-20 03:16:37] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:37] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e953a004-kMaT8q.tmp
+[2025-02-20 03:16:37] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-04.png]]>?simply_static_page=47
+[2025-02-20 03:16:37] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-04.png]]>?simply_static_page=47
+[2025-02-20 03:16:40] [class-ss-url-fetcher.php:103] Filesize: 83542 bytes
+[2025-02-20 03:16:40] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:40] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:40] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e981a71f-tbUi0C.tmp
+[2025-02-20 03:16:40] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-04.png]]>
+[2025-02-20 03:16:42] [class-ss-url-fetcher.php:103] Filesize: 83542 bytes
+[2025-02-20 03:16:42] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:42] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:42] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-01.png]]>
+[2025-02-20 03:16:42] [class-ss-task.php:58] [PAGES STATUS] Remaining:12; Total: 59
+[2025-02-20 03:16:42] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:42] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e9aa7b1a-7wyBn7.tmp
+[2025-02-20 03:16:42] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-01.png]]>?simply_static_page=48
+[2025-02-20 03:16:42] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-01.png]]>?simply_static_page=48
+[2025-02-20 03:16:45] [class-ss-url-fetcher.php:103] Filesize: 83542 bytes
+[2025-02-20 03:16:45] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:45] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:45] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e9d1242a-MSG0KG.tmp
+[2025-02-20 03:16:45] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-webdesign-GB-01.png]]>
+[2025-02-20 03:16:47] [class-ss-url-fetcher.php:103] Filesize: 83542 bytes
+[2025-02-20 03:16:47] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:47] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:47] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-10.jpg]]>
+[2025-02-20 03:16:47] [class-ss-task.php:58] [PAGES STATUS] Remaining:11; Total: 59
+[2025-02-20 03:16:47] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:47] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69e9f0bbec-XNLv08.tmp
+[2025-02-20 03:16:47] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-10.jpg]]>?simply_static_page=49
+[2025-02-20 03:16:47] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-10.jpg]]>?simply_static_page=49
+[2025-02-20 03:16:49] [class-ss-url-fetcher.php:103] Filesize: 83549 bytes
+[2025-02-20 03:16:49] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:49] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:49] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ea13ee32-2M1E1Z.tmp
+[2025-02-20 03:16:49] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-10.jpg]]>
+[2025-02-20 03:16:51] [class-ss-url-fetcher.php:103] Filesize: 83549 bytes
+[2025-02-20 03:16:51] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:51] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:51] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-13.jpg]]>
+[2025-02-20 03:16:51] [class-ss-task.php:58] [PAGES STATUS] Remaining:10; Total: 59
+[2025-02-20 03:16:51] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:51] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ea36e130-hcp2Ll.tmp
+[2025-02-20 03:16:51] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-13.jpg]]>?simply_static_page=50
+[2025-02-20 03:16:51] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-13.jpg]]>?simply_static_page=50
+[2025-02-20 03:16:53] [class-ss-url-fetcher.php:103] Filesize: 83549 bytes
+[2025-02-20 03:16:53] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:53] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:53] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ea547aed-d2DUS0.tmp
+[2025-02-20 03:16:53] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-13.jpg]]>
+[2025-02-20 03:16:55] [class-ss-url-fetcher.php:103] Filesize: 83549 bytes
+[2025-02-20 03:16:55] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:55] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:55] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-08.jpg]]>
+[2025-02-20 03:16:55] [class-ss-task.php:58] [PAGES STATUS] Remaining:9; Total: 59
+[2025-02-20 03:16:55] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:55] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ea77df92-LVnu0Q.tmp
+[2025-02-20 03:16:55] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-08.jpg]]>?simply_static_page=51
+[2025-02-20 03:16:55] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-08.jpg]]>?simply_static_page=51
+[2025-02-20 03:16:57] [class-ss-url-fetcher.php:103] Filesize: 83549 bytes
+[2025-02-20 03:16:57] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:57] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:57] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ea96412e-1dlL32.tmp
+[2025-02-20 03:16:57] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-08.jpg]]>
+[2025-02-20 03:16:59] [class-ss-url-fetcher.php:103] Filesize: 83549 bytes
+[2025-02-20 03:16:59] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:16:59] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:16:59] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/contact/]]>
+[2025-02-20 03:16:59] [class-ss-task.php:58] [PAGES STATUS] Remaining:8; Total: 59
+[2025-02-20 03:16:59] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:16:59] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69eaba3b55-m5M3dh.tmp
+[2025-02-20 03:16:59] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/contact/]]>?simply_static_page=52
+[2025-02-20 03:16:59] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/contact/]]>?simply_static_page=52
+[2025-02-20 03:17:03] [class-ss-url-fetcher.php:103] Filesize: 83220 bytes
+[2025-02-20 03:17:03] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:03] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:03] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69eaf87cb6-H2tbcx.tmp
+[2025-02-20 03:17:03] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/contact/]]>
+[2025-02-20 03:17:15] [class-ss-archive-creation-job.php:172] Current task: fetch_urls
+[2025-02-20 03:17:15] [class-ss-archive-creation-job.php:182] Performing task: fetch_urls
+[2025-02-20 03:17:15] [class-ss-fetch-urls-task.php:66] Total pages: 76; Pages remaining: 24
+[2025-02-20 03:17:15] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/about/]]>
+[2025-02-20 03:17:15] [class-ss-task.php:58] [PAGES STATUS] Remaining:24; Total: 76
+[2025-02-20 03:17:15] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:15] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ebb8ffa4-qaZGOm.tmp
+[2025-02-20 03:17:15] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/about/]]>?simply_static_page=53
+[2025-02-20 03:17:15] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/about/]]>?simply_static_page=53
+[2025-02-20 03:17:18] [class-ss-url-fetcher.php:103] Filesize: 83206 bytes
+[2025-02-20 03:17:18] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:18] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:18] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ebe62338-wYldLm.tmp
+[2025-02-20 03:17:18] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/about/]]>
+[2025-02-20 03:17:19] [class-ss-url-fetcher.php:103] Filesize: 83206 bytes
+[2025-02-20 03:17:19] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:19] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:19] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/uploads/2024/03/MEWBORNEPHOTO-78.jpg]]>
+[2025-02-20 03:17:19] [class-ss-task.php:58] [PAGES STATUS] Remaining:23; Total: 76
+[2025-02-20 03:17:19] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:19] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ebf40c97-RIRvxb.tmp
+[2025-02-20 03:17:19] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/uploads/2024/03/MEWBORNEPHOTO-78.jpg]]>?simply_static_page=54
+[2025-02-20 03:17:19] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2024/03/MEWBORNEPHOTO-78.jpg]]>?simply_static_page=54
+[2025-02-20 03:17:21] [class-ss-url-fetcher.php:103] Filesize: 83514 bytes
+[2025-02-20 03:17:21] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:21] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:21] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ec188c2a-MaCtMA.tmp
+[2025-02-20 03:17:21] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2024/03/MEWBORNEPHOTO-78.jpg]]>
+[2025-02-20 03:17:24] [class-ss-url-fetcher.php:103] Filesize: 83514 bytes
+[2025-02-20 03:17:24] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:24] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:24] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-12.jpg]]>
+[2025-02-20 03:17:24] [class-ss-task.php:58] [PAGES STATUS] Remaining:22; Total: 76
+[2025-02-20 03:17:24] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:24] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ec414072-hB6Ahu.tmp
+[2025-02-20 03:17:24] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-12.jpg]]>?simply_static_page=55
+[2025-02-20 03:17:24] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-12.jpg]]>?simply_static_page=55
+[2025-02-20 03:17:29] [class-ss-url-fetcher.php:103] Filesize: 83549 bytes
+[2025-02-20 03:17:29] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:29] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:29] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ec97ca11-5RTEpI.tmp
+[2025-02-20 03:17:29] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/uploads/2020/01/neve-web-design-bg-12.jpg]]>
+[2025-02-20 03:17:30] [class-ss-url-fetcher.php:103] Filesize: 83549 bytes
+[2025-02-20 03:17:30] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:30] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:30] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/uo-recipe/send-to-webhook/]]>
+[2025-02-20 03:17:30] [class-ss-task.php:58] [PAGES STATUS] Remaining:21; Total: 76
+[2025-02-20 03:17:30] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:30] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ecaeaacf-jPOEI0.tmp
+[2025-02-20 03:17:30] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/uo-recipe/send-to-webhook/]]>?simply_static_page=56
+[2025-02-20 03:17:30] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/uo-recipe/send-to-webhook/]]>?simply_static_page=56
+[2025-02-20 03:17:34] [class-ss-url-fetcher.php:103] Filesize: 83353 bytes
+[2025-02-20 03:17:34] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:34] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:34] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ece290a8-faBpg3.tmp
+[2025-02-20 03:17:34] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/uo-recipe/send-to-webhook/]]>
+[2025-02-20 03:17:35] [class-ss-url-fetcher.php:103] Filesize: 83353 bytes
+[2025-02-20 03:17:35] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:35] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:35] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/category/fractional-cto/]]>
+[2025-02-20 03:17:35] [class-ss-task.php:58] [PAGES STATUS] Remaining:20; Total: 76
+[2025-02-20 03:17:35] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:35] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ecf18091-BGuh9R.tmp
+[2025-02-20 03:17:35] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/category/fractional-cto/]]>?simply_static_page=57
+[2025-02-20 03:17:35] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/category/fractional-cto/]]>?simply_static_page=57
+[2025-02-20 03:17:36] [class-ss-url-fetcher.php:103] Filesize: 83339 bytes
+[2025-02-20 03:17:36] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:36] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:36] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ed051681-3U5LkX.tmp
+[2025-02-20 03:17:36] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/category/fractional-cto/]]>
+[2025-02-20 03:17:37] [class-ss-url-fetcher.php:103] Filesize: 83339 bytes
+[2025-02-20 03:17:37] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:37] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:37] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/tag/fcto/]]>
+[2025-02-20 03:17:37] [class-ss-task.php:58] [PAGES STATUS] Remaining:19; Total: 76
+[2025-02-20 03:17:37] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:37] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ed19a24d-N8VnjH.tmp
+[2025-02-20 03:17:37] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/tag/fcto/]]>?simply_static_page=58
+[2025-02-20 03:17:37] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/tag/fcto/]]>?simply_static_page=58
+[2025-02-20 03:17:39] [class-ss-url-fetcher.php:103] Filesize: 83234 bytes
+[2025-02-20 03:17:39] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:39] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:39] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ed35d54d-FFtdIl.tmp
+[2025-02-20 03:17:39] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/tag/fcto/]]>
+[2025-02-20 03:17:40] [class-ss-url-fetcher.php:103] Filesize: 83234 bytes
+[2025-02-20 03:17:40] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:40] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:40] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/tag/change/]]>
+[2025-02-20 03:17:40] [class-ss-task.php:58] [PAGES STATUS] Remaining:18; Total: 76
+[2025-02-20 03:17:40] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:40] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ed432e3a-P8j9LN.tmp
+[2025-02-20 03:17:40] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/tag/change/]]>?simply_static_page=59
+[2025-02-20 03:17:40] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/tag/change/]]>?simply_static_page=59
+[2025-02-20 03:17:41] [class-ss-url-fetcher.php:103] Filesize: 83248 bytes
+[2025-02-20 03:17:41] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:41] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:41] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ed518b80-xsxkLc.tmp
+[2025-02-20 03:17:41] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/tag/change/]]>
+[2025-02-20 03:17:42] [class-ss-url-fetcher.php:103] Filesize: 83248 bytes
+[2025-02-20 03:17:42] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:42] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:42] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-json/wp/v2/pages/307
+[2025-02-20 03:17:42] [class-ss-task.php:58] [PAGES STATUS] Remaining:17; Total: 76
+[2025-02-20 03:17:42] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/wp-json/wp/v2/pages/307
+[2025-02-20 03:17:42] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:17:42] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/open-for-business/
+[2025-02-20 03:17:42] [class-ss-task.php:58] [PAGES STATUS] Remaining:16; Total: 76
+[2025-02-20 03:17:42] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:42] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ed6e864d-ZhMX2D.tmp
+[2025-02-20 03:17:42] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/open-for-business/?simply_static_page=61
+[2025-02-20 03:17:42] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/open-for-business/?simply_static_page=61
+[2025-02-20 03:17:44] [class-ss-url-fetcher.php:103] Filesize: 93103 bytes
+[2025-02-20 03:17:44] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:44] [class-ss-url-fetcher.php:233] New filename for static page: open-for-business/index.html
+[2025-02-20 03:17:44] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69ed6e864d-ZhMX2D.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/open-for-business/index.html
+[2025-02-20 03:17:44] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:17:44] [class-ss-fetch-urls-task.php:155] Adding 27 URLs to the queue
+[2025-02-20 03:17:44] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:17:44] [class-ss-page.php:119] Checking Content Identical:4c8d8644787111f87020335e2072ff38a48eb3e7===. Value: FALSE
+[2025-02-20 03:17:44] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/author/nathananderson/
+[2025-02-20 03:17:44] [class-ss-task.php:58] [PAGES STATUS] Remaining:15; Total: 76
+[2025-02-20 03:17:44] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:44] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ed8cc53d-tLGvhm.tmp
+[2025-02-20 03:17:44] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/author/nathananderson/?simply_static_page=62
+[2025-02-20 03:17:44] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/author/nathananderson/?simply_static_page=62
+[2025-02-20 03:17:46] [class-ss-url-fetcher.php:103] Filesize: 86835 bytes
+[2025-02-20 03:17:46] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:46] [class-ss-url-fetcher.php:233] New filename for static page: author/nathananderson/index.html
+[2025-02-20 03:17:46] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69ed8cc53d-tLGvhm.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/author/nathananderson/index.html
+[2025-02-20 03:17:46] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:17:46] [class-ss-fetch-urls-task.php:155] Adding 25 URLs to the queue
+[2025-02-20 03:17:46] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:17:46] [class-ss-page.php:119] Checking Content Identical:18de52c8f74371cc3bdf009883a628929627f022===. Value: FALSE
+[2025-02-20 03:17:46] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/category/fractional-cto/
+[2025-02-20 03:17:46] [class-ss-task.php:58] [PAGES STATUS] Remaining:14; Total: 76
+[2025-02-20 03:17:46] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:46] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edacd161-m4JEmx.tmp
+[2025-02-20 03:17:46] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/category/fractional-cto/?simply_static_page=63
+[2025-02-20 03:17:46] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/category/fractional-cto/?simply_static_page=63
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:103] Filesize: 86049 bytes
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:233] New filename for static page: category/fractional-cto/index.html
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69edacd161-m4JEmx.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/category/fractional-cto/index.html
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:155] Adding 25 URLs to the queue
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:17:48] [class-ss-page.php:119] Checking Content Identical:d98d188b82cd43adb869b77a694efc94b3620aa6===. Value: FALSE
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-json/wp/v2/pages/75
+[2025-02-20 03:17:48] [class-ss-task.php:58] [PAGES STATUS] Remaining:13; Total: 76
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/wp-json/wp/v2/pages/75
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_555555_256x240.png%22
+[2025-02-20 03:17:48] [class-ss-task.php:58] [PAGES STATUS] Remaining:12; Total: 76
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edc30616-0dMvGq.tmp
+[2025-02-20 03:17:48] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_555555_256x240.png%22?simply_static_page=65
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_555555_256x240.png%22?simply_static_page=65
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edc6053b-dWpuNc.tmp
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_555555_256x240.png%22
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_777620_256x240.png%22
+[2025-02-20 03:17:48] [class-ss-task.php:58] [PAGES STATUS] Remaining:11; Total: 76
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edc9bf8e-NEfqUD.tmp
+[2025-02-20 03:17:48] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_777620_256x240.png%22?simply_static_page=66
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_777620_256x240.png%22?simply_static_page=66
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edcb1de4-4VRRik.tmp
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_777620_256x240.png%22
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_444444_256x240.png%22
+[2025-02-20 03:17:48] [class-ss-task.php:58] [PAGES STATUS] Remaining:10; Total: 76
+[2025-02-20 03:17:48] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edcc9084-H59tjQ.tmp
+[2025-02-20 03:17:48] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_444444_256x240.png%22?simply_static_page=67
+[2025-02-20 03:17:48] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_444444_256x240.png%22?simply_static_page=67
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edd0635d-A2xWo2.tmp
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_444444_256x240.png%22
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:49] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_cc0000_256x240.png%22
+[2025-02-20 03:17:49] [class-ss-task.php:58] [PAGES STATUS] Remaining:9; Total: 76
+[2025-02-20 03:17:49] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edd3d222-yN8e7v.tmp
+[2025-02-20 03:17:49] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_cc0000_256x240.png%22?simply_static_page=68
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_cc0000_256x240.png%22?simply_static_page=68
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edd6baf1-HLuQag.tmp
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_cc0000_256x240.png%22
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:49] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_777777_256x240.png%22
+[2025-02-20 03:17:49] [class-ss-task.php:58] [PAGES STATUS] Remaining:8; Total: 76
+[2025-02-20 03:17:49] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edd80f56-X0BmsI.tmp
+[2025-02-20 03:17:49] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_777777_256x240.png%22?simply_static_page=69
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_777777_256x240.png%22?simply_static_page=69
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69eddadde2-xgg2oL.tmp
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_777777_256x240.png%22
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:49] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_ffffff_256x240.png%22
+[2025-02-20 03:17:49] [class-ss-task.php:58] [PAGES STATUS] Remaining:7; Total: 76
+[2025-02-20 03:17:49] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edde6cbc-KXa5xx.tmp
+[2025-02-20 03:17:49] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_ffffff_256x240.png%22?simply_static_page=70
+[2025-02-20 03:17:49] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_ffffff_256x240.png%22?simply_static_page=70
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ede24654-dJYhcc.tmp
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/%22images%2Fui-icons_ffffff_256x240.png%22
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:103] Filesize: 196 bytes
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:119] http_status_code: 404 | content_type: text/html; charset=iso-8859-1
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:147] We weren't able to establish a filename; deleting temp file
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_444444_256x240.png
+[2025-02-20 03:17:50] [class-ss-task.php:58] [PAGES STATUS] Remaining:6; Total: 76
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ede57a7e-AeTD8t.tmp
+[2025-02-20 03:17:50] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_444444_256x240.png?simply_static_page=71
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_444444_256x240.png?simply_static_page=71
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:103] Filesize: 6992 bytes
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: image/png
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_444444_256x240.png
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69ede57a7e-AeTD8t.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_444444_256x240.png
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:17:50] [class-ss-page.php:119] Checking Content Identical:0ed9a8464fd2ed600654a5f68ae8cca65cc0149c===. Value: FALSE
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_555555_256x240.png
+[2025-02-20 03:17:50] [class-ss-task.php:58] [PAGES STATUS] Remaining:5; Total: 76
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ede907c6-rTbfD6.tmp
+[2025-02-20 03:17:50] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_555555_256x240.png?simply_static_page=72
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_555555_256x240.png?simply_static_page=72
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:103] Filesize: 6988 bytes
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: image/png
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_555555_256x240.png
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69ede907c6-rTbfD6.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_555555_256x240.png
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:17:50] [class-ss-page.php:119] Checking Content Identical:0a037d8df967a1caedeb59c471095a15b9c472f1===. Value: FALSE
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_ffffff_256x240.png
+[2025-02-20 03:17:50] [class-ss-task.php:58] [PAGES STATUS] Remaining:4; Total: 76
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edebaaa3-W1Qasm.tmp
+[2025-02-20 03:17:50] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_ffffff_256x240.png?simply_static_page=73
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_ffffff_256x240.png?simply_static_page=73
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:103] Filesize: 6299 bytes
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: image/png
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_ffffff_256x240.png
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69edebaaa3-W1Qasm.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_ffffff_256x240.png
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:17:50] [class-ss-page.php:119] Checking Content Identical:2dcd9f88298724135571dd8460bc32b52d782a75===. Value: FALSE
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_777620_256x240.png
+[2025-02-20 03:17:50] [class-ss-task.php:58] [PAGES STATUS] Remaining:3; Total: 76
+[2025-02-20 03:17:50] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edee8455-c5WTxw.tmp
+[2025-02-20 03:17:50] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_777620_256x240.png?simply_static_page=74
+[2025-02-20 03:17:50] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_777620_256x240.png?simply_static_page=74
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:103] Filesize: 4549 bytes
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: image/png
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_777620_256x240.png
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69edee8455-c5WTxw.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_777620_256x240.png
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:17:51] [class-ss-page.php:119] Checking Content Identical:165d1225c6fc74b873d8bef3b69565d77e48e23a===. Value: FALSE
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_cc0000_256x240.png
+[2025-02-20 03:17:51] [class-ss-task.php:58] [PAGES STATUS] Remaining:2; Total: 76
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edf20dd2-VUIfuG.tmp
+[2025-02-20 03:17:51] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_cc0000_256x240.png?simply_static_page=75
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_cc0000_256x240.png?simply_static_page=75
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:103] Filesize: 4549 bytes
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: image/png
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_cc0000_256x240.png
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69edf20dd2-VUIfuG.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_cc0000_256x240.png
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:17:51] [class-ss-page.php:119] Checking Content Identical:a65a1696366469d247aeb9faf2917dcdc93d704f===. Value: FALSE
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_777777_256x240.png
+[2025-02-20 03:17:51] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 76
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69edf4c03a-svjfm3.tmp
+[2025-02-20 03:17:51] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_777777_256x240.png?simply_static_page=76
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_777777_256x240.png?simply_static_page=76
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:103] Filesize: 6999 bytes
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: image/png
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:233] New filename for static page: wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_777777_256x240.png
+[2025-02-20 03:17:51] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69edf4c03a-svjfm3.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/wp-content/plugins/zoho-crm-forms/assets/css/images/ui-icons_777777_256x240.png
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:155] Adding 0 URLs to the queue
+[2025-02-20 03:17:51] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:17:51] [class-ss-page.php:119] Checking Content Identical:0a574cb15146b05dfac442ff32d3a30b1e3cc3be===. Value: FALSE
+[2025-02-20 03:17:51] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 52 of 76 pages/files
+[2025-02-20 03:17:51] [class-ss-archive-creation-job.php:212] We're not done with the fetch_urls task yet
+[2025-02-20 03:17:52] [class-ss-archive-creation-job.php:172] Current task: fetch_urls
+[2025-02-20 03:17:52] [class-ss-archive-creation-job.php:182] Performing task: fetch_urls
+[2025-02-20 03:17:52] [class-ss-fetch-urls-task.php:66] Total pages: 83; Pages remaining: 7
+[2025-02-20 03:17:52] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/tag/change/
+[2025-02-20 03:17:52] [class-ss-task.php:58] [PAGES STATUS] Remaining:7; Total: 83
+[2025-02-20 03:17:52] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:52] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ee00faf5-9QYEcu.tmp
+[2025-02-20 03:17:52] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/tag/change/?simply_static_page=77
+[2025-02-20 03:17:52] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/tag/change/?simply_static_page=77
+[2025-02-20 03:17:52] [class-ss-url-fetcher.php:103] Filesize: 85850 bytes
+[2025-02-20 03:17:52] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:52] [class-ss-url-fetcher.php:233] New filename for static page: tag/change/index.html
+[2025-02-20 03:17:52] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69ee00faf5-9QYEcu.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/tag/change/index.html
+[2025-02-20 03:17:52] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:17:52] [class-ss-fetch-urls-task.php:155] Adding 26 URLs to the queue
+[2025-02-20 03:17:52] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:17:52] [class-ss-page.php:119] Checking Content Identical:8f94f54cb3f5f17021a3bb0a8de6188319d72841===. Value: FALSE
+[2025-02-20 03:17:52] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/tag/fcto/
+[2025-02-20 03:17:52] [class-ss-task.php:58] [PAGES STATUS] Remaining:6; Total: 83
+[2025-02-20 03:17:52] [class-ss-fetch-urls-task.php:80] URL is not being excluded
+[2025-02-20 03:17:52] [class-ss-url-fetcher.php:94] Fetching URL and saving it to: /tmp/67b69ee0e2a40-D694cM.tmp
+[2025-02-20 03:17:52] [class-ss-page-handler.php:38] URL Prepared:https://nathananderson.com/tag/fcto/?simply_static_page=78
+[2025-02-20 03:17:52] [class-ss-url-fetcher.php:251] Fetching URL: https://nathananderson.com/tag/fcto/?simply_static_page=78
+[2025-02-20 03:17:53] [class-ss-url-fetcher.php:103] Filesize: 85818 bytes
+[2025-02-20 03:17:53] [class-ss-url-fetcher.php:119] http_status_code: 200 | content_type: text/html; charset=UTF-8
+[2025-02-20 03:17:53] [class-ss-url-fetcher.php:233] New filename for static page: tag/fcto/index.html
+[2025-02-20 03:17:53] [class-ss-url-fetcher.php:143] Renaming temp file from /tmp/67b69ee0e2a40-D694cM.tmp to /nas/content/live/nathananderson/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287/tag/fcto/index.html
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:148] Extracting URLs and replacing URLs in the static file
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:155] Adding 26 URLs to the queue
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:166] We're saving this URL; keeping the static file
+[2025-02-20 03:17:53] [class-ss-page.php:119] Checking Content Identical:259b3ca577682c453baf19d21bedc373ef569042===. Value: FALSE
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-json/wp/v2/posts/38
+[2025-02-20 03:17:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:5; Total: 83
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/wp-json/wp/v2/posts/38
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/author/nathananderson/feed/
+[2025-02-20 03:17:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:4; Total: 83
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/author/nathananderson/feed/
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-json/wp/v2/users/1
+[2025-02-20 03:17:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:3; Total: 83
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/wp-json/wp/v2/users/1
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/category/fractional-cto/feed/
+[2025-02-20 03:17:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:2; Total: 83
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/category/fractional-cto/feed/
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-json/wp/v2/categories/13
+[2025-02-20 03:17:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 83
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/wp-json/wp/v2/categories/13
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:17:53] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 76 of 83 pages/files
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:212] We're not done with the fetch_urls task yet
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:172] Current task: fetch_urls
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:182] Performing task: fetch_urls
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:66] Total pages: 87; Pages remaining: 4
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/tag/change/feed/
+[2025-02-20 03:17:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:4; Total: 87
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/tag/change/feed/
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-json/wp/v2/tags/12
+[2025-02-20 03:17:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:3; Total: 87
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/wp-json/wp/v2/tags/12
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/tag/fcto/feed/
+[2025-02-20 03:17:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:2; Total: 87
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/tag/fcto/feed/
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:69] URL: https://nathananderson.com/wp-json/wp/v2/tags/11
+[2025-02-20 03:17:53] [class-ss-task.php:58] [PAGES STATUS] Remaining:1; Total: 87
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:76] Excludable found: URL: https://nathananderson.com/wp-json/wp/v2/tags/11
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:86] Skipping URL because it is no-save and no-follow
+[2025-02-20 03:17:53] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 83 of 87 pages/files
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:212] We're not done with the fetch_urls task yet
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:172] Current task: fetch_urls
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:182] Performing task: fetch_urls
+[2025-02-20 03:17:53] [class-ss-fetch-urls-task.php:66] Total pages: 87; Pages remaining: 0
+[2025-02-20 03:17:53] [class-ss-task.php:44] Status message: [fetch_urls] Fetched 87 of 87 pages/files
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:204] We've found our next task: create_zip_archive
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:172] Current task: create_zip_archive
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:182] Performing task: create_zip_archive
+[2025-02-20 03:17:53] [class-ss-create-zip-archive.php:78] Fetching list of files to include in zip
+[2025-02-20 03:17:53] [class-ss-create-zip-archive.php:87] Creating zip archive
+[2025-02-20 03:17:53] [class-ss-task.php:44] Status message: [create_zip_archive] ZIP archive created:  <a href="https://nathananderson.com/wp-content/uploads/simply-static/temp-files/simply-static-1-1740021287.zip">Click here to download</a>
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:204] We've found our next task: wrapup
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:172] Current task: wrapup
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:182] Performing task: wrapup
+[2025-02-20 03:17:53] [class-ss-wrapup-task.php:22] Deleting temporary files
+[2025-02-20 03:17:53] [class-ss-task.php:44] Status message: [wrapup] Wrapping up
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:199] This task is done and there are no more tasks, time to complete the job
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:244] Completing the job
+[2025-02-20 03:17:53] [class-ss-archive-creation-job.php:371] Status message: [done] Done! Finished in 00:03:06
