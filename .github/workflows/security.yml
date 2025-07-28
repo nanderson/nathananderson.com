@@ -1,0 +1,93 @@
+name: Security Audit
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run security audit daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+    
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v3
+      with:
+        hugo-version: '0.143.0'
+        extended: true
+    
+    - name: Audit Dependencies
+      run: |
+        # Check for known vulnerabilities in Hugo themes
+        if [ -f "themes/hugo-profile/package.json" ]; then
+          cd themes/hugo-profile
+          npm audit --audit-level=moderate
+        fi
+    
+    - name: Static Security Analysis
+      run: |
+        # Check for potential security issues in configuration
+        echo "Checking Hugo configuration security..."
+        
+        # Check for unsafe rendering
+        if grep -r "unsafe.*true" hugo.toml; then
+          echo "::warning::Unsafe HTML rendering is enabled"
+        fi
+        
+        # Check for hardcoded secrets
+        echo "Scanning for potential secrets..."
+        grep -r -i "password\|secret\|api[_-]key\|token" . --exclude-dir=.git --exclude-dir=public --exclude="*.md" || true
+        
+        # Check for potentially dangerous file permissions
+        find . -type f -perm -o+w -not -path './.git/*' -not -path './public/*' || true
+    
+    - name: Content Security Policy Check
+      run: |
+        hugo --minify
+        echo "Checking generated HTML for CSP compliance..."
+        
+        # Check for inline scripts (CSP violation)
+        if find public -name "*.html" -exec grep -l "<script[^>]*>[^<]" {} \;; then
+          echo "::warning::Found inline scripts that may violate CSP"
+        fi
+        
+        # Check for inline styles (CSP violation)
+        if find public -name "*.html" -exec grep -l 'style="' {} \;; then
+          echo "::warning::Found inline styles that may violate CSP"
+        fi
+    
+    - name: Security Headers Check
+      run: |
+        echo "Security headers that should be configured at server/CDN level:"
+        echo "- Content-Security-Policy"
+        echo "- X-Frame-Options"
+        echo "- X-Content-Type-Options"
+        echo "- Referrer-Policy"
+        echo "- Permissions-Policy"
+    
+    - name: HTTPS and SSL Check
+      run: |
+        # Check that baseURL uses HTTPS
+        if ! grep -q "https://" hugo.toml; then
+          echo "::warning::baseURL should use HTTPS in production"
+        fi
+    
+    - name: Upload Security Report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: security-audit-report
+        path: |
+          hugo.toml
+          public/**/*.html
+        retention-days: 30

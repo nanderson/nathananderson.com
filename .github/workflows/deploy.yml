@@ -1,0 +1,103 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+# Sets permissions for GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        submodules: recursive
+        fetch-depth: 0
+    
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v3
+      with:
+        hugo-version: '0.143.0'
+        extended: true
+    
+    - name: Setup Pages
+      id: pages
+      uses: actions/configure-pages@v4
+    
+    - name: Security Checks
+      run: |
+        echo "Running pre-deployment security checks..."
+        
+        # Verify HTTPS in config
+        if ! grep -q "https://" hugo.toml; then
+          echo "::error::Production builds must use HTTPS baseURL"
+          exit 1
+        fi
+        
+        # Check for sensitive files
+        if find . -name "*.env" -o -name "*.key" -o -name "*.pem" | grep -v .git; then
+          echo "::error::Sensitive files found in repository"
+          exit 1
+        fi
+    
+    - name: Update baseURL for GitHub Pages
+      run: |
+        # Update baseURL for GitHub Pages deployment
+        REPO_NAME="${GITHUB_REPOSITORY#*/}"
+        sed -i "s|baseURL = 'https://example.org/'|baseURL = 'https://${{ github.repository_owner }}.github.io/${REPO_NAME}/'|" hugo.toml
+    
+    - name: Build with Hugo
+      env:
+        HUGO_ENVIRONMENT: production
+        HUGO_ENV: production
+      run: |
+        hugo \
+          --gc \
+          --minify \
+          --baseURL "${{ steps.pages.outputs.base_url }}/"
+    
+    - name: Security Hardening
+      run: |
+        echo "Applying security hardening to built files..."
+        
+        # Remove any accidentally included sensitive files
+        find public -name "*.env*" -delete || true
+        find public -name "*.key" -delete || true
+        find public -name "*.log" -delete || true
+        
+        # Add security headers via meta tags where possible
+        find public -name "*.html" -exec sed -i '/<head>/a\<meta http-equiv="X-Content-Type-Options" content="nosniff">\n<meta http-equiv="X-Frame-Options" content="DENY">\n<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">' {} \;
+    
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    
+    steps:
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
