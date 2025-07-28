@@ -88,7 +88,7 @@ minify = true
     intro = "Hi, my name is"
     title = "Nathan Anderson"  # Replace with your name
     subtitle = "Chief Technology Officer"
-    content = "I'm a technology leader with extensive experience in driving innovation, building world-class engineering teams, and delivering scalable solutions that transform businesses."
+    content = "I'm a people-first technology leader with extensive experience in driving innovation, building world-class engineering teams, and delivering scalable solutions that transform businesses."
     image = "/images/hero.jpg"
     
     # Social links
