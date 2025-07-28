@@ -1,0 +1,113 @@
+{{/* Custom SEO Head - Replaces/Enhances Default Head */}}
+
+{{/* Include all SEO components */}}
+{{ partial "seo/meta-tags.html" . }}
+{{ partial "seo/performance.html" . }}
+
+{{/* Google Analytics with enhanced tracking */}}
+{{ if .Site.GoogleAnalytics }}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  
+  gtag('config', '{{ .Site.GoogleAnalytics }}', {
+    // Enhanced professional website tracking
+    send_page_view: true,
+    allow_google_signals: true,
+    allow_ad_personalization_signals: false, // Professional privacy
+    anonymize_ip: true,
+    // Custom dimensions for CTO profile tracking
+    custom_map: {
+      'custom_dimension_1': 'page_type',
+      'custom_dimension_2': 'content_category',
+      'custom_dimension_3': 'professional_focus'
+    }
+  });
+  
+  // Track professional engagement events
+  gtag('event', 'page_view', {
+    'custom_dimension_1': '{{ if .IsHome }}homepage{{ else if eq .Type "blog" }}blog{{ else }}{{ .Type }}{{ end }}',
+    'custom_dimension_2': '{{ .Section | default "main" }}',
+    'custom_dimension_3': 'technology_leadership'
+  });
+</script>
+{{ end }}
+
+{{/* LinkedIn Insight Tag for professional networking */}}
+<script type="text/javascript">
+_linkedin_partner_id = "YOUR_LINKEDIN_PARTNER_ID"; // Replace with actual ID
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script>
+<script type="text/javascript">
+(function(l) {
+if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+window.lintrk.q=[]}
+var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})(window.lintrk);
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=YOUR_LINKEDIN_PARTNER_ID&fmt=gif" />
+</noscript>
+
+{{/* Professional Schema structured data */}}
+{{ partial "seo/structured-data.html" . }}
+
+{{/* Additional professional meta tags */}}
+<meta name="profession" content="Chief Technology Officer">
+<meta name="industry" content="Technology">
+<meta name="expertise" content="{{ delimit .Site.Params.specializations ", " }}">
+
+{{/* Security headers via meta tags */}}
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+{{/* Professional manifest for PWA capabilities */}}
+<link rel="manifest" href="/manifest.json">
+
+{{/* Theme and brand colors */}}
+<meta name="theme-color" content="{{ .Site.Params.color.primaryColor }}">
+<meta name="msapplication-navbutton-color" content="{{ .Site.Params.color.primaryColor }}">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+{{/* RSS Feed */}}
+{{ with .OutputFormats.Get "rss" }}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">
+{{ end }}
+
+{{/* Prefetch critical professional resources */}}
+<link rel="prefetch" href="/images/profile.jpg">
+<link rel="prefetch" href="/images/hero.jpg">
+
+{{/* Critical font optimization */}}
+<link rel="preload" href="/fonts/professional-font.woff2" as="font" type="font/woff2" crossorigin>
+
+{{/* Alternative languages if available */}}
+{{ range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{ end }}
+<link rel="alternate" hreflang="x-default" href="{{ .Site.BaseURL }}">
+
+{{/* Professional contact schema */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "mainEntity": {
+    "@type": "ContactPoint",
+    "contactType": "Professional",
+    "email": "{{ .Site.Params.email }}",
+    "telephone": "{{ .Site.Params.phone }}",
+    "areaServed": "Global",
+    "availableLanguage": "English"
+  }
+}
+</script>

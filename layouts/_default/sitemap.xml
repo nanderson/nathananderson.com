@@ -1,0 +1,56 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  {{- range .Data.Pages }}
+  {{- if not .Params.noindex }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    {{- if not .Date.IsZero }}
+    <lastmod>{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}</lastmod>
+    {{- end }}
+    {{- with .Sitemap.ChangeFreq }}
+    <changefreq>{{ . }}</changefreq>
+    {{- end }}
+    {{- if ge .Sitemap.Priority 0.0 }}
+    <priority>{{ .Sitemap.Priority }}</priority>
+    {{- end }}
+    
+    {{- /* Include professional profile images in sitemap */}}
+    {{- if .Params.image }}
+    <image:image>
+      <image:loc>{{ .Params.image | absURL }}</image:loc>
+      <image:caption>{{ .Title }} - {{ .Site.Params.author }}</image:caption>
+      <image:title>{{ .Title }}</image:title>
+    </image:image>
+    {{- end }}
+    
+    {{- /* Include hero image for homepage */}}
+    {{- if and .IsHome .Site.Params.hero.image }}
+    <image:image>
+      <image:loc>{{ .Site.Params.hero.image | absURL }}</image:loc>
+      <image:caption>{{ .Site.Params.author }} - {{ .Site.Params.position }}</image:caption>
+      <image:title>{{ .Site.Title }}</image:title>
+    </image:image>
+    {{- end }}
+    
+    {{- /* Include profile image */}}
+    {{- if and .IsHome .Site.Params.about.image }}
+    <image:image>
+      <image:loc>{{ .Site.Params.about.image | absURL }}</image:loc>
+      <image:caption>Professional profile photo of {{ .Site.Params.author }}</image:caption>
+      <image:title>{{ .Site.Params.author }} Profile Photo</image:title>
+    </image:image>
+    {{- end }}
+    
+    {{- /* Alternative language versions */}}
+    {{- range .AllTranslations }}
+    <xhtml:link
+      rel="alternate"
+      hreflang="{{ .Language.Lang }}"
+      href="{{ .Permalink }}" />
+    {{- end }}
+  </url>
+  {{- end }}
+  {{- end }}
+</urlset>

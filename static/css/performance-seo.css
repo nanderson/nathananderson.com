@@ -1,0 +1,284 @@
+/* Performance & SEO Optimized CSS for CTO Website */
+
+/* Critical CSS optimizations */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Font display optimization */
+@font-face {
+  font-family: 'Roboto';
+  font-display: swap;
+  font-weight: 300 900;
+  font-style: normal;
+  src: local('Roboto'), url('/fonts/roboto-variable.woff2') format('woff2-variations');
+}
+
+@font-face {
+  font-family: 'Lora';
+  font-display: swap;
+  font-weight: 400 700;
+  font-style: normal italic;
+  src: local('Lora'), url('/fonts/lora-variable.woff2') format('woff2-variations');
+}
+
+/* Performance optimizations for images */
+img {
+  max-width: 100%;
+  height: auto;
+  loading: lazy;
+  decoding: async;
+}
+
+/* Hero images - priority loading */
+.hero img,
+.profile-img {
+  loading: eager;
+  fetchpriority: high;
+}
+
+/* Layout shift prevention */
+.container-fluid,
+.container {
+  contain: layout;
+}
+
+/* Optimize animations for performance */
+@media (prefers-reduced-motion: no-preference) {
+  .smooth-transition {
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    will-change: transform, opacity;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Critical viewport optimizations */
+.hero-section {
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
+  display: flex;
+  align-items: center;
+  contain: layout;
+}
+
+/* Professional color scheme optimizations */
+:root {
+  --cto-primary: #10036d;
+  --cto-secondary: #0056fb;
+  --cto-success: #28a745;
+  --cto-warning: #ffc107;
+  --cto-danger: #dc3545;
+  --cto-info: #17a2b8;
+  --cto-light: #f8f9fa;
+  --cto-dark: #343a40;
+  
+  /* Professional gradients */
+  --cto-gradient-primary: linear-gradient(135deg, var(--cto-primary) 0%, var(--cto-secondary) 100%);
+  --cto-gradient-tech: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  
+  /* Spacing system */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 3rem;
+  --space-xxl: 4.5rem;
+}
+
+/* Dark mode support with performance optimization */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cto-bg: #1a1a1a;
+    --cto-text: #e4e6eb;
+    --cto-text-secondary: #b0b3b8;
+    color-scheme: dark;
+  }
+  
+  img:not([src*=".svg"]) {
+    filter: brightness(0.9);
+  }
+}
+
+/* Performance-optimized button styles */
+.btn-cto {
+  background: var(--cto-gradient-primary);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cto:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 3, 109, 0.3);
+}
+
+.btn-cto:active {
+  transform: translateY(0);
+}
+
+/* Professional skill badges */
+.skill-badge {
+  display: inline-block;
+  background: var(--cto-gradient-tech);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 4px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.skill-badge:hover {
+  transform: scale(1.05);
+}
+
+/* Loading states for better UX */
+.loading-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Professional typography scale */
+.text-scale-1 { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2; }
+.text-scale-2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.3; }
+.text-scale-3 { font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.4; }
+.text-scale-4 { font-size: clamp(1.25rem, 2.5vw, 1.875rem); line-height: 1.5; }
+.text-scale-5 { font-size: clamp(1.125rem, 2vw, 1.5rem); line-height: 1.6; }
+
+/* Container queries for responsive design */
+@supports (container-type: inline-size) {
+  .card-container {
+    container-type: inline-size;
+  }
+  
+  @container (min-width: 400px) {
+    .card-responsive {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: var(--space-lg);
+    }
+  }
+}
+
+/* Optimized focus states for accessibility */
+.focus-visible:focus-visible {
+  outline: 2px solid var(--cto-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Professional section spacing */
+.section-professional {
+  padding-top: var(--space-xxl);
+  padding-bottom: var(--space-xxl);
+}
+
+@media (max-width: 768px) {
+  .section-professional {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+}
+
+/* Performance-optimized grid layouts */
+.professional-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+/* Social media icons optimization */
+.social-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+  color: var(--cto-primary);
+  font-size: 1.25rem;
+}
+
+.social-icon:hover {
+  background-color: var(--cto-primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Print styles for professional documents */
+@media print {
+  .no-print { display: none !important; }
+  
+  body {
+    font-family: 'Times New Roman', serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: black !important;
+    background: white !important;
+  }
+  
+  .hero-section {
+    min-height: auto;
+    page-break-inside: avoid;
+  }
+  
+  .btn-cto {
+    border: 1px solid var(--cto-primary);
+    background: transparent !important;
+    color: var(--cto-primary) !important;
+  }
+  
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --cto-primary: #000080;
+    --cto-secondary: #000080;
+  }
+  
+  .btn-cto {
+    border: 2px solid var(--cto-primary);
+  }
+  
+  .skill-badge {
+    border: 2px solid var(--cto-primary);
+  }
+}

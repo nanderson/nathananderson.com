@@ -1,0 +1,429 @@
+baseURL = 'https://nathananderson.com/'  # Update this to your actual domain
+languageCode = 'en-us'
+title = 'Nathan Anderson'
+theme = 'hugo-profile'
+
+# Core SEO Configuration
+enableRobotsTXT = true
+enableGitInfo = true
+canonifyURLs = true
+enableEmoji = true
+relativeURLs = false
+
+# Performance optimizations
+minify = true
+
+# Taxonomy for SEO
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  skill = "skills"
+  technology = "technologies"
+
+[params]
+  title = "Nathan Anderson"
+  description = "Chief Technology Officer - Technology Leader & Innovation Driver. Experienced in scaling engineering teams, cloud architecture, and digital transformation."
+  keywords = ["CTO", "Chief Technology Officer", "Technology Leadership", "Engineering Management", "Cloud Architecture", "Digital Transformation", "Software Development", "Tech Executive"]
+  author = "Nathan Anderson"
+  favicon = "/images/favicon.ico"
+  
+  # Professional optimization settings
+  [params.seo]
+    enableTwitterCard = true
+    enableOpenGraph = true
+    enableJsonLd = true
+  
+  # Performance optimizations
+  [params.performance]
+    enableImageOptimization = true
+    enableLazyLoading = true
+    enableCriticalCSS = true
+  
+  # Color scheme - using your specified colors
+  [params.color]
+    textColor = "#343a40"
+    secondaryTextColor = "#6c757d"
+    backgroundColor = "#ffffff"
+    secondaryBackgroundColor = "#f8f9fa"
+    primaryColor = "#10036d"  # Dark accent
+    secondaryColor = "#0056fb"  # Light accent
+
+  # Google Analytics
+  googleAnalytics = "G-XXXXXXXXXX"  # Replace with your tracking ID
+  
+  # Advanced SEO Configuration
+  author = "Nathan Anderson"
+  keywords = ["CTO", "Chief Technology Officer", "Technology Leadership", "Engineering Management", "Cloud Architecture", "Digital Transformation", "Software Development", "Tech Innovation"]
+  
+  # Social Media and Contact
+  linkedin = "https://linkedin.com/in/nathanedwardanderson"
+  github = "https://github.com/nanderson"
+  email = "nathan@nathananderson.com"
+  phone = "+1-210-860-0399"
+  location = "San Antonio, TX"
+  
+  # Company/Current Role
+  company = "Tú TeleDoc"
+  position = "Chief Technology Officer; Co-Founder"
+  
+  # Professional Focus Areas
+  specializations = ["Cloud Architecture", "Team Leadership", "Digital Transformation", "AI/ML Strategy", "Cybersecurity", "DevOps"]
+  
+  # Schema.org structured data
+  [params.schema]
+    type = "Person"
+    jobTitle = "Chief Technology Officer"
+    worksFor = "Tú TeleDoc"
+    knowsAbout = ["Software Engineering", "Cloud Computing", "Team Leadership", "Digital Strategy"]
+    
+  # Open Graph defaults
+  [params.opengraph]
+    image = "/images/og-image.jpg"
+    locale = "en_US"
+    type = "profile"
+
+  # Hero section
+  [params.hero]
+    enable = true
+    intro = "Hi, my name is"
+    title = "Nathan Anderson"  # Replace with your name
+    subtitle = "Chief Technology Officer"
+    content = "I'm a technology leader with extensive experience in driving innovation, building world-class engineering teams, and delivering scalable solutions that transform businesses."
+    image = "/images/hero.jpg"
+    
+    # Social links
+    [[params.hero.socialLinks.links]]
+      fontAwesomeIconName = "fab fa-linkedin"
+      link = "https://linkedin.com/in/nathanedwardanderson"
+    
+    [[params.hero.socialLinks.links]]
+      fontAwesomeIconName = "fab fa-github"
+      link = "https://github.com/nanderson"
+    
+    [[params.hero.socialLinks.links]]
+      fontAwesomeIconName = "fab fa-facebook"
+      link = "https://facebook.com/nathan.edward.anderson"
+    
+    [[params.hero.socialLinks.links]]
+      fontAwesomeIconName = "fab fa-instagram"
+      link = "https://instagram.com/MtMan97"
+
+  # About section
+  [params.about]
+    enable = true
+    title = "About"
+    image = "/images/profile.jpg"
+    content = """
+    As a Chief Technology Officer, I bring over 25 years of experience in technology leadership, 
+    strategic planning, and team building. I specialize in scaling engineering organizations, 
+    implementing cutting-edge technologies, and driving digital transformation initiatives.
+
+    My expertise spans cloud architecture, software development, cybersecurity, and emerging 
+    technologies. I'm passionate about building high-performing teams and creating technology 
+    solutions that deliver measurable business value.
+    """
+
+    # Skills
+    [params.about.skills]
+      enable = true
+      title = "Core Competencies"
+      items = [
+        "Technology Strategy & Vision",
+        "Engineering Leadership",
+        "Cloud Architecture (AWS, Azure, GCP)",
+        "Software Development",
+        "Cybersecurity & Compliance",
+        "Digital Transformation",
+        "Team Building & Mentoring",
+        "Product Development"
+      ]
+
+  # Experience section
+  [params.experience]
+    enable = true
+    
+    [[params.experience.items]]
+      job = "Chief Technology Officer"
+      company = "Tú TeleDoc"
+      companyUrl = "https://tuteledoc.com"
+      date = "2025 - Present"
+      content = """
+      Leading technology strategy and engineering operations for a fast-growing SaaS company.
+      - Built and scaled engineering team from 10 to 50+ engineers
+      - Implemented cloud-native architecture serving 1M+ users
+      - Reduced infrastructure costs by 40% through optimization
+      - Established DevOps practices and CI/CD pipelines
+      """
+
+    [[params.experience.items]]
+      job = "Fractional CTO"
+      company = "Nathan Anderson Consulting"
+      companyUrl = "https://nathananderson.com"
+      date = "April 2024 - May 2025"
+      content = """
+      Provided strategic technology leadership and consulting services to early and mid-stage startups and small companies.
+      - Guided software engineering organizations through technical and operational challenges
+      - Optimized people, processes, and technology for scalable growth
+      - Specialized in B2B SaaS, FinTech, and Healthcare Tech industries
+      - Delivered fractional CTO services to multiple client companies simultaneously
+      """
+
+    [[params.experience.items]]
+      job = "Vice President of Software Engineering"
+      company = "SWIVEL"
+      companyUrl = "https://swivel.com"
+      date = "February 2023 - April 2024"
+      content = """
+      Reported directly to CEO and led Software Engineering organization through major growth and transformation initiatives.
+      - Led organization through multiple major product launches and company acquisition
+      - Executed complete Product & Engineering department reorganization into functional business units
+      - Streamlined cross-functional communication and aligned organization-wide goals for accelerated product development
+      - Organized and facilitated first company-wide Engineering in-person offsite planning event
+      - Built SWIVEL's first DevOps function to reduce operational overhead on engineering teams
+      - Conducted M&A due diligence for MagicWrighter acquisition and led integration planning
+      """
+
+    [[params.experience.items]]
+      job = "Chief Technology Officer"
+      company = "CyberFortress"
+      companyUrl = "https://cyberfortress.com"
+      date = "February 2022 - February 2023"
+      content = """
+      Led global Product Engineering, Product Management, and Information Systems teams for a cybersecurity company.
+      - Managed product portfolio roadmap and SDLC across multiple acquired brands
+      - Unified engineering teams from Jungle Disk, LiveVault, KeepItSafe, and OffSiteDataSync acquisitions
+      - Designed, developed, and delivered new products and features for consolidated portfolio
+      - Established unified organizational structure and reporting for cross-brand teams
+      - Managed vendor relationships and supported marketing initiatives through technical content
+      """
+
+    [[params.experience.items]]
+      job = "Vice President of DevOps and Engineering"
+      company = "Chargify (now Maxio)"
+      companyUrl = "https://maxio.com"
+      date = "July 2021 - February 2022"
+      content = """
+      Led global DevOps, Software Engineering, IT, and Compliance teams across multiple international locations.
+      - Managed distributed engineering teams in Krakow and Warsaw, Poland with global sales & support in Dublin
+      - Served as core team member for post-merger integration of Chargify and SaaSOptics
+      - Led due diligence process during Battery Ventures acquisition of Chargify
+      - Architected and developed combined product offerings from both Chargify and SaaSOptics platforms
+      - Coordinated cross-functional teams across multiple time zones and regulatory environments
+      """
+
+    [[params.experience.items]]
+      job = "Director of Engineering and DevOps"
+      company = "Chargify (now Maxio)"
+      companyUrl = "https://maxio.com"
+      date = "January 2019 - July 2021"
+      content = """
+      Led Operations, Compliance, and Helpdesk functions for a global SaaS organization spanning multiple continents.
+      - Managed world-spanning Operations department across San Antonio, Poland, and Australia
+      - Oversaw all system operations and infrastructure for enterprise-scale billing platform
+      - Led comprehensive compliance efforts including SOC I Type II, PCI DSS, and GDPR certifications
+      - Served as primary point of contact for customer compliance meetings and audits
+      - Developed and managed compliance policies and procedures across international jurisdictions
+      """
+
+    [[params.experience.items]]
+      job = "Director of Engineering"
+      company = "ClearDATA"
+      companyUrl = "https://cleardata.com"
+      date = "December 2015 - January 2019"
+      content = """
+      Led distributed Engineering teams responsible for core components of HIPAA compliant hosting framework and enterprise microservice architectures.
+      - Architected enterprise-scale microservice architectures and multi-cloud solutions on AWS
+      - Led and mentored distributed engineering teams across multiple locations
+      - Engaged directly with customers to understand product needs and demonstrate platform capabilities
+      - Facilitated strategic roadmap planning and represented products at HIMSS and healthcare trade shows
+      - Managed critical partner relationships and participated in AWS vendor confidential roadmap briefings
+      - Ensured compliance and security posture of core products across SOC2, HITRUST, and other major audits
+      - Developed AWS platform automation tools for healthcare-grade infrastructure
+      - Represented Product Engineering in enterprise audit processes and regulatory compliance initiatives
+      """
+
+    [[params.experience.items]]
+      job = "Director of Product Management"
+      company = "Rackspace"
+      companyUrl = "https://rackspace.com"
+      date = "September 2013 - December 2015"
+      content = """
+      Managed Product Management team responsible for Cloud Identity (OpenStack Keystone), Key Management (Barbican), and core cloud infrastructure services.
+      - Led product management for usage processing and billing systems across the cloud platform
+      - Represented Public Cloud division on major company-wide strategic initiatives
+      - Helped launch Barbican as an official OpenStack project for key management services
+      - Successfully launched Repose (openrepose.org) as internal developer toolkit for API development
+      - Managed product roadmaps for various services and toolkits critical to cloud operations
+      - Collaborated with engineering teams to deliver common API development solutions across all Cloud Engineering teams
+      """
+
+    [[params.experience.items]]
+      job = "Senior Product Manager"
+      company = "Rackspace"
+      companyUrl = "https://rackspace.com"
+      date = "June 2010 - September 2013"
+      content = """
+      Led product management for billing & usage reporting systems and internal cloud infrastructure services.
+      - Managed billing and usage reporting systems for enterprise cloud platform
+      - Oversaw product development for various services internal to cloud infrastructure operations
+      - Led development of tools utilized by Cloud Engineering teams for enhanced productivity
+      - Managed team of Product Managers and Technical Product Managers
+      - Collaborated with engineering teams to deliver critical infrastructure and tooling solutions
+      - Established product management processes and frameworks for cloud services portfolio
+      """
+
+    [[params.experience.items]]
+      job = "Software Development Manager"
+      company = "Rackspace"
+      companyUrl = "https://rackspace.com"
+      date = "June 2002 - June 2010"
+      content = """
+      Led development of Public Cloud Control Panel, internal management portals, and core cloud infrastructure services during Rackspace's transformation to cloud computing.
+      - Managed development of Public Cloud Control Panel and various internal management portals
+      - Led Cloud Servers API and Cloud Identity development initiatives
+      - Architected internal systems and services necessary for large-scale cloud operations
+      - Orchestrated monitoring system overhaul integrating OpenNMS, Nimbus, HP SiteScope, and HP NNM
+      - Built large-scale event processing, de-duplication, and correlation engine for enterprise monitoring
+      - Managed development of MyRackspace customer portal and Rackspace.com platform
+      - Established foundational infrastructure for Rackspace's cloud services evolution
+      """
+
+    [[params.experience.items]]
+      job = "Software Developer"
+      company = "Rackspace"
+      companyUrl = "https://rackspace.com"
+      date = "December 2000 - June 2002"
+      content = """
+      Developed foundational customer-facing platforms during Rackspace's early growth phase as a hosting company.
+      - Led development of MyRackspace customer portal for managed hosting services
+      - Built and maintained the public website rackspace.com
+      - Established core web development practices and frameworks for customer-facing applications
+      - Contributed to early hosting platform infrastructure and customer management systems
+      """
+
+    [[params.experience.items]]
+      job = "System Integrator"
+      company = "IPI GrammTech"
+      companyUrl = "#"
+      date = "1998 - December 2000"
+      content = """
+      Served as Systems Engineer performing diverse technical functions across government and commercial contracts.
+      - Performed network and system administration across variety of government and commercial environments
+      - Developed custom applications including Air Force Library System automation for book procurement processes
+      - Installed and maintained point-to-point wireless network infrastructure in downtown San Antonio
+      - Diagnosed and maintained legacy Solaris infrastructure and large-scale WORM drive array systems
+      - Provided comprehensive network troubleshooting, installation, and technical support services
+      - Gained foundational experience across multiple technologies, platforms, and industry verticals
+      """
+
+    [[params.experience.items]]
+      job = "System Administrator and Tech Support"
+      company = "InterSAT Internet"
+      companyUrl = "#"
+      date = "1996 - 1998"
+      content = """
+      Served as sole employee of a small ISP, performing comprehensive technical operations across all business functions.
+      - Managed systems administration for both Windows and Linux servers as the only technical staff member
+      - Provided technical support and customer service for growing customer base
+      - Performed network engineering and infrastructure management for ISP operations
+      - Developed custom software solutions to support business operations and customer management
+      - Helped scale the business from 100 to over 3,000 customers during 18-month tenure
+      - Gained comprehensive experience in all aspects of ISP operations and small business technology management
+      """
+
+  # Education section
+  [params.education]
+    enable = false
+
+  # Contact section
+  [params.contact]
+    enable = false
+    title = "Contact"
+    content = "I'm always interested in discussing technology leadership opportunities, consulting engagements, or speaking at industry events."
+    email = "nathan@nathananderson.com"  # Replace with your email
+    btnName = "Contact Me"
+
+# Footer
+[params.footer.recentPosts]
+  path = "blogs"
+  count = 3
+  title = "Recent Posts"
+  enable = false
+
+# Custom CSS
+[params.customCSS]
+  enable = true
+  list = ["css/custom.css"]
+
+# Google Analytics
+[params.analytics.google]
+  SiteVerificationTag = "G-XXXXXXXXXX"  # Replace with your tracking ID
+
+# SEO and Content Processing
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false  # Security: Disable unsafe HTML rendering
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+  
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+    
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    lineNumbersInTable = false
+    tabWidth = 4
+
+# Sitemap configuration
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+# Privacy configuration for GDPR compliance
+[privacy]
+  [privacy.googleAnalytics]
+    respectDoNotTrack = true
+    anonymizeIP = true
+    useSessionStorage = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# Related content for SEO
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+  [[related.indices]]
+    name = "keywords"
+    weight = 100
+  [[related.indices]]
+    name = "tags"
+    weight = 80
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
+# Image processing for performance
+[imaging]
+  quality = 85
+  resampleFilter = "lanczos"
+  anchor = "smart"
+
+# Cache and performance
+[caches]
+  [caches.getjson]
+    maxAge = "10m"
+  [caches.getcsv]
+    maxAge = "10m"
+  [caches.images]
+    maxAge = "1h"
+  [caches.assets]
+    maxAge = "1h"
+

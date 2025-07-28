@@ -1,0 +1,95 @@
+{{/* Enhanced SEO Meta Tags for CTO Website */}}
+
+{{/* Basic Meta Tags */}}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{{/* Core SEO Meta Tags */}}
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary | truncate 155 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="keywords" content="{{ if .Params.keywords }}{{ delimit .Params.keywords ", " }}{{ else }}{{ delimit .Site.Params.keywords ", " }}{{ end }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+
+{{/* Canonical URL */}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Robots Meta */}}
+{{ if .Params.noindex }}
+<meta name="robots" content="noindex, nofollow">
+{{ else }}
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+{{ end }}
+
+{{/* Language and Region */}}
+<meta name="language" content="{{ .Site.LanguageCode }}">
+<meta name="geo.region" content="US-CA">
+<meta name="geo.placename" content="{{ .Site.Params.location }}">
+
+{{/* Professional/Business Meta Tags */}}
+<meta name="classification" content="Technology Leadership">
+<meta name="category" content="Professional Services">
+<meta name="coverage" content="Worldwide">
+<meta name="distribution" content="Global">
+<meta name="rating" content="General">
+
+{{/* OpenGraph Meta Tags */}}
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary | truncate 155 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else if eq .Type "blog" }}article{{ else }}profile{{ end }}">
+<meta property="og:locale" content="{{ .Site.Params.opengraph.locale | default "en_US" }}">
+
+{{/* OpenGraph Image */}}
+{{ if .Params.image }}
+<meta property="og:image" content="{{ .Params.image | absURL }}">
+{{ else if .Site.Params.opengraph.image }}
+<meta property="og:image" content="{{ .Site.Params.opengraph.image | absURL }}">
+{{ end }}
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+
+{{/* Twitter Card Meta Tags */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+<meta name="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else if .Summary }}{{ .Summary | truncate 155 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+{{ if .Params.image }}
+<meta name="twitter:image" content="{{ .Params.image | absURL }}">
+{{ else if .Site.Params.opengraph.image }}
+<meta name="twitter:image" content="{{ .Site.Params.opengraph.image | absURL }}">
+{{ end }}
+<meta name="twitter:image:alt" content="{{ .Site.Params.author }} - {{ .Site.Params.position }}">
+
+{{/* LinkedIn Specific */}}
+<meta property="article:author" content="{{ .Site.Params.linkedin }}">
+
+{{/* Professional Schema breadcrumbs */}}
+{{ if not .IsHome }}
+<meta property="article:section" content="{{ .Section | title }}">
+{{ if .Params.tags }}
+<meta property="article:tag" content="{{ delimit .Params.tags ", " }}">
+{{ end }}
+{{ end }}
+
+{{/* DNS Prefetch and Preconnect for Performance */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+
+{{/* Favicons */}}
+<link rel="icon" type="image/x-icon" href="{{ .Site.Params.favicon | default "/favicon.ico" }}">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+{{/* Theme Color for Mobile */}}
+<meta name="theme-color" content="{{ .Site.Params.color.primaryColor | default "#10036d" }}">
+<meta name="msapplication-TileColor" content="{{ .Site.Params.color.primaryColor | default "#10036d" }}">
+
+{{/* Prevent automatic translation */}}
+<meta name="google" content="notranslate">
+
+{{/* Structured Data will be handled separately */}}

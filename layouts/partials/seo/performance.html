@@ -1,0 +1,180 @@
+{{/* Performance Optimization for Core Web Vitals */}}
+
+{{/* Critical Resource Hints */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.google-analytics.com">
+
+{{/* DNS Prefetch for external resources */}}
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+
+{{/* Preload critical CSS */}}
+<link rel="preload" href="{{ .Site.Params.staticPath }}/css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ .Site.Params.staticPath }}/css/header.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+{{/* Optimize font loading */}}
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" media="print" onload="this.media='all'">
+
+{{/* Fallback for browsers without JS */}}
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+  <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/theme.css">
+  <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/header.css">
+</noscript>
+
+{{/* Preload hero image if on homepage */}}
+{{ if .IsHome }}
+{{ if .Site.Params.hero.image }}
+<link rel="preload" as="image" href="{{ .Site.Params.hero.image }}">
+{{ end }}
+{{ end }}
+
+{{/* Inline critical CSS for above-the-fold content */}}
+<style>
+/* Critical CSS for immediate render */
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color, #ffffff);
+  color: var(--text-color, #343a40);
+}
+
+/* Header critical styles */
+.navbar {
+  background-color: var(--background-color, #ffffff);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Hero section critical styles */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+}
+
+/* Font display optimization */
+@font-face {
+  font-family: 'Roboto';
+  font-display: swap;
+}
+
+/* Prevent layout shift */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Loading animation to prevent CLS */
+.loading-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Optimize button interactions */
+.btn {
+  transition: transform 0.1s ease-in-out;
+  will-change: transform;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Container queries support */
+@supports (container-type: inline-size) {
+  .container {
+    container-type: inline-size;
+  }
+}
+</style>
+
+{{/* Performance monitoring script */}}
+<script>
+  // Core Web Vitals monitoring
+  if ('web-vital' in window) {
+    // Monitor FCP (First Contentful Paint)
+    new PerformanceObserver((entryList) => {
+      for (const entry of entryList.getEntries()) {
+        if (entry.name === 'first-contentful-paint') {
+          console.log('FCP:', entry.startTime);
+          // Send to analytics if needed
+        }
+      }
+    }).observe({entryTypes: ['paint']});
+
+    // Monitor LCP (Largest Contentful Paint)
+    new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      console.log('LCP:', lastEntry.startTime);
+    }).observe({entryTypes: ['largest-contentful-paint']});
+
+    // Monitor CLS (Cumulative Layout Shift)
+    let clsValue = 0;
+    new PerformanceObserver((entryList) => {
+      for (const entry of entryList.getEntries()) {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+          console.log('CLS:', clsValue);
+        }
+      }
+    }).observe({entryTypes: ['layout-shift']});
+  }
+
+  // Preload next likely pages
+  const links = document.querySelectorAll('a[href^="/"]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const link = entry.target;
+        const href = link.getAttribute('href');
+        if (href && !link.hasAttribute('data-preloaded')) {
+          const linkElement = document.createElement('link');
+          linkElement.rel = 'prefetch';
+          linkElement.href = href;
+          document.head.appendChild(linkElement);
+          link.setAttribute('data-preloaded', 'true');
+        }
+      }
+    });
+  });
+
+  // Defer non-critical JavaScript
+  window.addEventListener('load', () => {
+    // Load non-critical scripts after page load
+    setTimeout(() => {
+      // Analytics and other non-critical scripts can be loaded here
+    }, 1000);
+  });
+</script>
+
+{{/* Service Worker registration for caching */}}
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    });
+  }
+</script>

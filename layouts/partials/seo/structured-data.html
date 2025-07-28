@@ -1,0 +1,235 @@
+{{/* JSON-LD Structured Data for CTO Professional Profile */}}
+
+{{ $baseURL := .Site.BaseURL }}
+{{ $author := .Site.Params.author }}
+{{ $position := .Site.Params.position }}
+{{ $company := .Site.Params.company }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ $baseURL }}#person",
+      "name": "{{ $author }}",
+      "givenName": "{{ index (split $author " ") 0 }}",
+      "familyName": "{{ index (split $author " ") 1 }}",
+      "jobTitle": "{{ $position }}",
+      "description": "{{ .Site.Params.description }}",
+      "url": "{{ $baseURL }}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.Params.opengraph.image | absURL }}",
+        "width": 400,
+        "height": 400
+      },
+      "sameAs": [
+        "{{ .Site.Params.linkedin }}",
+        "{{ .Site.Params.github }}"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "{{ .Site.Params.email }}",
+        "telephone": "{{ .Site.Params.phone }}",
+        "contactType": "professional"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ .Site.Params.location }}"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "{{ $baseURL }}#organization",
+        "name": "{{ $company }}"
+      },
+      "knowsAbout": [
+        {{- range $index, $skill := .Site.Params.schema.knowsAbout -}}
+        {{- if $index }}, {{ end }}"{{ $skill }}"
+        {{- end -}}
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "{{ $position }}",
+        "occupationLocation": {
+          "@type": "City",
+          "name": "{{ .Site.Params.location }}"
+        },
+        "skills": [
+          {{- range $index, $skill := .Site.Params.specializations -}}
+          {{- if $index }}, {{ end }}"{{ $skill }}"
+          {{- end -}}
+        ]
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "{{ $baseURL }}#organization",
+      "name": "{{ $company }}",
+      "employee": {
+        "@id": "{{ $baseURL }}#person"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ $baseURL }}#website",
+      "url": "{{ $baseURL }}",
+      "name": "{{ .Site.Title }}",
+      "description": "{{ .Site.Params.description }}",
+      "publisher": {
+        "@id": "{{ $baseURL }}#person"
+      },
+      "inLanguage": "{{ .Site.LanguageCode }}",
+      "copyrightHolder": {
+        "@id": "{{ $baseURL }}#person"
+      }
+    }
+    {{- if eq .Type "blog" -}},
+    {
+      "@type": "Article",
+      "@id": "{{ .Permalink }}#article",
+      "headline": "{{ .Title }}",
+      "description": "{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | truncate 155 }}{{ end }}",
+      "author": {
+        "@id": "{{ $baseURL }}#person"
+      },
+      "publisher": {
+        "@id": "{{ $baseURL }}#person"
+      },
+      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+      "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}"
+      },
+      {{ if .Params.image }}
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{ .Params.image | absURL }}",
+        "width": 1200,
+        "height": 630
+      },
+      {{ end }}
+      "articleSection": "{{ .Section | title }}",
+      {{ if .Params.tags }}
+      "keywords": [
+        {{- range $index, $tag := .Params.tags -}}
+        {{- if $index }}, {{ end }}"{{ $tag }}"
+        {{- end -}}
+      ],
+      {{ end }}
+      "wordCount": {{ .WordCount }},
+      "timeRequired": "PT{{ div .WordCount 200 }}M",
+      "inLanguage": "{{ .Site.LanguageCode }}"
+    }
+    {{- end -}}
+    {{- if .IsHome -}},
+    {
+      "@type": "WebPage",
+      "@id": "{{ .Permalink }}#webpage",
+      "url": "{{ .Permalink }}",
+      "name": "{{ .Title }}",
+      "description": "{{ .Site.Params.description }}",
+      "isPartOf": {
+        "@id": "{{ $baseURL }}#website"
+      },
+      "about": {
+        "@id": "{{ $baseURL }}#person"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.Params.opengraph.image | absURL }}"
+      },
+      "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+      "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "{{ $baseURL }}"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "{{ $baseURL }}#service",
+      "name": "Technology Leadership Consulting",
+      "description": "Expert technology leadership and strategic consulting services",
+      "provider": {
+        "@id": "{{ $baseURL }}#person"
+      },
+      "areaServed": "Worldwide",
+      "serviceType": [
+        "Technology Strategy",
+        "Engineering Leadership", 
+        "Digital Transformation",
+        "Team Building",
+        "Cloud Architecture",
+        "Software Development"
+      ]
+    }
+    {{- end -}}
+  ]
+}
+</script>
+
+{{/* Additional Schema for breadcrumbs on non-home pages */}}
+{{ if not .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ .Site.BaseURL }}"
+    }
+    {{ if .Section }},
+    {
+      "@type": "ListItem", 
+      "position": 2,
+      "name": "{{ .Section | title }}",
+      "item": "{{ .Site.BaseURL }}{{ .Section }}/"
+    }
+    {{ end }}
+    {{ if not .IsSection }},
+    {
+      "@type": "ListItem",
+      "position": {{ if .Section }}3{{ else }}2{{ end }},
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
+
+{{/* FAQ Schema if FAQ section exists */}}
+{{ if .Params.faq }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ range $index, $faq := .Params.faq }}
+    {{ if $index }},{{ end }}
+    {
+      "@type": "Question",
+      "name": "{{ $faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ $faq.answer }}"
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}

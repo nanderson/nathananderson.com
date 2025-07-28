@@ -1,0 +1,55 @@
+User-agent: *
+Allow: /
+
+# CTO Website - Technology Leadership Professional Profile
+# Allow all crawlers access to public content
+
+# Sitemap
+Sitemap: {{ .Site.BaseURL }}sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Allow specific search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot  
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Professional focus - allow LinkedIn crawler specifically for career profiles
+User-agent: LinkedInBot
+Crawl-delay: 0
+
+# Block unnecessary crawlers that don't add value for professional profile
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Disallow common admin/private areas (though none exist in this static site)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Professional profile optimization
+# Allow career-related crawlers
+User-agent: CareerBuilderBot
+Allow: /
+
+User-agent: IndeedBot
+Allow: /
