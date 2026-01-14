@@ -337,7 +337,7 @@ minify = true
 
   # Contact section
   [params.contact]
-    enable = false
+    enable = true
     title = "Contact"
     content = "I'm always interested in discussing technology leadership opportunities, consulting engagements, or speaking at industry events."
     email = "nathan@nathananderson.com"  # Replace with your email
