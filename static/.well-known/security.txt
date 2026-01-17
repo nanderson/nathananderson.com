@@ -1,7 +1,7 @@
-Contact: mailto:security@example.org
+Contact: mailto:nathan@nathananderson.com
 Expires: 2025-12-31T23:59:59.000Z
 Preferred-Languages: en
-Canonical: https://example.org/.well-known/security.txt
+Canonical: https://nathananderson.com/.well-known/security.txt
 
 # Security Policy
 # If you discover a security vulnerability, please report it to:
@@ -16,5 +16,5 @@ Canonical: https://example.org/.well-known/security.txt
 # We will acknowledge receipt within 24 hours and
 # provide a more detailed response within 48 hours.
 
-Policy: https://example.org/security-policy
-Hiring: https://example.org/careers
+Policy: https://athananderson.com
+Hiring: https://athananderson.com

@@ -1,7 +1,7 @@
 ---
 title: "The CTO's Guide to Technology Stack Evolution in 2024"
 date: 2024-01-15T09:00:00-08:00
-draft: false
+draft: true
 author: "CTO Name"
 tags:
   - Technology Strategy

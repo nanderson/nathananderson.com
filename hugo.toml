@@ -3,6 +3,15 @@ languageCode = 'en-us'
 title = 'Nathan Anderson'
 theme = 'hugo-profile'
 
+# Navigation Menu
+[Menus]
+  [[Menus.main]]
+    identifier = "blog"
+    name = "Blog"
+    title = "Blog"
+    url = "/blog"
+    weight = 1
+
 # Core SEO Configuration
 enableRobotsTXT = true
 enableGitInfo = true
@@ -340,15 +349,15 @@ minify = true
     enable = true
     title = "Contact"
     content = "I'm always interested in discussing technology leadership opportunities, consulting engagements, or speaking at industry events."
-    email = "nathan@nathananderson.com"  # Replace with your email
+    email = ""  # Replace with your email
     btnName = "Contact Me"
 
 # Footer
 [params.footer.recentPosts]
-  path = "blogs"
+  path = "blog"
   count = 3
   title = "Recent Posts"
-  enable = false
+  enable = true
 
 # Custom CSS
 [params.customCSS]
@@ -365,7 +374,7 @@ minify = true
     [markup.goldmark.renderer]
       unsafe = false  # Security: Disable unsafe HTML rendering
     [markup.goldmark.parser]
-      attribute = true
+      #attribute = true
       autoHeadingID = true
       autoHeadingIDType = "github"
   
@@ -413,8 +422,8 @@ minify = true
 # Image processing for performance
 [imaging]
   quality = 85
-  resampleFilter = "lanczos"
-  anchor = "smart"
+  resampleFilter = "Lanczos"
+  anchor = "Smart"
 
 # Cache and performance
 [caches]

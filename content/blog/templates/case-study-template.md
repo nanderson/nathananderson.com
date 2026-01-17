@@ -1,7 +1,7 @@
 ---
 title: "Case Study: Rebuilding a Legacy System While Maintaining Growth"
 date: 2024-02-05T09:00:00-08:00
-draft: false
+draft: true
 author: "CTO Name"
 tags:
   - Case Study

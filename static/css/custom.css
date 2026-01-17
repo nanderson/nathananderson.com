@@ -161,14 +161,14 @@ p {
 /* Link Styles */
 a {
   color: var(--primary-color);
-  text-decoration: none;
+  text-decoration: underline;
   transition: all var(--transition-base);
   position: relative;
 }
 
 a:hover {
   color: var(--secondary-color);
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:focus {

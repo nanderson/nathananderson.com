@@ -1,7 +1,7 @@
 ---
 title: "Scaling Engineering Teams: Lessons from 10 to 100+ Engineers"
 date: 2024-01-22T09:00:00-08:00
-draft: false
+draft: true
 author: "CTO Name"
 tags:
   - Engineering Leadership
