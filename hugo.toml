@@ -97,7 +97,13 @@ minify = true
     intro = "Hi, my name is"
     title = "Nathan Anderson"  # Replace with your name
     subtitle = "Chief Technology Officer"
-    content = "I'm a people-first technology leader with extensive experience in driving innovation, building world-class engineering teams, and delivering scalable solutions that transform businesses."
+    content = """
+I'm a people-first technology leader with extensive experience in driving innovation, building world-class engineering teams, and delivering scalable solutions that transform businesses.
+
+With deep expertise in **FinTech** and **Healthcare Tech** industries, I specialize in navigating complex regulatory environments, ensuring **compliance** across SOC 2, PCI DSS, HIPAA, and GDPR frameworks. I'm passionate about **mentoring** emerging leaders and **leading teams through transformational change**, whether scaling from startup to enterprise or modernizing legacy systems.
+
+My approach combines strategic vision with hands-on technical leadership, empowering teams to deliver exceptional results while maintaining the highest standards of security and compliance.
+"""
     image = "/images/hero.jpg"
     
     # Social links
