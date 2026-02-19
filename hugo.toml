@@ -35,6 +35,7 @@ minify = true
   keywords = ["CTO", "Chief Technology Officer", "Technology Leadership", "Engineering Management", "Cloud Architecture", "Digital Transformation", "Software Development", "Tech Executive"]
   author = "Nathan Anderson"
   favicon = "/images/favicon.ico"
+  googleAnalytics = "G-0FVQ0R62J5"   # Google Analytics
   
   # Professional optimization settings
   [params.seo]
@@ -57,9 +58,6 @@ minify = true
     primaryColor = "#10036d"  # Dark accent
     secondaryColor = "#0056fb"  # Light accent
 
-  # Google Analytics
-  googleAnalytics = "G-0FVQ0R62J5"  # Replace with your tracking ID
-  
   # Advanced SEO Configuration
   author = "Nathan Anderson"
   keywords = ["CTO", "Chief Technology Officer", "Technology Leadership", "Engineering Management", "Cloud Architecture", "Digital Transformation", "Software Development", "Tech Innovation"]
