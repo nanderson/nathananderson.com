@@ -58,7 +58,7 @@ minify = true
     secondaryColor = "#0056fb"  # Light accent
 
   # Google Analytics
-  googleAnalytics = "G-XXXXXXXXXX"  # Replace with your tracking ID
+  googleAnalytics = "G-0FVQ0R62J5"  # Replace with your tracking ID
   
   # Advanced SEO Configuration
   author = "Nathan Anderson"
