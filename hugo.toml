@@ -354,7 +354,7 @@ My approach combines strategic vision with hands-on technical leadership, empowe
   [params.contact]
     enable = true
     title = "Contact"
-    content = "I'm always interested in discussing technology leadership opportunities, consulting engagements, or speaking at industry events."
+    content = "I'm always interested in discussing technology leadership opportunities, consulting engagements, podcast appearances, or speaking at industry events."
     email = ""  # Replace with your email
     btnName = "Contact Me"
 
@@ -372,7 +372,7 @@ My approach combines strategic vision with hands-on technical leadership, empowe
 
 # Google Analytics
 [params.analytics.google]
-  SiteVerificationTag = "G-XXXXXXXXXX"  # Replace with your tracking ID
+  SiteVerificationTag = "G-0FVQ0R62J5"  # Replace with your tracking ID
 
 # SEO and Content Processing
 [markup]
