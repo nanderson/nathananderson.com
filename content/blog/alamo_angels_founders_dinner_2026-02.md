@@ -17,9 +17,8 @@ slug: alamo_angels_founders_dinner_2026-02
 
 [Dr. Jeremy Roberts](https://www.linkedin.com/in/jeremyaroberts/) and I spent a great evening with the [Alamo Angels](https://www.linkedin.com/company/alamoangelsofsa) and a room full of founders building some interesting things here in San Antonio. It feels good to be building [Tú TeleDoc](https://tuteledoc.com/) here while surrounded by such a supportive network. Thank you Juan Sebastian Garzon and Francisco García for inviting us.
 
+![Founders Dinner candid](/images/blog/2026/alamoangels_foundersdinner_2026-02_3.jpg "Founders Dinner candid")
 
-
-![Founders & Investors Speed Networking](/images/blog/2026/alamoangels_foundersdinner_2026-02_3.jpg "Founders Dinner candid")
-![Founders & Investors Speed Networking](/images/blog/2025/alamoangels_foundersdinner_2026-02_1.jpg "Founders Dinner candid")
+![Another Founders Dinner candid](/images/blog/2026/alamoangels_foundersdinner_2026-02_1.jpg "Another Founders Dinner candid")
 
 #Founders #StartUp #SanAntonio #AngelInvesting #VentureCapital #StartupEcosystem #AlamoAngels #TexasInnovation #EarlyStageInvesting
