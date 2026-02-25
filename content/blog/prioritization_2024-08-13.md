@@ -2,7 +2,7 @@
 title: "Prioritization"
 date: 2025-08-13
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - Fractional CTO
   - Product Management

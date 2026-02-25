@@ -2,7 +2,7 @@
 title: "Podcast with Dan Villa of Jeminmi"
 date: 2025-12-16
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - Podcast
   - AI

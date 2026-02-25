@@ -1,8 +1,8 @@
 ---
-title: "LSA 47 Graduation"
+title: "Leadership San Antonio 47 Graduation"
 date: 2023-09-10
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - San Antonio
   - Career

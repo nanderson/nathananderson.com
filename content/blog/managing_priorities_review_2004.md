@@ -2,7 +2,7 @@
 title: "Managing Priorities by Harry Max"
 date: 2024-07-19
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - Fractional CTO
   - Software Engineering

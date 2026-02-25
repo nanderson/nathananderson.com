@@ -66,7 +66,7 @@ minify = true
   linkedin = "https://linkedin.com/in/nathanedwardanderson"
   github = "https://github.com/nanderson"
   email = "nathan@nathananderson.com"
-  phone = "+1-210-860-0399"
+  #phone = "+1-210-860-0399"
   location = "San Antonio, TX"
   
   # Company/Current Role
@@ -120,6 +120,10 @@ My approach combines strategic vision with hands-on technical leadership, empowe
     [[params.hero.socialLinks.links]]
       fontAwesomeIconName = "fab fa-instagram"
       link = "https://instagram.com/MtMan97"
+
+    [[params.hero.socialLinks.links]]
+      fontAwesomeIconName = "fab fa-rss"
+      link = "/index.xml"
 
   # About section
   [params.about]
@@ -356,7 +360,18 @@ My approach combines strategic vision with hands-on technical leadership, empowe
     email = ""  # Replace with your email
     btnName = "Contact Me"
 
-# Footer
+[params.social]
+  rss = "index.xml"
+
+# Footer Social Network links
+[params.footer.socialNetworks]
+  github = "https://github.com/nanderson/"
+  instagram = "https://www.instagram.com/mtman97/"
+  facebook = "https://www.facebook.com/nathan.edward.anderson"
+  linkedin = "https://www.linkedin.com/in/nathanedwardanderson/"
+  #twitter = "https://x.com/mtman97"
+
+# Footer Recent Posts
 [params.footer.recentPosts]
   path = "blog"
   count = 3
@@ -440,3 +455,11 @@ My approach combines strategic vision with hands-on technical leadership, empowe
   [caches.assets]
     maxAge = "1h"
 
+[module]
+  [[module.imports]]
+    path = "hugo-atom-feed"
+
+[outputs]
+  home = ["HTML", "RSS", "ATOM"]
+  section = ["HTML", "RSS", "ATOM"]
+  taxonomy = ["HTML", "RSS", "ATOM"]

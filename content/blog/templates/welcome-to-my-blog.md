@@ -2,7 +2,7 @@
 title: "Welcome to My Blog"
 date: 2026-01-16
 draft: true
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - "Technology Leadership"
   - "CTO"

@@ -2,7 +2,7 @@
 title: "Dad retires"
 date: 2024-05-04
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - Leadership
   - Family

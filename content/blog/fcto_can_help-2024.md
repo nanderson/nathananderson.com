@@ -2,7 +2,7 @@
 title: "A Fractional CTO can help"
 date: 2024-06-01
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - Fractional CTO
   - Software Engineering

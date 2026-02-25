@@ -2,7 +2,7 @@
 title: "CNTR/CTY Cocktails and Conversation: Connecting Tech"
 date: 2024-08-01
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - Fractional CTO
   - Software Engineering

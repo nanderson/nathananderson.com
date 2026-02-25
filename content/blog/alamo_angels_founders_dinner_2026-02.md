@@ -2,7 +2,7 @@
 title: "Alamo Angels Founders Dinner"
 date: 2026-02-21
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - San Antonio
   - Startup

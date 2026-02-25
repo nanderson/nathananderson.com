@@ -2,7 +2,7 @@
 title: "FrUN comes to San Antonio"
 date: 2024-07-31
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - Fractional CTO
   - San Antonio

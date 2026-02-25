@@ -2,7 +2,7 @@
 title: "We have always done it this way"
 date: 2024-07-03
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - Fractional CTO
   - Software Engineering

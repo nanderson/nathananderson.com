@@ -6,6 +6,10 @@
 {{/* Include performance optimizations */}}
 {{ partial "seo/performance.html" . }}
 
+{{- with .OutputFormats.Get "ATOM" -}}
+<link href="{{ .Permalink }}" rel="alternate" type="{{ .MediaType }}" title="{{ $.Site.Title }} Atom Feed" />
+{{- end -}}
+
 {{/* Fonts with performance optimization */}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

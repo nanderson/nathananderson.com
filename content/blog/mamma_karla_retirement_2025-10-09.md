@@ -2,7 +2,7 @@
 title: "Mamma Karla retires"
 date: 2025-10-09
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - San Antonio
   - Rackspace

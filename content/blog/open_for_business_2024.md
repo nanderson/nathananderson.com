@@ -2,7 +2,7 @@
 title: "Open for Business"
 date: 2024-04-08
 draft: false
-author: "Nathan Anderson"
+author: ["Nathan Anderson"]
 tags:
   - San Antonio
   - Fractional CTO
