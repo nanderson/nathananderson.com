@@ -27,9 +27,13 @@ Big shout-out as well to [Juan Sebastian Garzon](https://www.linkedin.com/in/jua
 Nights like this make the hard days of startup life feel absolutely worth it. 🙌
 
 ![Jeremy Roberts, Graham Weston, Nathan Anderson, and Pat Matthews](/images/blog/2026/prosperops_alamoangels_2.jpg "Jeremy Roberts, Graham Weston, Nathan Anderson, and Pat Matthews")
+
 ![Jeremy Roberts, Graham Weston, Nathan Anderson](/images/blog/2026/prosperops_alamoangels_3.jpg "Jeremy Roberts, Graham Weston, Nathan Anderson")
+
 ![Nathan Anderson, Pat Matthews, and Jeremy Roberts](/images/blog/2026/prosperops_alamoangels_4.jpg "Nathan Anderson, Pat Matthews, and Jeremy Roberts")
+
 ![Jeremy Roberts, Nathan Anderson, and Pat Matthews](/images/blog/2026/prosperops_alamoangels_5.jpg "Jeremy Roberts, Nathan Anderson, and Pat Matthews")
+
 ![Erica Rempel, Hajar Moshirsadri, Nathan Anderson, and Caleb Scott](/images/blog/2026/prosperops_alamoangels_6.jpg "Erica Rempel, Hajar Moshirsadri, Nathan Anderson, and Caleb Scott")
 
 #Founders #StartUp #SanAntonio #StartupEcosystem
