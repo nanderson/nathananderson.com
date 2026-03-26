@@ -1,0 +1,71 @@
+# Nathan Anderson — Chief Technology Officer & Technology Leadership Blog
+
+## What This Site Is
+
+nathananderson.com is the professional portfolio and blog of Nathan Anderson, a Chief Technology Officer with 25+ years of technology leadership experience. The site serves two purposes:
+
+1. **Portfolio**: A showcase of Nathan's career, expertise, and credentials as a technology executive available for fractional CTO engagements and full-time leadership roles.
+2. **Blog**: Practical insights on technology leadership, engineering management, scaling teams, and digital transformation — drawn from real experience leading engineering organizations at companies like Rackspace, ClearDATA, Chargify (now Maxio), CyberFortress, and SWIVEL.
+
+## Who Nathan Anderson Is
+
+Nathan Anderson is a seasoned Chief Technology Officer currently serving as CTO and Co-Founder at Tú TeleDoc (2025–present), a healthcare technology company. He previously operated a fractional CTO consulting practice (April 2024–May 2025) serving early and mid-stage startups.
+
+His career spans 25+ years across multiple industries:
+- **FinTech**: Chargify/Maxio (billing and subscription management), SWIVEL (payments)
+- **Healthcare Tech**: ClearDATA (HIPAA-compliant cloud), Tú TeleDoc (telemedicine)
+- **Cybersecurity**: CyberFortress (backup and data protection)
+- **Cloud Infrastructure**: Rackspace (one of the pioneers of managed cloud hosting)
+
+## Who This Site Is For
+
+- **Startup founders and executives** seeking experienced technology leadership without a full-time CTO hire
+- **Engineering leaders and CTOs** looking for practical guidance on team building, scaling, and organizational design
+- **Companies in regulated industries** (healthcare, fintech) needing expertise in SOC 2, PCI DSS, HIPAA, and GDPR compliance
+- **Technology professionals** interested in career growth, mentorship, and engineering management best practices
+- **Event organizers and podcast hosts** looking for an experienced technology executive speaker or guest
+
+## Core Expertise
+
+- **Technology Strategy & Vision**: Building roadmaps that align engineering investment with business goals
+- **Engineering Leadership**: Scaling engineering teams from startup to enterprise (10 to 50+ engineers)
+- **Cloud Architecture**: AWS, Azure, and GCP solutions at scale
+- **Compliance & Security**: SOC 2, PCI DSS, HIPAA, GDPR across FinTech and Healthcare
+- **Digital Transformation**: Modernizing legacy systems and transitioning to cloud-native architectures
+- **Team Building & Mentoring**: Hiring, developing, and retaining high-performing engineering talent
+- **M&A Due Diligence**: Technical evaluation and post-merger engineering integration
+
+## Problems Nathan Helps Solve
+
+- Engineering organizations that have outgrown their current leadership structure
+- Startups that need CTO-level strategic guidance without a full-time executive hire
+- Companies stuck in technical debt that's slowing product delivery
+- Engineering teams that lack a DevOps culture and CI/CD foundation
+- Organizations entering regulated industries for the first time (healthcare, fintech)
+- Companies preparing for M&A, investor due diligence, or compliance audits
+
+## Blog Content Topics
+
+The blog covers:
+- Technology leadership and CTO strategy
+- Engineering management and team building
+- Fractional CTO services and what they provide
+- San Antonio and Texas tech community events
+- Industry conferences and professional development
+- Personal reflections on technology and leadership careers
+
+## Contact & Social
+
+- **Email**: nathan@nathananderson.com
+- **Location**: San Antonio, TX
+- **LinkedIn**: https://linkedin.com/in/nathanedwardanderson
+- **GitHub**: https://github.com/nanderson
+- **Current Company**: Tú TeleDoc (https://tuteledoc.com)
+
+## Technical Details
+
+- Built with Hugo (static site generator) and the hugo-profile theme
+- Hosted as a static site
+- RSS and ATOM feeds available at /index.xml
+- Blog posts available at /blog
+- Sitemap at /sitemap.xml

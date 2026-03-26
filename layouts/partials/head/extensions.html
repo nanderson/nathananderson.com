@@ -1,0 +1,72 @@
+{{/*
+    JSON-LD structured data for the homepage (Person + WebSite schema)
+*/}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ .Site.BaseURL }}#person",
+      "name": "Nathan Anderson",
+      "jobTitle": "Chief Technology Officer",
+      "description": "Chief Technology Officer with 25+ years of experience in technology leadership, engineering management, and digital transformation across FinTech and Healthcare Tech industries.",
+      "url": "{{ .Site.BaseURL }}",
+      "email": "nathan@nathananderson.com",
+      "image": "{{ .Site.BaseURL }}images/hero.jpg",
+      "sameAs": [
+        "https://linkedin.com/in/nathanedwardanderson",
+        "https://github.com/nanderson",
+        "https://www.facebook.com/nathan.edward.anderson",
+        "https://www.instagram.com/MtMan97"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "San Antonio",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Tú TeleDoc",
+        "url": "https://tuteledoc.com"
+      },
+      "knowsAbout": [
+        "Technology Strategy",
+        "Engineering Leadership",
+        "Cloud Architecture",
+        "Digital Transformation",
+        "Cybersecurity",
+        "DevOps",
+        "FinTech",
+        "Healthcare Technology",
+        "SOC 2 Compliance",
+        "HIPAA Compliance",
+        "PCI DSS",
+        "Team Building",
+        "Fractional CTO Services"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}#website",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "Nathan Anderson",
+      "description": "Professional portfolio and technology leadership blog of Nathan Anderson, Chief Technology Officer with 25+ years of experience.",
+      "publisher": {
+        "@id": "{{ .Site.BaseURL }}#person"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{ .Site.BaseURL }}?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
+{{ end }}

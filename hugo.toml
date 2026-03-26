@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'Nathan Anderson'
 theme = 'hugo-profile'
 
+[author]
+  name = "Nathan Anderson"
+  email = "nathan@nathananderson.com"
+
 # Navigation Menu
 [Menus]
   [[Menus.main]]
@@ -20,7 +24,7 @@ enableEmoji = true
 relativeURLs = false
 
 # Performance optimizations
-minify = true
+minify = false
 
 # Taxonomy for SEO
 [taxonomies]
@@ -96,11 +100,11 @@ minify = true
     title = "Nathan Anderson"  # Replace with your name
     subtitle = "Chief Technology Officer"
     content = """
-I'm a people-first technology leader with extensive experience in driving innovation, building world-class engineering teams, and delivering scalable solutions that transform businesses.
+I help **startups and growing companies** solve their hardest technology problems — from building and scaling engineering teams to navigating compliance in **FinTech** and **Healthcare Tech**.
 
-With deep expertise in **FinTech** and **Healthcare Tech** industries, I specialize in navigating complex regulatory environments, ensuring **compliance** across SOC 2, PCI DSS, HIPAA, and GDPR frameworks. I'm passionate about **mentoring** emerging leaders and **leading teams through transformational change**, whether scaling from startup to enterprise or modernizing legacy systems.
+With 25+ years leading engineering organizations at companies like Rackspace, ClearDATA, Chargify, and SWIVEL, I bring executive-level technology strategy to organizations that need it most. Whether you're a founder who has outgrown your current tech leadership, a company entering regulated industries for the first time, or an engineering org that needs to level up fast — I can help.
 
-My approach combines strategic vision with hands-on technical leadership, empowering teams to deliver exceptional results while maintaining the highest standards of security and compliance.
+Available for **fractional CTO engagements**, advisory roles, and speaking. Explore my [blog](/blog) for practical insights on technology leadership and engineering management.
 """
     image = "/images/hero.jpg"
     
@@ -381,7 +385,7 @@ My approach combines strategic vision with hands-on technical leadership, empowe
 # Custom CSS
 [params.customCSS]
   enable = true
-  list = ["css/custom.css"]
+  list = ["css/custom.css", "css/performance-seo.css"]
 
 # Google Analytics
 [params.analytics.google]
@@ -446,10 +450,6 @@ My approach combines strategic vision with hands-on technical leadership, empowe
 
 # Cache and performance
 [caches]
-  [caches.getjson]
-    maxAge = "10m"
-  [caches.getcsv]
-    maxAge = "10m"
   [caches.images]
     maxAge = "1h"
   [caches.assets]

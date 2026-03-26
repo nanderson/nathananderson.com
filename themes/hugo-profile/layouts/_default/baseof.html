@@ -5,9 +5,11 @@
   {{- partial "head.html" . -}}
   {{- block "head" . }} {{- end }}
 
-  <!-- Custom Styles -->
-  {{ if .Site.Params.customCSS }}
-    <link rel="stylesheet" href="{{ .Site.Params.staticPath }}/style.css">
+  
+  {{ if .Site.Params.customCSS.enabled }}
+    {{ range .Site.Params.customCSS.list }}
+      <link rel="stylesheet" href="{{.Site.Params.staticPath}}/{{- . -}}">
+    {{ end }}
   {{ end }}
 
   <title>

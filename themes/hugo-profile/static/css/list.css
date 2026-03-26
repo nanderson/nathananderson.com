@@ -57,6 +57,7 @@
     width: 100%;
     height: 250px !important;
     background-color: transparent !important;
+    /* object-fit: none; */ /* Prevents the image from scaling, the image will display at its original resolution*/
 }
 
 /* pagination */
