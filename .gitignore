@@ -51,6 +51,9 @@ config/secrets/
 vercel.json
 .vercel/
 
+# Worktrees
+.worktrees/
+
 # Local development
 .swarm/
 .claude/
