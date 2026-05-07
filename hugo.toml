@@ -35,8 +35,8 @@ minify = false
 
 [params]
   title = "Nathan Anderson"
-  description = "Chief Technology Officer - Technology Leader & Innovation Driver. Experienced in scaling engineering teams, cloud architecture, and digital transformation."
-  keywords = ["CTO", "Chief Technology Officer", "Technology Leadership", "Engineering Management", "Cloud Architecture", "Digital Transformation", "Software Development", "Tech Executive"]
+  description = "Fractional CTO for Series A & B startups in FinTech and Healthcare Tech. 25+ years of engineering leadership. Available for fractional CTO and VP Engineering engagements."
+  keywords = ["Fractional CTO", "Fractional VP Engineering", "CTO for Hire", "Series A CTO", "Series B CTO", "Healthcare Tech CTO", "FinTech CTO", "Engineering Leadership", "Technology Strategy", "Startup CTO"]
   author = "Nathan Anderson"
   favicon = "/images/favicon.ico"
   googleAnalytics = "G-0FVQ0R62J5"   # Google Analytics
@@ -64,7 +64,7 @@ minify = false
 
   # Advanced SEO Configuration
   author = "Nathan Anderson"
-  keywords = ["CTO", "Chief Technology Officer", "Technology Leadership", "Engineering Management", "Cloud Architecture", "Digital Transformation", "Software Development", "Tech Innovation"]
+  keywords = ["Fractional CTO", "Fractional VP Engineering", "CTO for Hire", "Series A CTO", "Series B CTO", "Healthcare Tech", "FinTech", "Engineering Leadership", "Technology Strategy", "Startup CTO"]
   
   # Social Media and Contact
   linkedin = "https://linkedin.com/in/nathanedwardanderson"
@@ -74,8 +74,8 @@ minify = false
   location = "San Antonio, TX"
   
   # Company/Current Role
-  company = "Tú TeleDoc"
-  position = "Chief Technology Officer; Co-Founder"
+  company = "Alenio Health"
+  position = "Chief Technology Officer"
   
   # Professional Focus Areas
   specializations = ["Cloud Architecture", "Team Leadership", "Digital Transformation", "AI/ML Strategy", "Cybersecurity", "DevOps"]
@@ -83,9 +83,9 @@ minify = false
   # Schema.org structured data
   [params.schema]
     type = "Person"
-    jobTitle = "Chief Technology Officer"
-    worksFor = "Tú TeleDoc"
-    knowsAbout = ["Software Engineering", "Cloud Computing", "Team Leadership", "Digital Strategy"]
+    jobTitle = "Fractional CTO"
+    worksFor = "Alenio Health"
+    knowsAbout = ["Software Engineering", "Product Management", "Cloud Computing", "Team Leadership", "Digital Strategy"]
     
   # Open Graph defaults
   [params.opengraph]
@@ -98,13 +98,15 @@ minify = false
     enable = true
     intro = "Hi, my name is"
     title = "Nathan Anderson"  # Replace with your name
-    subtitle = "Chief Technology Officer"
+    subtitle = "Fractional CTO for Series A & B Startups"
     content = """
-I help **startups and growing companies** solve their hardest technology problems — from building and scaling engineering teams to navigating compliance in **FinTech** and **Healthcare Tech**.
+You've raised your round. Now you need a CTO who can build the team, ship the product, and establish the architecture — without the full-time executive cost.
 
-With 25+ years leading engineering organizations at companies like Rackspace, ClearDATA, Chargify, and SWIVEL, I bring executive-level technology strategy to organizations that need it most. Whether you're a founder who has outgrown your current tech leadership, a company entering regulated industries for the first time, or an engineering org that needs to level up fast — I can help.
+I embed with **Series A and B startups** as Fractional CTO or VP Engineering and get to work immediately. I've taken a **healthcare platform from idea to launch** — product roadmap, architecture, and acquisition strategy. I've helped a **FinTech team go from one release per quarter to multiple releases per week** by rebuilding their CI/CD pipeline, team structure, and SDLC.
 
-Available for **fractional CTO engagements**, advisory roles, and speaking. Explore my [blog](/blog) for practical insights on technology leadership and engineering management.
+25+ years leading engineering at Rackspace, ClearDATA, Chargify, and SWIVEL. Deep expertise in **Healthcare Tech** and **FinTech**.
+
+**[Let's talk →](/contact)**
 """
     image = "/images/hero.jpg"
     
@@ -135,13 +137,11 @@ Available for **fractional CTO engagements**, advisory roles, and speaking. Expl
     title = "About"
     image = "/images/profile.jpg"
     content = """
-    As a Chief Technology Officer, I bring over 25 years of experience in technology leadership, 
-    strategic planning, and team building. I specialize in scaling engineering organizations, 
-    implementing cutting-edge technologies, and driving digital transformation initiatives.
+    Series A and B startups hire me when they need executive-level tech leadership but aren't ready — or funded enough — for a full-time CTO.
 
-    My expertise spans cloud architecture, software development, cybersecurity, and emerging 
-    technologies. I'm passionate about building high-performing teams and creating technology 
-    solutions that deliver measurable business value.
+    I step in as Fractional CTO or VP Engineering and help you build the team, establish the architecture, and ship the product. I specialize in **Healthcare Tech** and **FinTech** — industries where compliance, security, and speed all matter at once.
+
+    With 25+ years at companies like Rackspace, ClearDATA, Chargify, and SWIVEL, I've seen what separates engineering orgs that scale from ones that stall. I bring that pattern recognition directly to your team.
     """
 
     # Skills
@@ -164,16 +164,15 @@ Available for **fractional CTO engagements**, advisory roles, and speaking. Expl
     enable = true
     
     [[params.experience.items]]
-      job = "Chief Technology Officer"
-      company = "Tú TeleDoc"
-      companyUrl = "https://tuteledoc.com"
+      job = "Chief Technology Officer & Chief Product Officer"
+      company = "Alenio Health"
+      companyUrl = "https://aleniohealth.com"
       date = "2025 - Present"
       content = """
-      Leading technology strategy and engineering operations for a fast-growing SaaS company.
-      - Built and scaled engineering team from 10 to 50+ engineers
-      - Implemented cloud-native architecture serving 1M+ users
-      - Reduced infrastructure costs by 40% through optimization
-      - Established DevOps practices and CI/CD pipelines
+      Leading technology and product strategy for an early-stage healthcare tech startup launching in Mexico.
+      - Defining product roadmap and go-to-market strategy for initial launch
+      - Establishing architecture and engineering foundation for the platform
+      - Driving product vision from concept through market launch
       """
 
     [[params.experience.items]]
@@ -182,11 +181,11 @@ Available for **fractional CTO engagements**, advisory roles, and speaking. Expl
       companyUrl = "https://nathananderson.com"
       date = "April 2024 - May 2025"
       content = """
-      Provided strategic technology leadership and consulting services to early and mid-stage startups and small companies.
-      - Guided software engineering organizations through technical and operational challenges
-      - Optimized people, processes, and technology for scalable growth
-      - Specialized in B2B SaaS, FinTech, and Healthcare Tech industries
-      - Delivered fractional CTO services to multiple client companies simultaneously
+      Embedded as Fractional CTO and VP Engineering for post-revenue startups navigating growth and technical complexity.
+      - Took a Healthcare Tech platform from idea to launch — built product roadmap, initial architecture, and acquisition strategy
+      - Helped a FinTech go from one release per quarter to multiple releases per week by rebuilding CI/CD pipeline, engineering team structure, and SDLC
+      - Specialized in Series A and B companies in FinTech and Healthcare Tech
+      - Delivered fractional CTO and VP Engineering services to multiple client companies simultaneously
       """
 
     [[params.experience.items]]
@@ -360,7 +359,7 @@ Available for **fractional CTO engagements**, advisory roles, and speaking. Expl
   [params.contact]
     enable = true
     title = "Contact"
-    content = "I'm always interested in discussing technology leadership opportunities, consulting engagements, podcast appearances, or speaking at industry events."
+    content = "If you're a Series A or B startup that needs experienced technology leadership without a full-time CTO hire, let's talk. I work with companies in Healthcare Tech and FinTech."
     email = ""  # Replace with your email
     btnName = "Contact Me"
 
