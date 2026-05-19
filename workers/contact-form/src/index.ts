@@ -13,6 +13,7 @@ export interface Env {
   AIRTABLE_TABLE_NAME: string;
   SLACK_WEBHOOK_URL: string;
   NOTIFICATION_EMAIL: string;
+  RESEND_API_KEY: string;
 }
 
 function jsonResponse(body: Record<string, unknown>, status: number, origin?: string): Response {
@@ -26,6 +27,12 @@ export default {
     // Handle CORS preflight
     const preflight = handlePreflight(env.ALLOWED_ORIGIN, request);
     if (preflight) return preflight;
+
+    // Check path
+    const url = new URL(request.url);
+    if (url.pathname !== "/api/contact") {
+      return jsonResponse({ success: false, error: "Not found" }, 404);
+    }
 
     // Only allow POST
     if (request.method !== "POST") {
@@ -92,7 +99,7 @@ export default {
         tableName: env.AIRTABLE_TABLE_NAME,
       }),
       sendSlackNotification(env.SLACK_WEBHOOK_URL, fields, meta),
-      sendEmail(env.NOTIFICATION_EMAIL, fields, meta),
+      sendEmail(env.NOTIFICATION_EMAIL, fields, meta, env.RESEND_API_KEY),
     ]);
 
     // Log any failures

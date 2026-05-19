@@ -1,17 +1,4 @@
-export interface ContactFields {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  company: string;
-  message: string;
-}
-
-export interface RequestMeta {
-  ip: string;
-  userAgent: string;
-  timestamp: string;
-}
+import type { ContactFields, RequestMeta } from "./airtable";
 
 export function formatEmailSubject(firstName: string, lastName: string, company: string): string {
   return `New contact: ${firstName} ${lastName} from ${company}`;
@@ -40,19 +27,23 @@ export async function sendEmail(
   toEmail: string,
   fields: ContactFields,
   meta: RequestMeta,
+  resendApiKey: string,
 ): Promise<{ success: boolean; error?: string }> {
   const subject = formatEmailSubject(fields.firstName, fields.lastName, fields.company);
   const body = formatEmailBody(fields, meta);
 
   try {
-    const response = await fetch("https://api.mailchannels.net/tx/v1/send", {
+    const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${resendApiKey}`,
+      },
       body: JSON.stringify({
-        personalizations: [{ to: [{ email: toEmail }] }],
-        from: { email: "noreply@nathananderson.com", name: "Contact Form" },
+        from: "Contact Form <noreply@nathananderson.com>",
+        to: [toEmail],
         subject,
-        content: [{ type: "text/plain", value: body }],
+        text: body,
       }),
     });
 

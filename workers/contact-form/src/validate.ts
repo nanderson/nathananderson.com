@@ -49,12 +49,18 @@ export function validateContactForm(raw: Record<string, unknown>): ValidationRes
 
   // Required field checks
   if (!data.firstName) errors.push("First name is required");
+  else if (data.firstName.length > 200) errors.push("First name is too long");
   if (!data.lastName) errors.push("Last name is required");
+  else if (data.lastName.length > 200) errors.push("Last name is too long");
   if (!data.email) errors.push("Email is required");
   else if (!EMAIL_REGEX.test(data.email)) errors.push("Invalid email address");
+  else if (data.email.length > 500) errors.push("Email is too long");
   if (!data.phone) errors.push("Phone number is required");
+  else if (data.phone.length > 50) errors.push("Phone number is too long");
   if (!data.company) errors.push("Company name is required");
+  else if (data.company.length > 200) errors.push("Company name is too long");
   if (!data.message) errors.push("Message is required");
+  else if (data.message.length > 5000) errors.push("Message is too long");
   if (!data.turnstileToken) errors.push("Security verification failed");
 
   return {

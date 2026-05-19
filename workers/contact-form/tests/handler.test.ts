@@ -10,6 +10,7 @@ const baseEnv = {
   AIRTABLE_TABLE_NAME: "Contacts",
   SLACK_WEBHOOK_URL: "https://hooks.slack.com/test",
   NOTIFICATION_EMAIL: "nathan@test.com",
+  RESEND_API_KEY: "re_test_key",
 };
 
 const validBody = {
@@ -35,8 +36,8 @@ describe("contact form handler", () => {
       if (url.includes("slack")) {
         return Promise.resolve(new Response("ok"));
       }
-      if (url.includes("mailchannels")) {
-        return Promise.resolve(new Response("", { status: 202 }));
+      if (url.includes("resend")) {
+        return Promise.resolve(new Response(JSON.stringify({ id: "msg_123" }), { status: 200 }));
       }
       return Promise.resolve(new Response("", { status: 404 }));
     });

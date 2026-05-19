@@ -10,6 +10,7 @@ const baseEnv = {
   AIRTABLE_TABLE_NAME: "test-table",
   SLACK_WEBHOOK_URL: "https://hooks.slack.com/test",
   NOTIFICATION_EMAIL: "test@test.com",
+  RESEND_API_KEY: "re_test_key",
 };
 
 describe("CORS", () => {
