@@ -362,6 +362,8 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
     content = "If you're a Series A or B startup that needs experienced technology leadership without a full-time CTO hire, let's talk. I work with companies in Healthcare Tech and FinTech."
     email = ""  # Replace with your email
     btnName = "Contact Me"
+    workerUrl = ""  # Set to your Worker URL, e.g. https://contact-form-worker.your-subdomain.workers.dev/api/contact
+    turnstileSiteKey = ""  # Set to your Cloudflare Turnstile site key
 
 [params.social]
   rss = "index.xml"

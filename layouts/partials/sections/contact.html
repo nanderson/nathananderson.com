@@ -9,11 +9,126 @@
                         {{ .Site.Params.contact.content | emojify | markdownify }}
                     </div>
 
-                    <!-- CUSTOM DIV SECTION - Add your iframe or custom HTML here -->
-                     <iframe id="JotFormIFrame-260136445576056" title="Contact Form" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/260136445576056" frameborder="0" style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no" ></iframe>
-                     <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-                     <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-260136445576056']", "https://form.jotform.com/")</script> 
-                    <!-- END CUSTOM DIV SECTION -->
+                    <!-- Contact Form -->
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group form-group-half">
+                                <label for="firstName">First Name <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+                            </div>
+                            <div class="form-group form-group-half">
+                                <label for="lastName">Last Name <span class="required">*</span></label>
+                                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group form-group-half">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" required autocomplete="email">
+                            </div>
+                            <div class="form-group form-group-half">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(555) 555-1234">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name <span class="required">*</span></label>
+                            <input type="text" id="company" name="company" required autocomplete="organization">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">What would you like to chat about? <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <!-- Honeypot - hidden from real users -->
+                        <div style="position:absolute;left:-9999px" aria-hidden="true">
+                            <input type="text" name="honeypot" tabindex="-1" autocomplete="off">
+                        </div>
+
+                        <!-- Turnstile widget -->
+                        <div class="cf-turnstile" data-sitekey="{{ .Site.Params.contact.turnstileSiteKey | default "" }}" data-callback="onTurnstileSuccess"></div>
+
+                        <div id="form-error" class="form-error" style="display:none"></div>
+
+                        <div class="form-group text-center">
+                            <button type="submit" id="submit-btn" class="btn">
+                                <span class="btn-text">{{ .Site.Params.contact.btnName | default "Contact Me" }}</span>
+                                <span class="btn-loading" style="display:none">Sending...</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success message (hidden by default) -->
+                    <div id="form-success" style="display:none" class="form-success">
+                        <h4>Thanks for reaching out!</h4>
+                        <p>I'll get back to you soon.</p>
+                    </div>
+
+                    <!-- Turnstile script -->
+                    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+                    <!-- Form submission script -->
+                    <script>
+                    (function() {
+                        var turnstileToken = '';
+                        window.onTurnstileSuccess = function(token) { turnstileToken = token; };
+
+                        var form = document.getElementById('contact-form');
+                        var submitBtn = document.getElementById('submit-btn');
+                        var btnText = submitBtn.querySelector('.btn-text');
+                        var btnLoading = submitBtn.querySelector('.btn-loading');
+                        var errorDiv = document.getElementById('form-error');
+                        var successDiv = document.getElementById('form-success');
+
+                        var WORKER_URL = '{{ .Site.Params.contact.workerUrl | default "" }}';
+
+                        form.addEventListener('submit', function(e) {
+                            e.preventDefault();
+                            errorDiv.style.display = 'none';
+                            btnText.style.display = 'none';
+                            btnLoading.style.display = 'inline';
+                            submitBtn.disabled = true;
+
+                            var data = {
+                                firstName: form.firstName.value,
+                                lastName: form.lastName.value,
+                                email: form.email.value,
+                                phone: form.phone.value,
+                                company: form.company.value,
+                                message: form.message.value,
+                                turnstileToken: turnstileToken,
+                                honeypot: form.honeypot.value
+                            };
+
+                            fetch(WORKER_URL, {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify(data)
+                            })
+                            .then(function(res) { return res.json(); })
+                            .then(function(json) {
+                                if (json.success) {
+                                    form.style.display = 'none';
+                                    successDiv.style.display = 'block';
+                                } else {
+                                    var msg = json.errors ? json.errors.join(', ') : (json.error || 'Something went wrong. Please try again.');
+                                    errorDiv.textContent = msg;
+                                    errorDiv.style.display = 'block';
+                                }
+                            })
+                            .catch(function() {
+                                errorDiv.textContent = 'Network error. Please check your connection and try again.';
+                                errorDiv.style.display = 'block';
+                            })
+                            .finally(function() {
+                                btnText.style.display = 'inline';
+                                btnLoading.style.display = 'none';
+                                submitBtn.disabled = false;
+                            });
+                        });
+                    })();
+                    </script>
+                    <!-- End Contact Form -->
 
                     {{ if .Site.Params.contact.formspree.enable | default false }}
                     <div class="row justify-content-center">

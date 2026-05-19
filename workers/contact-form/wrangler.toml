@@ -1,0 +1,15 @@
+name = "contact-form-worker"
+main = "src/index.ts"
+compatibility_date = "2025-05-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://nathananderson.com"
+
+# Secrets (set via `wrangler secret put`):
+# TURNSTILE_SECRET_KEY
+# AIRTABLE_API_KEY
+# AIRTABLE_BASE_ID
+# AIRTABLE_TABLE_NAME
+# SLACK_WEBHOOK_URL
+# NOTIFICATION_EMAIL
+# RESEND_API_KEY
