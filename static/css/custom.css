@@ -693,6 +693,125 @@ section.py-5, section.py-0.py-sm-5 {
   padding: var(--space-lg) var(--space-2xl);
 }
 
+/* Contact Form Styles */
+.contact-form {
+  text-align: left;
+  max-width: 100%;
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.contact-form .form-group {
+  margin-bottom: var(--space-lg);
+  width: 100%;
+}
+
+.contact-form .form-group-half {
+  flex: 1;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.contact-form .required {
+  color: var(--error-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: var(--space-md);
+  border: 2px solid var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+  box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--secondary-color);
+  box-shadow: var(--focus-shadow);
+  outline: none;
+}
+
+.contact-form input:invalid:not(:placeholder-shown),
+.contact-form textarea:invalid:not(:placeholder-shown) {
+  border-color: var(--error-color);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form .btn {
+  min-width: 200px;
+}
+
+.contact-form .btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.form-error {
+  color: var(--error-color);
+  background: rgba(220, 53, 69, 0.1);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.form-success {
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.form-success h4 {
+  color: var(--success-color);
+  margin-bottom: var(--space-md);
+}
+
+.form-success p {
+  color: var(--text-secondary);
+}
+
+/* Turnstile widget centering */
+.cf-turnstile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-lg);
+}
+
+/* Dark mode contact form */
+.dark .contact-form input,
+.dark .contact-form textarea {
+  background: var(--bg-secondary);
+  border-color: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+/* Mobile: stack form rows */
+@media (max-width: 575.98px) {
+  .contact-form .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
 /* ===== FOOTER ===== */
 
 footer {
