@@ -1,0 +1,98 @@
+name: Build check
+
+# Cloudflare Pages performs the actual deploy straight from this repository.
+# This workflow only verifies that a push builds cleanly and produces a sane
+# site — it publishes nothing.
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      # Must match HUGO_VERSION in the Cloudflare Pages build settings.
+      # Minimum 0.146: the templates rely on the layouts/<section>/page.html lookup.
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.164.0'
+          extended: true
+
+      - name: Pre-build checks
+        run: |
+          if ! grep -q "baseURL = 'https://" hugo.toml; then
+            echo "::error::baseURL must be HTTPS"
+            exit 1
+          fi
+          if find . -name "*.env" -o -name "*.key" -o -name "*.pem" | grep -v '^./.git'; then
+            echo "::error::Sensitive files found in repository"
+            exit 1
+          fi
+
+      - name: Build
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: hugo --gc --minify --panicOnWarning
+
+      - name: Verify output
+        run: |
+          fail=0
+          for f in public/index.html public/services/index.html public/contact/index.html \
+                   public/blog/index.html public/robots.txt public/llms.txt public/sitemap.xml; do
+            if [ ! -s "$f" ]; then echo "::error::missing or empty: $f"; fail=1; fi
+          done
+
+          # robots.txt and llms.txt share a media type; a lookup collision makes
+          # one silently render the other's template.
+          if cmp -s public/robots.txt public/llms.txt; then
+            echo "::error::robots.txt and llms.txt are identical — template lookup collision"
+            fail=1
+          fi
+          exit $fail
+
+      - name: Check internal links and structured data
+        run: |
+          python3 - <<'PY'
+          import glob, json, os, re, sys, urllib.parse
+          os.chdir("public")
+          broken, bad = {}, []
+          for p in glob.glob("**/*.html", recursive=True):
+              h = open(p, encoding="utf-8", errors="ignore").read()
+              for m in re.findall(r'(?:href|src)="(/[^"#?]*)"', h):
+                  t = urllib.parse.unquote(m).lstrip("/")
+                  if not (os.path.exists(t) or os.path.exists(os.path.join(t, "index.html"))):
+                      broken.setdefault("/" + t, set()).add(p)
+              if "/page/" in p:
+                  continue
+              ld = re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, re.S)
+              if len(ld) != 1:
+                  bad.append((p, f"{len(ld)} JSON-LD blocks")); continue
+              try:
+                  json.loads(ld[0])
+              except Exception as e:
+                  bad.append((p, f"invalid JSON-LD: {e}"))
+          for t, srcs in broken.items():
+              print(f"::error::broken internal reference {t} (in {sorted(srcs)[0]})")
+          for p, why in bad:
+              print(f"::error::{p}: {why}")
+          sys.exit(1 if (broken or bad) else 0)
+          PY

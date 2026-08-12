@@ -1,0 +1,24 @@
+{{- $r := .resource -}}
+{{- if $r -}}
+{{- $sizes := .sizes | default "100vw" -}}
+{{- $max := .max | default 1600 -}}
+{{- $base := cond (lt $r.Width $max) $r ($r.Resize (printf "%dx q80" $max)) -}}
+{{/* Candidate widths, clamped to the source and deduped so no two entries share a "w". */}}
+{{- $widths := slice -}}
+{{- range (.widths | default (slice 480 768 1100 1600)) -}}
+  {{- if and (le . $base.Width) (not (in $widths .)) -}}{{- $widths = $widths | append . -}}{{- end -}}
+{{- end -}}
+{{- if not (in $widths $base.Width) -}}{{- $widths = $widths | append $base.Width -}}{{- end -}}
+{{- $set := slice -}}
+{{- range $widths -}}
+  {{- $v := cond (eq . $base.Width) $base ($base.Resize (printf "%dx q80" .)) -}}
+  {{- $set = $set | append (printf "%s %dw" $v.RelPermalink $v.Width) -}}
+{{- end -}}
+<img src="{{ $base.RelPermalink }}"
+     srcset="{{ delimit $set ", " }}"
+     sizes="{{ $sizes }}"
+     width="{{ $base.Width }}" height="{{ $base.Height }}"
+     alt="{{ .alt }}"
+     {{ if .eager }}fetchpriority="high" decoding="async"{{ else }}loading="lazy" decoding="async"{{ end }}
+     {{- with .class }} class="{{ . }}"{{ end }}>
+{{- end -}}

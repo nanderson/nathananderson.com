@@ -23,16 +23,8 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
       with:
-        hugo-version: '0.143.0'
+        hugo-version: '0.164.0'
         extended: true
-    
-    - name: Audit Dependencies
-      run: |
-        # Check for known vulnerabilities in Hugo themes
-        if [ -f "themes/hugo-profile/package.json" ]; then
-          cd themes/hugo-profile
-          npm audit --audit-level=moderate
-        fi
     
     - name: Static Security Analysis
       run: |
@@ -51,29 +43,42 @@ jobs:
         # Check for potentially dangerous file permissions
         find . -type f -perm -o+w -not -path './.git/*' -not -path './public/*' || true
     
-    - name: Content Security Policy Check
+    - name: Third-party resource check
       run: |
-        hugo --minify
-        echo "Checking generated HTML for CSP compliance..."
-        
-        # Check for inline scripts (CSP violation)
-        if find public -name "*.html" -exec grep -l "<script[^>]*>[^<]" {} \;; then
-          echo "::warning::Found inline scripts that may violate CSP"
-        fi
-        
-        # Check for inline styles (CSP violation)
-        if find public -name "*.html" -exec grep -l 'style="' {} \;; then
-          echo "::warning::Found inline styles that may violate CSP"
-        fi
-    
-    - name: Security Headers Check
+        hugo --gc --minify
+        python3 - <<'PY'
+        import glob, re, sys
+        # Only resource loads are governed by CSP — outbound <a href> links are not.
+        ALLOWED = {"https://www.googletagmanager.com"}
+        pat = re.compile(
+            r'<(script|link|img|iframe|source|video|audio|embed|object)\b[^>]*?'
+            r'\b(?:src|href|data)="(https?://[^"]+)"', re.I)
+        found = {}
+        for f in glob.glob("public/**/*.html", recursive=True):
+            for tag, url in pat.findall(open(f, encoding="utf-8", errors="ignore").read()):
+                origin = re.match(r"https?://[^/]+", url).group(0)
+                if origin.endswith("nathananderson.com"):
+                    continue
+                if origin not in ALLOWED:
+                    found.setdefault(origin, set()).add(tag.lower())
+        for origin, tags in sorted(found.items()):
+            print(f"::error::cross-origin resource load not permitted by the CSP in "
+                  f"static/_headers: {origin} (via <{'>, <'.join(sorted(tags))}>)")
+        sys.exit(1 if found else 0)
+        PY
+
+    - name: Security headers check
       run: |
-        echo "Security headers that should be configured at server/CDN level:"
-        echo "- Content-Security-Policy"
-        echo "- X-Frame-Options"
-        echo "- X-Content-Type-Options"
-        echo "- Referrer-Policy"
-        echo "- Permissions-Policy"
+        # Headers are served by Cloudflare Pages from static/_headers.
+        MISSING=0
+        for h in Content-Security-Policy X-Frame-Options X-Content-Type-Options \
+                 Referrer-Policy Permissions-Policy; do
+          if ! grep -qi "$h" static/_headers; then
+            echo "::error::static/_headers is missing $h"
+            MISSING=1
+          fi
+        done
+        exit $MISSING
     
     - name: HTTPS and SSL Check
       run: |

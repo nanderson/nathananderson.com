@@ -1,163 +1,222 @@
-baseURL = 'https://nathananderson.com/'  # Update this to your actual domain
-languageCode = 'en-us'
+baseURL = 'https://nathananderson.com/'
 title = 'Nathan Anderson'
-theme = 'hugo-profile'
+defaultContentLanguage = 'en'
+
+[languages.en]
+  locale = 'en-US'
+  label = 'English'
+
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+canonifyURLs = false
+relativeURLs = false
 
 [author]
   name = "Nathan Anderson"
   email = "nathan@nathananderson.com"
 
-# Navigation Menu
-[Menus]
-  [[Menus.main]]
-    identifier = "blog"
-    name = "Blog"
-    title = "Blog"
-    url = "/blog"
-    weight = 1
+[pagination]
+  pagerSize = 12
 
-# Core SEO Configuration
-enableRobotsTXT = true
-enableGitInfo = true
-canonifyURLs = true
-enableEmoji = true
-relativeURLs = false
-
-# Performance optimizations
-minify = false
-
-# Taxonomy for SEO
 [taxonomies]
   tag = "tags"
-  category = "categories"
-  skill = "skills"
-  technology = "technologies"
 
+[Menus]
+  [[Menus.main]]
+    name = "Services"
+    url = "/services/"
+    weight = 1
+  [[Menus.main]]
+    name = "Experience"
+    url = "/#experience"
+    weight = 2
+  [[Menus.main]]
+    name = "Writing"
+    url = "/blog/"
+    weight = 3
+  [[Menus.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+# ---------------------------------------------------------------------------
+# Site parameters — these drive the layouts in layouts/
+# ---------------------------------------------------------------------------
 [params]
-  title = "Nathan Anderson"
-  description = "Fractional CTO for Series A & B startups in FinTech and Healthcare Tech. 25+ years of engineering leadership. Available for fractional CTO and VP Engineering engagements."
-  keywords = ["Fractional CTO", "Fractional VP Engineering", "CTO for Hire", "Series A CTO", "Series B CTO", "Healthcare Tech CTO", "FinTech CTO", "Engineering Leadership", "Technology Strategy", "Startup CTO"]
-  author = "Nathan Anderson"
-  favicon = "/images/favicon.ico"
-  googleAnalytics = "G-0FVQ0R62J5"   # Google Analytics
-  
-  # Professional optimization settings
-  [params.seo]
-    enableTwitterCard = true
-    enableOpenGraph = true
-    enableJsonLd = true
-  
-  # Performance optimizations
-  [params.performance]
-    enableImageOptimization = true
-    enableLazyLoading = true
-    enableCriticalCSS = true
-  
-  # Color scheme - using your specified colors
-  [params.color]
-    textColor = "#343a40"
-    secondaryTextColor = "#6c757d"
-    backgroundColor = "#ffffff"
-    secondaryBackgroundColor = "#f8f9fa"
-    primaryColor = "#10036d"  # Dark accent
-    secondaryColor = "#0056fb"  # Light accent
+  author      = "Nathan Anderson"
+  tagline     = "Fractional CTO"
+  position    = "Fractional Chief Technology Officer"
+  description = "Fractional CTO and VP Engineering for Series A and B startups in Healthcare Tech and FinTech. 25+ years of engineering leadership at Rackspace, ClearDATA, Chargify and SWIVEL."
+  email       = "nathan@nathananderson.com"
+  location    = "San Antonio, TX"
+  linkedin    = "https://linkedin.com/in/nathanedwardanderson"
+  github      = "https://github.com/nanderson"
+  bookingUrl  = "https://app.reclaim.ai/m/nathan-anderson/flexible-quick-meeting"
 
-  # Advanced SEO Configuration
-  author = "Nathan Anderson"
-  keywords = ["Fractional CTO", "Fractional VP Engineering", "CTO for Hire", "Series A CTO", "Series B CTO", "Healthcare Tech", "FinTech", "Engineering Leadership", "Technology Strategy", "Startup CTO"]
-  
-  # Social Media and Contact
-  linkedin = "https://linkedin.com/in/nathanedwardanderson"
-  github = "https://github.com/nanderson"
-  email = "nathan@nathananderson.com"
-  #phone = "+1-210-860-0399"
-  location = "San Antonio, TX"
-  
-  # Company/Current Role
-  company = "Alenio Health"
-  position = "Chief Technology Officer"
-  
-  # Professional Focus Areas
-  specializations = ["Cloud Architecture", "Team Leadership", "Digital Transformation", "AI/ML Strategy", "Cybersecurity", "DevOps"]
-  
-  # Schema.org structured data
-  [params.schema]
-    type = "Person"
-    jobTitle = "Fractional CTO"
-    worksFor = "Alenio Health"
-    knowsAbout = ["Software Engineering", "Product Management", "Cloud Computing", "Team Leadership", "Digital Strategy"]
-    
-  # Open Graph defaults
-  [params.opengraph]
-    image = "/images/og-image.jpg"
-    locale = "en_US"
-    type = "profile"
+  googleAnalytics = "G-0FVQ0R62J5"
 
-  # Hero section
+  # Current venture. Alenio Health and Tú TeleDoc are the same venture; adjust
+  # the naming here and it propagates to schema.org, llms.txt and the page copy.
+  company    = "Alenio Health"
+  companyAka = "Tú TeleDoc"
+  companyUrl = "https://aleniohealth.com"
+
+  footerBlurb = "Fractional CTO and VP Engineering for Series A and B startups in Healthcare Tech and FinTech. 25+ years leading engineering at Rackspace, ClearDATA, Chargify and SWIVEL. Based in San Antonio."
+
+  ctaTitle = "Tell me what's slowing your team down"
+  ctaBody  = "A 30-minute call, no pitch. Bring the problem as you currently understand it — even if that's just \"delivery feels slow and I can't tell why.\" If I'm not the right person, I'll tell you and point you somewhere better."
+
+  profiles = [
+    "https://linkedin.com/in/nathanedwardanderson",
+    "https://github.com/nanderson",
+    "https://www.facebook.com/nathan.edward.anderson",
+    "https://www.instagram.com/mtman97/",
+  ]
+
+  pastCompanies = ["Rackspace", "ClearDATA", "Chargify / Maxio", "CyberFortress", "SWIVEL"]
+
+  specializations = [
+    "Fractional CTO",
+    "Fractional VP Engineering",
+    "Technology Strategy",
+    "Engineering Leadership",
+    "Cloud Architecture",
+    "Technical Due Diligence",
+    "Security & Compliance",
+    "Digital Transformation",
+  ]
+
+  knowsAbout = [
+    "Fractional CTO Services",
+    "Engineering Leadership",
+    "Technology Strategy",
+    "Cloud Architecture",
+    "AWS", "Azure", "Google Cloud Platform",
+    "DevOps", "CI/CD",
+    "SOC 2 Compliance", "HIPAA Compliance", "PCI DSS", "HITRUST", "GDPR",
+    "Healthcare Technology", "FinTech",
+    "Technical Due Diligence", "Post-merger Integration",
+    "Team Building", "Product Management",
+  ]
+
+  # --- Hero -----------------------------------------------------------------
   [params.hero]
-    enable = true
-    intro = "Hi, my name is"
-    title = "Nathan Anderson"  # Replace with your name
-    subtitle = "Fractional CTO for Series A & B Startups"
-    content = """
-You've raised your round. Now you need a CTO who can build the team, ship the product, and establish the architecture — without the full-time executive cost.
+    eyebrow  = "Fractional CTO · Healthcare Tech & FinTech"
+    title    = "Executive engineering leadership, at the size you actually need."
+    subtitle = "I embed with Series A and B startups as Fractional CTO or VP Engineering."
+    note     = "Based in San Antonio, Texas · Working remotely across the US and Mexico"
+    content  = """
+You've raised your round. The board wants a roadmap, your engineers want direction, and the architecture
+decisions you make in the next six months will either compound or haunt you.
 
-I embed with **Series A and B startups** as Fractional CTO or VP Engineering and get to work immediately. I've taken a **healthcare platform from idea to launch** — product roadmap, architecture, and acquisition strategy. I've helped a **FinTech team go from one release per quarter to multiple releases per week** by rebuilding their CI/CD pipeline, team structure, and SDLC.
-
-25+ years leading engineering at Rackspace, ClearDATA, Chargify, and SWIVEL. Deep expertise in **Healthcare Tech** and **FinTech**.
-
-**[Let's talk →](/contact)**
+I've taken a **healthcare platform from idea to launch** — roadmap, architecture, and acquisition strategy.
+I've helped a **FinTech go from one release per quarter to multiple releases per week** by rebuilding their
+CI/CD pipeline, team structure, and SDLC. I do that work part-time, starting immediately.
 """
-    image = "/images/hero.jpg"
-    
-    # Social links
-    [[params.hero.socialLinks.links]]
-      fontAwesomeIconName = "fab fa-linkedin"
-      link = "https://linkedin.com/in/nathanedwardanderson"
-    
-    [[params.hero.socialLinks.links]]
-      fontAwesomeIconName = "fab fa-github"
-      link = "https://github.com/nanderson"
-    
-    [[params.hero.socialLinks.links]]
-      fontAwesomeIconName = "fab fa-facebook"
-      link = "https://facebook.com/nathan.edward.anderson"
-    
-    [[params.hero.socialLinks.links]]
-      fontAwesomeIconName = "fab fa-instagram"
-      link = "https://instagram.com/MtMan97"
 
-    [[params.hero.socialLinks.links]]
-      fontAwesomeIconName = "fab fa-rss"
-      link = "/index.xml"
+  # --- Proof ----------------------------------------------------------------
+  [[params.stats]]
+    value = "25+ years"
+    label = "Leading engineering, product and DevOps organisations — from a 3,000-customer ISP to global teams across three continents."
+  [[params.stats]]
+    value = "4 acquisitions"
+    label = "Due diligence and post-merger integration at Rackspace, Chargify, SWIVEL, and CyberFortress."
+  [[params.stats]]
+    value = "5 compliance regimes"
+    label = "SOC 2 Type II, PCI DSS, HIPAA, HITRUST and GDPR programmes led end to end."
+  [[params.stats]]
+    value = "1 per quarter → more than onde a day"
+    label = "Release cadence improvement delivered for a FinTech client by rebuilding CI/CD, team structure and SDLC."
 
-  # About section
+  # --- Services -------------------------------------------------------------
+  [[params.services]]
+    icon    = "compass"
+    title   = "Fractional CTO"
+    summary = "For companies with no technology executive, or a founding engineer who has outgrown the role."
+    points  = [
+      "Technical strategy, roadmap and architecture ownership",
+      "Build-versus-buy calls and vendor relationships",
+      "The technology story your investors and board need",
+      "Typically 1–3 days a week, reviewed quarterly",
+    ]
+  [[params.services]]
+    icon    = "users"
+    title   = "Fractional VP Engineering"
+    summary = "For companies where the technical vision is clear but delivery is not."
+    points  = [
+      "Team structure, hiring plans and performance management",
+      "SDLC, CI/CD and the operating cadence that ships software",
+      "Turning a roadmap into predictable delivery",
+      "Typically 2–3 days a week, six months minimum",
+    ]
+  [[params.services]]
+    icon    = "shield"
+    title   = "Diligence & compliance readiness"
+    summary = "For companies raising, selling, or entering a regulated market for the first time."
+    points  = [
+      "Architecture, security and compliance posture review",
+      "Engineering team and delivery assessment",
+      "Remediation plan — before someone else finds the gaps",
+      "Four to six weeks, or ongoing advisory",
+    ]
+
+  # --- Case notes -----------------------------------------------------------
+  [[params.caseNotes]]
+    sector   = "Healthcare Tech"
+    headline = "Idea to launched platform"
+    detail   = "Took a healthcare technology platform from concept to market as Fractional CTO — owning the product roadmap, the initial architecture, and the acquisition strategy that followed."
+  [[params.caseNotes]]
+    sector   = "FinTech"
+    headline = "Quarterly releases to weekly"
+    detail   = "Rebuilt a FinTech client's CI/CD pipeline, engineering team structure and SDLC, moving them from one release per quarter to multiple releases per week."
+  [[params.caseNotes]]
+    sector   = "SaaS · M&A"
+    headline = "Two acquisitions, both sides of the table"
+    detail   = "Ran technical due diligence on MagicWrighter for SWIVEL's acquisition, and represented engineering during Battery Ventures' acquisition of Chargify — then led the integration planning."
+  [[params.caseNotes]]
+    sector   = "Cybersecurity"
+    headline = "Four brands, one product org"
+    detail   = "Unified engineering teams from the Jungle Disk, LiveVault, KeepItSafe and OffSiteDataSync acquisitions into a single product organisation at CyberFortress."
+  [[params.caseNotes]]
+    sector   = "Cloud Infrastructure"
+    headline = "OpenStack at Rackspace scale"
+    detail   = "Led product for Cloud Identity (Keystone) and Key Management, helped launch Barbican as an official OpenStack project, and shipped Repose as an open developer toolkit."
+  [[params.caseNotes]]
+    sector   = "Regulated Cloud"
+    headline = "HIPAA-compliant infrastructure"
+    detail   = "Architected enterprise microservice and multi-cloud AWS solutions at ClearDATA, and carried core products through SOC 2, HITRUST and other major healthcare audits."
+
+  # --- About ----------------------------------------------------------------
   [params.about]
-    enable = true
-    title = "About"
-    image = "/images/profile.jpg"
+    title   = "I've seen this movie before — in 1998, 2008 and 2018."
     content = """
-    Series A and B startups hire me when they need executive-level tech leadership but aren't ready — or funded enough — for a full-time CTO.
+Series A and B startups hire me when they need executive-level technology leadership but aren't ready —
+or funded enough — for a full-time CTO.
 
-    I step in as Fractional CTO or VP Engineering and help you build the team, establish the architecture, and ship the product. I specialize in **Healthcare Tech** and **FinTech** — industries where compliance, security, and speed all matter at once.
+I started as the sole employee of a small ISP, scaling it from 100 to 3,000 customers in eighteen months.
+I spent thirteen years at Rackspace as it became a cloud company. I've led engineering at ClearDATA building
+HIPAA-compliant infrastructure, run global DevOps and compliance at Chargify through its acquisition, unified
+four acquired brands at CyberFortress, and reported to the CEO at SWIVEL through a reorganisation and an exit.
 
-    With 25+ years at companies like Rackspace, ClearDATA, Chargify, and SWIVEL, I've seen what separates engineering orgs that scale from ones that stall. I bring that pattern recognition directly to your team.
-    """
+That range matters because your problem is rarely purely technical. It's usually a technical problem wearing
+an organisational costume — and pattern recognition is the thing you can't hire junior.
 
-    # Skills
-    [params.about.skills]
-      enable = true
-      title = "Core Competencies"
-      items = [
-        "Technology Strategy & Vision",
-        "Engineering Leadership",
-        "Cloud Architecture (AWS, Azure, GCP)",
-        "Software Development",
-        "Cybersecurity & Compliance",
-        "Digital Transformation",
-        "Team Building & Mentoring",
-        "Product Development"
-      ]
+Outside client work I'm CTO of **Alenio Health (Tú TeleDoc)**, a telemedicine venture serving Mexico and Latin
+America. I sit on the board of [Tech Bloc](https://satechbloc.com/) and the Leadership San Antonio Alumni
+Association, and I mentor engineers, engineering leaders and founders at local universities.
+"""
+    skills = [
+      "Technology Strategy & Vision",
+      "Engineering Leadership",
+      "Cloud Architecture (AWS, Azure, GCP)",
+      "DevOps & CI/CD",
+      "Cybersecurity & Compliance",
+      "Technical Due Diligence",
+      "Digital Transformation",
+      "Team Building & Mentoring",
+      "Product Development",
+    ]
 
   # Experience section
   [params.experience]
@@ -169,23 +228,23 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "https://aleniohealth.com"
       date = "2025 - Present"
       content = """
-      Leading technology and product strategy for an early-stage healthcare tech startup launching in Mexico.
-      - Defining product roadmap and go-to-market strategy for initial launch
-      - Establishing architecture and engineering foundation for the platform
-      - Driving product vision from concept through market launch
+Leading technology and product strategy for an early-stage healthcare tech startup launching in Mexico.
+- Defining product roadmap and go-to-market strategy for initial launch
+- Establishing architecture and engineering foundation for the platform
+- Driving product vision from concept through market launch
       """
 
     [[params.experience.items]]
       job = "Fractional CTO"
       company = "Nathan Anderson Consulting"
       companyUrl = "https://nathananderson.com"
-      date = "April 2024 - May 2025"
+      date = "April 2024 - Present"
       content = """
-      Embedded as Fractional CTO and VP Engineering for post-revenue startups navigating growth and technical complexity.
-      - Took a Healthcare Tech platform from idea to launch — built product roadmap, initial architecture, and acquisition strategy
-      - Helped a FinTech go from one release per quarter to multiple releases per week by rebuilding CI/CD pipeline, engineering team structure, and SDLC
-      - Specialized in Series A and B companies in FinTech and Healthcare Tech
-      - Delivered fractional CTO and VP Engineering services to multiple client companies simultaneously
+Embedded as Fractional CTO and VP Engineering for post-revenue startups navigating growth and technical complexity.
+- Took a Healthcare Tech platform from idea to launch — built product roadmap, initial architecture, and acquisition strategy
+- Helped a FinTech go from one release per quarter to multiple releases per week by rebuilding CI/CD pipeline, engineering team structure, and SDLC
+- Specialized in Series A and B companies in FinTech and Healthcare Tech
+- Delivered fractional CTO and VP Engineering services to multiple client companies simultaneously
       """
 
     [[params.experience.items]]
@@ -194,13 +253,13 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "https://swivel.com"
       date = "February 2023 - April 2024"
       content = """
-      Reported directly to CEO and led Software Engineering organization through major growth and transformation initiatives.
-      - Led organization through multiple major product launches and company acquisition
-      - Executed complete Product & Engineering department reorganization into functional business units
-      - Streamlined cross-functional communication and aligned organization-wide goals for accelerated product development
-      - Organized and facilitated first company-wide Engineering in-person offsite planning event
-      - Built SWIVEL's first DevOps function to reduce operational overhead on engineering teams
-      - Conducted M&A due diligence for MagicWrighter acquisition and led integration planning
+Reported directly to CEO and led Software Engineering organization through major growth and transformation initiatives.
+- Led organization through multiple major product launches and company acquisition
+- Executed complete Product & Engineering department reorganization into functional business units
+- Streamlined cross-functional communication and aligned organization-wide goals for accelerated product development
+- Organized and facilitated first company-wide Engineering in-person offsite planning event
+- Built SWIVEL's first DevOps function to reduce operational overhead on engineering teams
+- Conducted M&A due diligence for MagicWrighter acquisition and led integration planning
       """
 
     [[params.experience.items]]
@@ -209,12 +268,12 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "https://cyberfortress.com"
       date = "February 2022 - February 2023"
       content = """
-      Led global Product Engineering, Product Management, and Information Systems teams for a cybersecurity company.
-      - Managed product portfolio roadmap and SDLC across multiple acquired brands
-      - Unified engineering teams from Jungle Disk, LiveVault, KeepItSafe, and OffSiteDataSync acquisitions
-      - Designed, developed, and delivered new products and features for consolidated portfolio
-      - Established unified organizational structure and reporting for cross-brand teams
-      - Managed vendor relationships and supported marketing initiatives through technical content
+Led global Product Engineering, Product Management, and Information Systems teams for a cybersecurity company.
+- Managed product portfolio roadmap and SDLC across multiple acquired brands
+- Unified engineering teams from Jungle Disk, LiveVault, KeepItSafe, and OffSiteDataSync acquisitions
+- Designed, developed, and delivered new products and features for consolidated portfolio
+- Established unified organizational structure and reporting for cross-brand teams
+- Managed vendor relationships and supported marketing initiatives through technical content
       """
 
     [[params.experience.items]]
@@ -223,12 +282,12 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "https://maxio.com"
       date = "July 2021 - February 2022"
       content = """
-      Led global DevOps, Software Engineering, IT, and Compliance teams across multiple international locations.
-      - Managed distributed engineering teams in Krakow and Warsaw, Poland with global sales & support in Dublin
-      - Served as core team member for post-merger integration of Chargify and SaaSOptics
-      - Led due diligence process during Battery Ventures acquisition of Chargify
-      - Architected and developed combined product offerings from both Chargify and SaaSOptics platforms
-      - Coordinated cross-functional teams across multiple time zones and regulatory environments
+Led global DevOps, Software Engineering, IT, and Compliance teams across multiple international locations.
+- Managed distributed engineering teams in Krakow and Warsaw, Poland with global sales & support in Dublin
+- Served as core team member for post-merger integration of Chargify and SaaSOptics
+- Led due diligence process during Battery Ventures acquisition of Chargify
+- Architected and developed combined product offerings from both Chargify and SaaSOptics platforms
+- Coordinated cross-functional teams across multiple time zones and regulatory environments
       """
 
     [[params.experience.items]]
@@ -237,12 +296,12 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "https://maxio.com"
       date = "January 2019 - July 2021"
       content = """
-      Led Operations, Compliance, and Helpdesk functions for a global SaaS organization spanning multiple continents.
-      - Managed world-spanning Operations department across San Antonio, Poland, and Australia
-      - Oversaw all system operations and infrastructure for enterprise-scale billing platform
-      - Led comprehensive compliance efforts including SOC I Type II, PCI DSS, and GDPR certifications
-      - Served as primary point of contact for customer compliance meetings and audits
-      - Developed and managed compliance policies and procedures across international jurisdictions
+Led Operations, Compliance, and Helpdesk functions for a global SaaS organization spanning multiple continents.
+- Managed world-spanning Operations department across San Antonio, Poland, and Australia
+- Oversaw all system operations and infrastructure for enterprise-scale billing platform
+- Led comprehensive compliance efforts including SOC I Type II, PCI DSS, and GDPR certifications
+- Served as primary point of contact for customer compliance meetings and audits
+- Developed and managed compliance policies and procedures across international jurisdictions
       """
 
     [[params.experience.items]]
@@ -251,15 +310,15 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "https://cleardata.com"
       date = "December 2015 - January 2019"
       content = """
-      Led distributed Engineering teams responsible for core components of HIPAA compliant hosting framework and enterprise microservice architectures.
-      - Architected enterprise-scale microservice architectures and multi-cloud solutions on AWS
-      - Led and mentored distributed engineering teams across multiple locations
-      - Engaged directly with customers to understand product needs and demonstrate platform capabilities
-      - Facilitated strategic roadmap planning and represented products at HIMSS and healthcare trade shows
-      - Managed critical partner relationships and participated in AWS vendor confidential roadmap briefings
-      - Ensured compliance and security posture of core products across SOC2, HITRUST, and other major audits
-      - Developed AWS platform automation tools for healthcare-grade infrastructure
-      - Represented Product Engineering in enterprise audit processes and regulatory compliance initiatives
+Led distributed Engineering teams responsible for core components of HIPAA compliant hosting framework and enterprise microservice architectures.
+- Architected enterprise-scale microservice architectures and multi-cloud solutions on AWS
+- Led and mentored distributed engineering teams across multiple locations
+- Engaged directly with customers to understand product needs and demonstrate platform capabilities
+- Facilitated strategic roadmap planning and represented products at HIMSS and healthcare trade shows
+- Managed critical partner relationships and participated in AWS vendor confidential roadmap briefings
+- Ensured compliance and security posture of core products across SOC2, HITRUST, and other major audits
+- Developed AWS platform automation tools for healthcare-grade infrastructure
+- Represented Product Engineering in enterprise audit processes and regulatory compliance initiatives
       """
 
     [[params.experience.items]]
@@ -268,13 +327,13 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "https://rackspace.com"
       date = "September 2013 - December 2015"
       content = """
-      Managed Product Management team responsible for Cloud Identity (OpenStack Keystone), Key Management (Barbican), and core cloud infrastructure services.
-      - Led product management for usage processing and billing systems across the cloud platform
-      - Represented Public Cloud division on major company-wide strategic initiatives
-      - Helped launch Barbican as an official OpenStack project for key management services
-      - Successfully launched Repose (openrepose.org) as internal developer toolkit for API development
-      - Managed product roadmaps for various services and toolkits critical to cloud operations
-      - Collaborated with engineering teams to deliver common API development solutions across all Cloud Engineering teams
+Managed Product Management team responsible for Cloud Identity (OpenStack Keystone), Key Management (Barbican), and core cloud infrastructure services.
+- Led product management for usage processing and billing systems across the cloud platform
+- Represented Public Cloud division on major company-wide strategic initiatives
+- Helped launch Barbican as an official OpenStack project for key management services
+- Successfully launched Repose (openrepose.org) as internal developer toolkit for API development
+- Managed product roadmaps for various services and toolkits critical to cloud operations
+- Collaborated with engineering teams to deliver common API development solutions across all Cloud Engineering teams
       """
 
     [[params.experience.items]]
@@ -283,13 +342,13 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "https://rackspace.com"
       date = "June 2010 - September 2013"
       content = """
-      Led product management for billing & usage reporting systems and internal cloud infrastructure services.
-      - Managed billing and usage reporting systems for enterprise cloud platform
-      - Oversaw product development for various services internal to cloud infrastructure operations
-      - Led development of tools utilized by Cloud Engineering teams for enhanced productivity
-      - Managed team of Product Managers and Technical Product Managers
-      - Collaborated with engineering teams to deliver critical infrastructure and tooling solutions
-      - Established product management processes and frameworks for cloud services portfolio
+Led product management for billing & usage reporting systems and internal cloud infrastructure services.
+- Managed billing and usage reporting systems for enterprise cloud platform
+- Oversaw product development for various services internal to cloud infrastructure operations
+- Led development of tools utilized by Cloud Engineering teams for enhanced productivity
+- Managed team of Product Managers and Technical Product Managers
+- Collaborated with engineering teams to deliver critical infrastructure and tooling solutions
+- Established product management processes and frameworks for cloud services portfolio
       """
 
     [[params.experience.items]]
@@ -298,14 +357,14 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "https://rackspace.com"
       date = "June 2002 - June 2010"
       content = """
-      Led development of Public Cloud Control Panel, internal management portals, and core cloud infrastructure services during Rackspace's transformation to cloud computing.
-      - Managed development of Public Cloud Control Panel and various internal management portals
-      - Led Cloud Servers API and Cloud Identity development initiatives
-      - Architected internal systems and services necessary for large-scale cloud operations
-      - Orchestrated monitoring system overhaul integrating OpenNMS, Nimbus, HP SiteScope, and HP NNM
-      - Built large-scale event processing, de-duplication, and correlation engine for enterprise monitoring
-      - Managed development of MyRackspace customer portal and Rackspace.com platform
-      - Established foundational infrastructure for Rackspace's cloud services evolution
+Led development of Public Cloud Control Panel, internal management portals, and core cloud infrastructure services during Rackspace's transformation to cloud computing.
+- Managed development of Public Cloud Control Panel and various internal management portals
+- Led Cloud Servers API and Cloud Identity development initiatives
+- Architected internal systems and services necessary for large-scale cloud operations
+- Orchestrated monitoring system overhaul integrating OpenNMS, Nimbus, HP SiteScope, and HP NNM
+- Built large-scale event processing, de-duplication, and correlation engine for enterprise monitoring
+- Managed development of MyRackspace customer portal and Rackspace.com platform
+- Established foundational infrastructure for Rackspace's cloud services evolution
       """
 
     [[params.experience.items]]
@@ -314,11 +373,11 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "https://rackspace.com"
       date = "December 2000 - June 2002"
       content = """
-      Developed foundational customer-facing platforms during Rackspace's early growth phase as a hosting company.
-      - Led development of MyRackspace customer portal for managed hosting services
-      - Built and maintained the public website rackspace.com
-      - Established core web development practices and frameworks for customer-facing applications
-      - Contributed to early hosting platform infrastructure and customer management systems
+Developed foundational customer-facing platforms during Rackspace's early growth phase as a hosting company.
+- Led development of MyRackspace customer portal for managed hosting services
+- Built and maintained the public website rackspace.com
+- Established core web development practices and frameworks for customer-facing applications
+- Contributed to early hosting platform infrastructure and customer management systems
       """
 
     [[params.experience.items]]
@@ -327,13 +386,13 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "#"
       date = "1998 - December 2000"
       content = """
-      Served as Systems Engineer performing diverse technical functions across government and commercial contracts.
-      - Performed network and system administration across variety of government and commercial environments
-      - Developed custom applications including Air Force Library System automation for book procurement processes
-      - Installed and maintained point-to-point wireless network infrastructure in downtown San Antonio
-      - Diagnosed and maintained legacy Solaris infrastructure and large-scale WORM drive array systems
-      - Provided comprehensive network troubleshooting, installation, and technical support services
-      - Gained foundational experience across multiple technologies, platforms, and industry verticals
+Served as Systems Engineer performing diverse technical functions across government and commercial contracts.
+- Performed network and system administration across variety of government and commercial environments
+- Developed custom applications including Air Force Library System automation for book procurement processes
+- Installed and maintained point-to-point wireless network infrastructure in downtown San Antonio
+- Diagnosed and maintained legacy Solaris infrastructure and large-scale WORM drive array systems
+- Provided comprehensive network troubleshooting, installation, and technical support services
+- Gained foundational experience across multiple technologies, platforms, and industry verticals
       """
 
     [[params.experience.items]]
@@ -342,123 +401,79 @@ I embed with **Series A and B startups** as Fractional CTO or VP Engineering and
       companyUrl = "#"
       date = "1996 - 1998"
       content = """
-      Served as sole employee of a small ISP, performing comprehensive technical operations across all business functions.
-      - Managed systems administration for both Windows and Linux servers as the only technical staff member
-      - Provided technical support and customer service for growing customer base
-      - Performed network engineering and infrastructure management for ISP operations
-      - Developed custom software solutions to support business operations and customer management
-      - Helped scale the business from 100 to over 3,000 customers during 18-month tenure
-      - Gained comprehensive experience in all aspects of ISP operations and small business technology management
+Served as sole employee of a small ISP, performing comprehensive technical operations across all business functions.
+- Managed systems administration for both Windows and Linux servers as the only technical staff member
+- Provided technical support and customer service for growing customer base
+- Performed network engineering and infrastructure management for ISP operations
+- Developed custom software solutions to support business operations and customer management
+- Helped scale the business from 100 to over 3,000 customers during 18-month tenure
+- Gained comprehensive experience in all aspects of ISP operations and small business technology management
       """
 
-  # Education section
-  [params.education]
-    enable = false
 
-  # Contact section
-  [params.contact]
-    enable = true
-    title = "Contact"
-    content = "If you're a Series A or B startup that needs experienced technology leadership without a full-time CTO hire, let's talk. I work with companies in Healthcare Tech and FinTech."
-    email = ""  # Replace with your email
-    btnName = "Contact Me"
-
-[params.social]
-  rss = "index.xml"
-
-# Footer Social Network links
-[params.footer.socialNetworks]
-  github = "https://github.com/nanderson/"
-  instagram = "https://www.instagram.com/mtman97/"
-  facebook = "https://www.facebook.com/nathan.edward.anderson"
-  linkedin = "https://www.linkedin.com/in/nathanedwardanderson/"
-  #twitter = "https://x.com/mtman97"
-
-# Footer Recent Posts
-[params.footer.recentPosts]
-  path = "blog"
-  count = 3
-  title = "Recent Posts"
-  enable = true
-
-# Custom CSS
-[params.customCSS]
-  enable = true
-  list = ["css/custom.css", "css/performance-seo.css"]
-
-# Google Analytics
-[params.analytics.google]
-  SiteVerificationTag = "G-0FVQ0R62J5"  # Replace with your tracking ID
-
-# SEO and Content Processing
+# ---------------------------------------------------------------------------
+# Markup / output
+# ---------------------------------------------------------------------------
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = false  # Security: Disable unsafe HTML rendering
-    [markup.goldmark.parser]
-      #attribute = true
-      autoHeadingID = true
-      autoHeadingIDType = "github"
-  
+  [markup.goldmark.renderer]
+    unsafe = false
+  [markup.goldmark.parser]
+    autoHeadingID = true
+    autoHeadingIDType = "github"
   [markup.tableOfContents]
     startLevel = 2
-    endLevel = 4
-    ordered = false
-    
+    endLevel = 3
   [markup.highlight]
     style = "github"
-    lineNos = true
-    lineNumbersInTable = false
+    lineNos = false
+    noClasses = true
     tabWidth = 4
 
-# Sitemap configuration
-[sitemap]
-  changefreq = 'weekly'
-  filename = 'sitemap.xml'
-  priority = 0.5
-
-# Privacy configuration for GDPR compliance
-[privacy]
-  [privacy.googleAnalytics]
-    respectDoNotTrack = true
-    anonymizeIP = true
-    useSessionStorage = true
-  [privacy.youtube]
-    privacyEnhanced = true
-
-# Related content for SEO
-[related]
-  includeNewer = true
-  threshold = 80
-  toLower = false
-  [[related.indices]]
-    name = "keywords"
-    weight = 100
-  [[related.indices]]
-    name = "tags"
-    weight = 80
-  [[related.indices]]
-    name = "date"
-    weight = 10
-
-# Image processing for performance
 [imaging]
-  quality = 85
+  quality = 82
   resampleFilter = "Lanczos"
   anchor = "Smart"
 
-# Cache and performance
-[caches]
-  [caches.images]
-    maxAge = "1h"
-  [caches.assets]
-    maxAge = "1h"
+[sitemap]
+  changefreq = 'monthly'
+  filename = 'sitemap.xml'
+  priority = 0.5
 
-[module]
-  [[module.imports]]
-    path = "hugo-atom-feed"
+[privacy.googleAnalytics]
+  respectDoNotTrack = true
+
+[mediaTypes."application/atom+xml"]
+  suffixes = ["xml"]
+
+[outputFormats.Atom]
+  name = "Atom"
+  mediaType = "application/atom+xml"
+  baseName = "atom"
+  isPlainText = false
+  rel = "alternate"
+  isHTML = false
+  noUgly = true
+  permalinkable = false
+
+[outputFormats.LLMS]
+  name = "LLMS"
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  rel = "alternate"
+  isHTML = false
+  noUgly = true
+  permalinkable = false
 
 [outputs]
-  home = ["HTML", "RSS", "ATOM"]
+  home = ["HTML", "RSS", "ATOM", "LLMS", "robots"]
   section = ["HTML", "RSS", "ATOM"]
-  taxonomy = ["HTML", "RSS", "ATOM"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+[minify]
+  disableXML = true
+  [minify.tdewolff.html]
+    keepDocumentTags = true
+    keepEndTags = true
+    keepQuotes = true

@@ -1,20 +1,11 @@
+# Security contact for nathananderson.com — RFC 9116
+# Report a vulnerability by email. Please include a description, steps to
+# reproduce, potential impact, and any suggested fix. Expect acknowledgement
+# within 48 hours.
+
 Contact: mailto:nathan@nathananderson.com
-Expires: 2025-12-31T23:59:59.000Z
+Expires: 2027-08-11T23:59:59.000Z
 Preferred-Languages: en
 Canonical: https://nathananderson.com/.well-known/security.txt
-
-# Security Policy
-# If you discover a security vulnerability, please report it to:
-# security@example.org
-#
-# Please include:
-# - Description of the vulnerability
-# - Steps to reproduce
-# - Potential impact
-# - Any suggested fixes
-#
-# We will acknowledge receipt within 24 hours and
-# provide a more detailed response within 48 hours.
-
-Policy: https://athananderson.com
-Hiring: https://athananderson.com
+Policy: https://github.com/nanderson/nathananderson.com/blob/main/SECURITY.md
+Hiring: https://nathananderson.com/services/

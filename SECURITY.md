@@ -22,54 +22,75 @@ This document outlines the security measures implemented for this Hugo-based CTO
 - **CSP Compliance Checks**: Validates generated HTML for Content Security Policy compliance
 - **HTTPS Verification**: Ensures production builds use HTTPS
 
-#### Deployment Workflow (`.github/workflows/deploy.yml`)
+#### Build Check Workflow (`.github/workflows/ci.yml`)
 
-- **Pre-deployment Security Checks**: Validates HTTPS configuration and scans for sensitive files
-- **Security Hardening**: Removes accidentally included sensitive files and adds security headers
-- **Secure GitHub Pages Deployment**: Uses official GitHub Pages actions with proper permissions
+- **Pre-build checks**: Validates the HTTPS baseURL and scans for sensitive files
+- **Build verification**: Confirms every key page, `robots.txt`, `llms.txt` and the sitemap
+  are produced and non-empty
+- **Link and structured-data checks**: Fails the build on broken internal references or
+  invalid JSON-LD
+- **Publishes nothing**: deployment is handled by Cloudflare Pages
 
-### 3. Netlify Security Configuration
+### 3. Cloudflare Pages Security Configuration
 
-#### Security Headers (`netlify.toml`)
+Deployment is Cloudflare Pages, building directly from this repository on push to `main`.
 
-- **Content Security Policy (CSP)**
-  ```
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
-  style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
-  img-src 'self' data: https:;
-  connect-src 'self' https://www.google-analytics.com;
+**Required build settings** (Cloudflare dashboard → Workers & Pages → Settings → Build):
+
+| Setting | Value |
+|---|---|
+| Build command | `hugo --gc --minify` |
+| Output directory | `public` |
+| `HUGO_VERSION` | `0.164.0` (minimum `0.146`) |
+
+`HUGO_VERSION` matters: Cloudflare's default Hugo is far older than 0.146, and the templates
+rely on the `layouts/<section>/page.html` lookup introduced in that release. On an older
+version blog posts and standalone pages render blank.
+
+#### Security Headers (`static/_headers`)
+
+Cloudflare Pages serves the headers declared in `static/_headers`. The active policy:
+
+```
+Content-Security-Policy: default-src 'self';
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
+  connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;
+  img-src 'self' data: https://www.google-analytics.com;
+  style-src 'self' 'unsafe-inline';
+  font-src 'self';
   frame-ancestors 'none';
-  ```
+  base-uri 'self';
+  form-action 'self'
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+```
 
-- **Security Headers**
-  - `X-Frame-Options: DENY` - Prevents clickjacking
-  - `X-Content-Type-Options: nosniff` - Prevents MIME sniffing
-  - `X-XSS-Protection: 1; mode=block` - XSS protection
-  - `Referrer-Policy: strict-origin-when-cross-origin` - Controls referrer information
-  - `Strict-Transport-Security` - Enforces HTTPS
-  - `Permissions-Policy` - Restricts browser features
+The policy is deliberately tight: the site self-hosts its CSS and fonts and loads no CDN
+scripts, so Google Analytics is the only permitted third-party origin. `'unsafe-inline'`
+covers the small theme-initialisation script and the inline critical styles.
 
-- **Cache Control**: Optimized caching for static assets with long-term caching (1 year)
-
-#### Redirect Rules
-
-- Blocks access to sensitive files (`.env`, `.git`, `config/`)
-- Forces HTTPS redirects
-- Returns 404 for sensitive paths
+`static/_headers` also sets immutable caching for fingerprinted assets under `/css/` and
+`/images/`, and forces revalidation on HTML.
 
 ### 4. Static Security Files
 
-#### robots.txt
-- Allows legitimate crawlers
-- Blocks access to sensitive directories
-- References sitemap location
+#### robots.txt (generated — `layouts/index.robots.txt`)
+- Explicitly allows search crawlers and AI/assistant crawlers (GPTBot, ClaudeBot,
+  PerplexityBot, Google-Extended, Applebot-Extended and others)
+- Blocks commercial SEO scrapers (SemrushBot, AhrefsBot, MJ12bot)
+- References the sitemap via an absolute, generated URL
 
-#### security.txt
-- RFC 9116 compliant security policy disclosure
-- Contact information for security reports
-- Clear vulnerability reporting process
+Note: it is generated rather than static so the `Sitemap:` directive resolves against
+`baseURL`. A static `static/robots.txt` would ship the template placeholder verbatim.
+
+#### security.txt (`static/.well-known/security.txt`)
+- RFC 9116 compliant disclosure record
+- Contact address, policy link, and preferred language
+
+**Maintenance**: the `Expires` field must stay in the future or the record is invalid.
+Review it annually — it is currently set to 2027-08-11.
 
 ### 5. Repository Security
 
@@ -126,7 +147,7 @@ This document outlines the security measures implemented for this Hugo-based CTO
 
 If you discover a security vulnerability in this website:
 
-1. **Email**: security@example.org (replace with actual email)
+1. **Email**: nathan@nathananderson.com (see `/.well-known/security.txt`)
 2. **Include**:
    - Description of the vulnerability
    - Steps to reproduce
@@ -135,7 +156,7 @@ If you discover a security vulnerability in this website:
 
 ### Response Timeline
 
-- **Acknowledgment**: Within 24 hours
+- **Acknowledgment**: Within 48 hours
 - **Initial Assessment**: Within 48 hours
 - **Resolution**: Based on severity (1-30 days)
 - **Disclosure**: Coordinated disclosure after fix

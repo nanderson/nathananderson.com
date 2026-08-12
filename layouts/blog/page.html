@@ -1,0 +1,58 @@
+{{ define "main" }}
+<article class="article">
+  <div class="container">
+    <header class="article__header">
+      <div class="article__meta">
+        <a href="/blog/">Writing</a>
+        <span aria-hidden="true">·</span>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        {{- if gt .ReadingTime 0 }}
+        <span aria-hidden="true">·</span>
+        <span>{{ .ReadingTime }} min read</span>
+        {{- end }}
+      </div>
+      <h1>{{ .Title }}</h1>
+      {{- if and .Description (ne .Description .Title) }}<p class="lede">{{ .Description }}</p>{{ end }}
+      {{- with .Params.tags }}
+      <ul class="tags" style="margin-top: var(--sp-5)">
+        {{- range . }}<li><a class="tag" href="{{ (urlize .) | printf "/tags/%s/" | relURL }}">{{ . }}</a></li>{{ end }}
+      </ul>
+      {{- end }}
+    </header>
+
+    {{- with .Params.image }}
+    {{- $r := resources.Get (strings.TrimPrefix "/" .) }}
+    {{- with $r }}
+    <figure class="article__hero">
+      {{ partial "image.html" (dict "resource" . "alt" $.Title
+          "sizes" "(max-width: 1140px) 100vw, 1140px" "widths" (slice 640 960 1400) "max" 1800 "eager" true) }}
+    </figure>
+    {{- end }}
+    {{- end }}
+
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    <footer class="article__footer">
+      <div class="author-card">
+        {{ partial "image.html" (dict "resource" (resources.Get "images/profile.jpg")
+            "alt" site.Params.author "sizes" "64px" "widths" (slice 64 128) "max" 128) }}
+        <div>
+          <strong>{{ site.Params.author }}</strong>
+          <p>{{ site.Params.footerBlurb }}</p>
+          <a class="btn" href="{{ site.Params.bookingUrl }}" rel="noopener">Book a call</a>
+        </div>
+      </div>
+
+      {{- $related := first 3 (where (where site.RegularPages "Section" "blog") "Permalink" "!=" .Permalink) }}
+      {{- with $related }}
+      <h2 style="font-size: var(--t-xl); margin-top: var(--sp-8); margin-bottom: var(--sp-5)">Keep reading</h2>
+      <div class="card-grid">
+        {{- range . }}{{ partial "post-card.html" . }}{{ end }}
+      </div>
+      {{- end }}
+    </footer>
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,10 @@
+{{- $r := resources.Get (strings.TrimPrefix "/" .Destination) -}}
+<figure>
+{{- if $r }}
+{{ partial "image.html" (dict "resource" $r "alt" .PlainText
+    "sizes" "(max-width: 700px) 100vw, 700px" "widths" (slice 480 700 1000 1400) "max" 1400) }}
+{{- else }}
+<img src="{{ .Destination | safeURL }}" alt="{{ .PlainText }}" loading="lazy" decoding="async">
+{{- end }}
+{{- with .Title }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

@@ -1,0 +1,84 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+{{/* ---- Title / description ---- */}}
+{{- $title := cond .IsHome (printf "%s — %s" site.Title site.Params.tagline) (printf "%s | %s" .Title site.Title) -}}
+{{- with .Params.metaTitle }}{{ $title = . }}{{ end -}}
+{{- $desc := "" -}}
+{{- with .Description }}{{ $desc = . }}
+{{- else }}{{ if .IsPage }}{{ $desc = (.Summary | plainify | truncate 160) }}{{ else }}{{ $desc = site.Params.description }}{{ end }}{{ end -}}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{- with .Params.keywords }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{- end }}
+<meta name="author" content="{{ site.Params.author }}">
+{{ if or .Params.noindex .Params.private -}}
+<meta name="robots" content="noindex, nofollow">
+{{- else -}}
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+{{- end }}
+
+{{/* ---- Social image: per-page, else the generated site card ---- */}}
+{{- $ogImage := partial "func/ogimage.html" . -}}
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if .IsPage }}{{ if eq .Section "blog" }}article{{ else }}website{{ end }}{{ else }}website{{ end }}">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="{{ $ogImage.Permalink }}">
+<meta property="og:image:width" content="{{ $ogImage.Width }}">
+<meta property="og:image:height" content="{{ $ogImage.Height }}">
+<meta property="og:image:alt" content="{{ site.Params.author }} — {{ site.Params.tagline }}">
+{{- if and .IsPage (eq .Section "blog") }}
+<meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+<meta property="article:author" content="{{ site.Params.linkedin }}">
+{{- range .Params.tags }}
+<meta property="article:tag" content="{{ . }}">
+{{- end }}
+{{- end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $ogImage.Permalink }}">
+
+{{/* ---- Geo / theme ---- */}}
+<meta name="geo.region" content="US-TX">
+<meta name="geo.placename" content="{{ site.Params.location }}">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0c0f16" media="(prefers-color-scheme: dark)">
+
+{{/* ---- Icons ---- */}}
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+
+{{/* ---- Feeds ---- */}}
+<link rel="alternate" type="application/rss+xml" href="{{ "index.xml" | absURL }}" title="{{ site.Title }}">
+{{- with .OutputFormats.Get "ATOM" }}
+<link rel="alternate" type="{{ .MediaType }}" href="{{ .Permalink }}" title="{{ site.Title }} Atom Feed">
+{{- end }}
+
+{{/* ---- Stylesheet: one file, minified + fingerprinted, immutable-cacheable ---- */}}
+{{- $css := resources.Get "css/main.css" | minify | fingerprint "sha256" -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+{{/* ---- Set the theme before first paint so there is no flash ---- */}}
+<script>
+(function(){try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+</script>
+
+{{ partial "head/schema.html" . }}
+
+{{- if and hugo.IsProduction site.Params.googleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.Params.googleAnalytics }}"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());
+gtag('config','{{ site.Params.googleAnalytics }}',{anonymize_ip:true,allow_ad_personalization_signals:false});
+</script>
+{{- end }}

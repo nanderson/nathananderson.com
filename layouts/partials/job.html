@@ -1,0 +1,12 @@
+<article class="job">
+  <div class="job__meta">{{ .date }}</div>
+  <div>
+    <h3 class="job__title">{{ .job }}</h3>
+    {{- if and .companyUrl (ne .companyUrl "#") }}
+    <a class="job__company" href="{{ .companyUrl }}" rel="noopener">{{ .company }}</a>
+    {{- else }}
+    <span class="job__company">{{ .company }}</span>
+    {{- end }}
+    <div class="job__body">{{ .content | markdownify }}</div>
+  </div>
+</article>

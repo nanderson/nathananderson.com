@@ -1,0 +1,170 @@
+{{ define "main" }}
+
+{{/* ---------------- Hero ---------------- */}}
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow">{{ site.Params.hero.eyebrow }}</p>
+      <h1>{{ site.Params.hero.title }}</h1>
+      <p class="hero__title-sub">{{ site.Params.hero.subtitle }}</p>
+      {{ site.Params.hero.content | markdownify }}
+      <div class="btn-row">
+        <a class="btn btn--lg" href="{{ site.Params.bookingUrl }}" rel="noopener">Book a 30-minute call</a>
+        <a class="btn btn--ghost btn--lg" href="/services/">How I work</a>
+      </div>
+      <p class="hero__note">{{ site.Params.hero.note }}</p>
+    </div>
+    <div class="hero__media">
+      {{ partial "image.html" (dict
+          "resource" (resources.Get "images/hero.jpg")
+          "alt" (printf "%s, %s" site.Params.author site.Params.tagline)
+          "sizes" "(max-width: 900px) 320px, 420px"
+          "widths" (slice 320 420 640 840)
+          "max" 840
+          "eager" true) }}
+    </div>
+  </div>
+</section>
+
+{{/* ---------------- Trust strip ---------------- */}}
+<section class="trust">
+  <div class="container trust__inner">
+    <p class="trust__label">25+ years building and leading engineering teams at</p>
+    <ul class="trust__list">
+      {{- range site.Params.pastCompanies }}<li>{{ . }}</li>{{ end }}
+    </ul>
+  </div>
+</section>
+
+{{/* ---------------- Outcomes ---------------- */}}
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Track record</p>
+      <h2>What that experience buys you</h2>
+    </div>
+    <div class="stats">
+      {{- range site.Params.stats }}
+      <div class="stat">
+        <div class="stat__num">{{ .value }}</div>
+        <p class="stat__label">{{ .label }}</p>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{/* ---------------- Services ---------------- */}}
+<section class="section section--tint" id="services">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Engagements</p>
+      <h2>Executive engineering leadership, without the full-time hire</h2>
+      <p>Three ways I embed with Series A and B teams. Most engagements start part-time and adjust as the work demands.</p>
+    </div>
+    <div class="cards">
+      {{- range site.Params.services }}
+      <article class="card">
+        <div class="card__icon">{{ partial "icon.html" .icon }}</div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .summary }}</p>
+        <ul>{{- range .points }}<li>{{ . }}</li>{{ end }}</ul>
+      </article>
+      {{- end }}
+    </div>
+    <div class="btn-row" style="margin-top: var(--sp-6)">
+      <a class="btn btn--ghost" href="/services/">See what the first 90 days look like</a>
+    </div>
+  </div>
+</section>
+
+{{/* ---------------- Proof / case notes ---------------- */}}
+<section class="section" id="results">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Selected results</p>
+      <h2>Problems I have already solved</h2>
+    </div>
+    <div class="cards">
+      {{- range site.Params.caseNotes }}
+      <article class="card">
+        <p class="eyebrow" style="color: var(--ink-3)">{{ .sector }}</p>
+        <h3>{{ .headline }}</h3>
+        <p>{{ .detail }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+{{/* ---------------- About ---------------- */}}
+<section class="section section--tint" id="about">
+  <div class="container about__grid">
+    <div class="about__photo">
+      {{ partial "image.html" (dict
+          "resource" (resources.Get "images/profile.jpg")
+          "alt" (printf "Portrait of %s" site.Params.author)
+          "sizes" "(max-width: 860px) 100vw, 380px"
+          "widths" (slice 380 560 760)
+          "max" 760) }}
+    </div>
+    <div class="about__body">
+      <p class="eyebrow">About</p>
+      <h2>{{ site.Params.about.title }}</h2>
+      <div class="stack-6" style="margin-top: var(--sp-5)">
+        {{ site.Params.about.content | markdownify }}
+      </div>
+      <h3 style="margin-top: var(--sp-6); font-size: var(--t-lg)">Core competencies</h3>
+      <ul class="tags" style="margin-top: var(--sp-4)">
+        {{- range site.Params.about.skills }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{{/* ---------------- Experience ---------------- */}}
+<section class="section" id="experience">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Experience</p>
+      <h2>Career history</h2>
+    </div>
+    {{- $items := site.Params.experience.items }}
+    {{- $recent := first 5 $items }}
+    {{- $rest := after 5 $items }}
+    <div class="timeline">
+      {{- range $recent }}{{ partial "job.html" . }}{{ end }}
+    </div>
+    {{- if $rest }}
+    <details class="more">
+      <summary>Show {{ len $rest }} earlier roles</summary>
+      <div class="timeline" style="margin-top: var(--sp-4)">
+        {{- range $rest }}{{ partial "job.html" . }}{{ end }}
+      </div>
+    </details>
+    {{- end }}
+  </div>
+</section>
+
+{{/* ---------------- Writing ---------------- */}}
+{{- with first 3 (where site.RegularPages "Section" "blog") }}
+<section class="section section--tint" id="writing">
+  <div class="container">
+    <div class="section__head">
+      <p class="eyebrow">Writing</p>
+      <h2>Notes from the trenches</h2>
+    </div>
+    <div class="card-grid">
+      {{- range . }}{{ partial "post-card.html" . }}{{ end }}
+    </div>
+    <div class="btn-row" style="margin-top: var(--sp-6)">
+      <a class="btn btn--ghost" href="/blog/">Read all posts</a>
+    </div>
+  </div>
+</section>
+{{- end }}
+
+{{/* ---------------- Closing CTA ---------------- */}}
+{{ partial "cta-band.html" . }}
+
+{{ end }}

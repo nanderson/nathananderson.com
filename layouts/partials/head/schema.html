@@ -1,0 +1,115 @@
+{{- $og := partial "func/ogimage.html" . -}}
+{{- $person := printf "%s#person" site.BaseURL -}}
+{{- $site := printf "%s#website" site.BaseURL -}}
+{{- $svc := printf "%s#service" site.BaseURL -}}
+<script type="application/ld+json">
+{{- $graph := slice -}}
+
+{{/* --- Person: the single source of truth for identity --- */}}
+{{- $sameAs := slice -}}
+{{- range site.Params.profiles }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+{{- $person_ := dict
+      "@type" "Person"
+      "@id" $person
+      "name" site.Params.author
+      "givenName" "Nathan"
+      "familyName" "Anderson"
+      "jobTitle" site.Params.position
+      "description" site.Params.description
+      "url" site.BaseURL
+      "image" (dict "@type" "ImageObject" "url" $og.Permalink "width" $og.Width "height" $og.Height)
+      "email" (printf "mailto:%s" site.Params.email)
+      "sameAs" $sameAs
+      "address" (dict "@type" "PostalAddress" "addressLocality" "San Antonio" "addressRegion" "TX" "addressCountry" "US")
+      "worksFor" (dict "@type" "Organization" "name" site.Params.company "alternateName" site.Params.companyAka "url" site.Params.companyUrl)
+      "alumniOf" (dict "@type" "Organization" "name" "Rackspace")
+      "knowsAbout" site.Params.knowsAbout
+      "hasOccupation" (dict
+        "@type" "Occupation"
+        "name" "Fractional Chief Technology Officer"
+        "occupationalCategory" "15-1299.00"
+        "occupationLocation" (dict "@type" "City" "name" "San Antonio, TX")
+        "skills" (delimit site.Params.specializations ", "))
+-}}
+{{- $graph = $graph | append $person_ -}}
+
+{{/* --- WebSite --- */}}
+{{- $graph = $graph | append (dict
+      "@type" "WebSite"
+      "@id" $site
+      "url" site.BaseURL
+      "name" site.Title
+      "description" site.Params.description
+      "inLanguage" "en-US"
+      "publisher" (dict "@id" $person)
+      "copyrightHolder" (dict "@id" $person)) -}}
+
+{{/* --- The service offering: what makes this page findable by hiring intent --- */}}
+{{- if or .IsHome (eq .RelPermalink "/services/") -}}
+{{- $offers := slice -}}
+{{- range site.Params.services -}}
+  {{- $offers = $offers | append (dict
+      "@type" "Offer"
+      "itemOffered" (dict "@type" "Service" "name" .title "description" .summary)) -}}
+{{- end -}}
+{{- $graph = $graph | append (dict
+      "@type" "ProfessionalService"
+      "@id" $svc
+      "name" "Nathan Anderson — Fractional CTO Services"
+      "description" site.Params.description
+      "provider" (dict "@id" $person)
+      "url" (printf "%sservices/" site.BaseURL)
+      "areaServed" (slice
+        (dict "@type" "Country" "name" "United States")
+        (dict "@type" "Country" "name" "Mexico"))
+      "serviceType" site.Params.specializations
+      "knowsAbout" site.Params.knowsAbout
+      "hasOfferCatalog" (dict "@type" "OfferCatalog" "name" "Engagements" "itemListElement" $offers)) -}}
+{{- end -}}
+
+{{/* --- Article --- */}}
+{{- if and .IsPage (eq .Section "blog") -}}
+{{- $a := dict
+      "@type" "BlogPosting"
+      "@id" (printf "%s#article" .Permalink)
+      "headline" .Title
+      "description" (cond (ne .Description "") .Description (.Summary | plainify | truncate 160))
+      "url" .Permalink
+      "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+      "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+      "author" (dict "@id" $person)
+      "publisher" (dict "@id" $person)
+      "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+      "image" $og.Permalink
+      "wordCount" .WordCount
+      "timeRequired" (printf "PT%dM" (add 1 (div .WordCount 200)))
+      "inLanguage" "en-US"
+      "isPartOf" (dict "@id" $site) -}}
+{{- with .Params.tags }}{{ $a = merge $a (dict "keywords" (delimit . ", ")) }}{{ end -}}
+{{- $graph = $graph | append $a -}}
+{{- end -}}
+
+{{/* --- FAQ: lets assistants quote answers directly --- */}}
+{{- with .Params.faq -}}
+{{- $qs := slice -}}
+{{- range . -}}
+  {{- $qs = $qs | append (dict "@type" "Question" "name" .q
+        "acceptedAnswer" (dict "@type" "Answer" "text" .a)) -}}
+{{- end -}}
+{{- $graph = $graph | append (dict "@type" "FAQPage" "@id" (printf "%s#faq" $.Permalink) "mainEntity" $qs) -}}
+{{- end -}}
+
+{{/* --- Breadcrumbs --- */}}
+{{- if not .IsHome -}}
+{{- $items := slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" site.BaseURL) -}}
+{{- if and .Section (ne .Section "") -}}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" 2 "name" (title .Section) "item" (printf "%s%s/" site.BaseURL .Section)) -}}
+{{- end -}}
+{{- if .IsPage -}}
+  {{- $items = $items | append (dict "@type" "ListItem" "position" (add (len $items) 1) "name" .Title "item" .Permalink) -}}
+{{- end -}}
+{{- $graph = $graph | append (dict "@type" "BreadcrumbList" "@id" (printf "%s#breadcrumb" .Permalink) "itemListElement" $items) -}}
+{{- end -}}
+
+{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify (dict "indent" "") | safeJS }}
+</script>

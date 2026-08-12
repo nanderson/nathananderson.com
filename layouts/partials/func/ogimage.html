@@ -1,0 +1,7 @@
+{{- $src := "" -}}
+{{- with .Params.image }}{{ $src = strings.TrimPrefix "/" . }}{{ end -}}
+{{- $res := "" -}}
+{{- if $src }}{{ $res = resources.Get $src }}{{ end -}}
+{{- if not $res }}{{ $res = resources.Get "images/og-default.jpg" }}{{ end -}}
+{{- if not $res }}{{ $res = resources.Get "images/hero.jpg" }}{{ end -}}
+{{- return ($res.Fill "1200x630 Smart q82 jpg") -}}

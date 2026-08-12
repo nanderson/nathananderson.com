@@ -1,0 +1,13 @@
+{{ define "main" }}
+<div class="section">
+  <div class="container">
+    <header class="article__header">
+      {{- with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{- with .Description }}<p class="lede" style="margin-top: var(--sp-4)">{{ . }}</p>{{ end }}
+    </header>
+    <div class="prose">{{ .Content }}</div>
+  </div>
+</div>
+{{ if not .Params.hideCta }}{{ partial "cta-band.html" . }}{{ end }}
+{{ end }}

@@ -1,0 +1,14 @@
+<article class="post-card">
+  {{- with .Params.image }}
+    {{- $r := resources.Get (strings.TrimPrefix "/" .) }}
+    {{- with $r }}
+      {{ partial "image.html" (dict "resource" . "alt" $.Title
+          "sizes" "(max-width: 700px) 100vw, 360px" "widths" (slice 360 560 760) "max" 760) }}
+    {{- end }}
+  {{- end }}
+  <div class="post-card__body">
+    <p class="post-card__date"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p>{{ .Summary | plainify | truncate 130 }}</p>
+  </div>
+</article>

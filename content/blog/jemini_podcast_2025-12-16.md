@@ -1,5 +1,5 @@
 ---
-title: "Podcast with Dan Villa of Jeminmi"
+title: "Podcast with Dan Villa of Jemini"
 date: 2025-12-16
 draft: false
 author: ["Nathan Anderson"]

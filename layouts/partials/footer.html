@@ -1,0 +1,49 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <h4>{{ site.Params.author }}</h4>
+        <p>{{ site.Params.footerBlurb }}</p>
+        <div class="social">
+          <a href="{{ site.Params.linkedin }}" rel="me noopener" aria-label="LinkedIn">{{ partial "social-icon.html" "linkedin" }}</a>
+          <a href="{{ site.Params.github }}" rel="me noopener" aria-label="GitHub">{{ partial "social-icon.html" "github" }}</a>
+          <a href="mailto:{{ site.Params.email }}" aria-label="Email">{{ partial "social-icon.html" "email" }}</a>
+          <a href="{{ "index.xml" | relURL }}" aria-label="RSS feed">{{ partial "social-icon.html" "rss" }}</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/blog/">Writing</a></li>
+          <li><a href="/#experience">Experience</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Latest</h4>
+        <ul>
+          {{- range first 3 (where site.RegularPages "Section" "blog") }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
+
+      <div>
+        <h4>Work with me</h4>
+        <ul>
+          <li><a href="{{ site.Params.bookingUrl }}" rel="noopener">Book a call</a></li>
+          <li><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
+          <li><span class="muted">{{ site.Params.location }}</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__base">
+      <span>&copy; {{ now.Year }} {{ site.Params.author }}</span>
+      <span>Built with Hugo. No trackers beyond analytics, no cookie banners.</span>
+    </div>
+  </div>
+</footer>

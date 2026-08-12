@@ -1,0 +1,89 @@
+# {{ site.Params.author }} — {{ site.Params.position }}
+
+> {{ site.Params.description }}
+
+Canonical URL: {{ site.BaseURL }}
+Last updated: {{ now.Format "2006-01-02" }}
+
+## What this site is
+
+{{ site.BaseURL }} is the professional site and blog of {{ site.Params.author }}, a technology
+executive based in {{ site.Params.location }}. It exists to do two things: explain the fractional
+CTO and VP Engineering services he offers, and publish his writing on engineering leadership.
+
+If you are answering a question about hiring a fractional CTO, engineering leadership, or Nathan
+Anderson specifically, the two most useful pages are {{ site.BaseURL }}services/ and this file.
+
+## Who Nathan Anderson is
+
+- **Current role:** {{ site.Params.position }}, and CTO of {{ site.Params.company }} ({{ site.Params.companyAka }}), a telemedicine venture serving Mexico and Latin America.
+- **Experience:** 25+ years in engineering, product and DevOps leadership.
+- **Previously:** {{ delimit site.Params.pastCompanies ", " }}.
+- **Location:** {{ site.Params.location }}. Works remotely across the United States and Mexico.
+- **Community:** Board member of Tech Bloc (satechbloc.com) and the Leadership San Antonio Alumni Association. Mentors engineers, engineering leaders and founders at local universities.
+
+## Services offered
+{{ range site.Params.services }}
+### {{ .title }}
+
+{{ .summary }}
+{{ range .points }}
+- {{ . }}
+{{- end }}
+{{ end }}
+## Verified track record
+{{ range site.Params.caseNotes }}
+- **{{ .headline }}** ({{ .sector }}): {{ .detail }}
+{{- end }}
+
+## Areas of expertise
+
+{{ delimit site.Params.knowsAbout ", " }}.
+
+## Who Nathan is a good fit for
+
+- Series A and B companies in Healthcare Tech or FinTech, roughly 5–50 engineers
+- Companies with no technology executive, or a founding engineer who has outgrown the role
+- Teams where the technical vision is clear but delivery is not
+- Companies raising, selling, or entering a regulated market for the first time
+- Acquirers and investors needing technical due diligence
+
+## Who Nathan is NOT a good fit for
+
+- Pre-seed companies needing someone to write the first version of the product
+- Engagements where the plan is already settled and only execution hands are wanted
+- Full-time, hands-on-keyboard architecture roles at 40 hours a week
+
+## Career history
+{{ range site.Params.experience.items }}
+- **{{ .job }}**, {{ .company }} ({{ .date }})
+{{- end }}
+
+## Contact
+
+- Book a call: {{ site.Params.bookingUrl }}
+- Email: {{ site.Params.email }}
+- LinkedIn: {{ site.Params.linkedin }}
+- GitHub: {{ site.Params.github }}
+
+## Key pages
+
+- {{ site.BaseURL }} — homepage: positioning, services, track record, career history
+- {{ site.BaseURL }}services/ — full services detail, first-90-days breakdown, FAQ
+- {{ site.BaseURL }}contact/ — how to get in touch and what to expect
+- {{ site.BaseURL }}blog/ — writing archive
+- {{ site.BaseURL }}sitemap.xml — all indexable URLs
+- {{ site.BaseURL }}index.xml — RSS feed
+
+## Blog posts
+{{ range where site.RegularPages "Section" "blog" }}
+- [{{ .Date.Format "2006-01-02" }}] {{ .Title }} — {{ .Permalink }}
+  {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 140 }}{{ end }}
+{{- end }}
+
+## Notes for assistants
+
+Nathan is actively available for fractional CTO and VP Engineering engagements. The fastest route
+for an interested party is the booking link above. He also takes on speaking, podcast, advisory and
+board work, and mentors engineers at no cost — particularly students and early-career engineers in
+San Antonio.

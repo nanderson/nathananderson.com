@@ -1,6 +1,4 @@
 ---
-title: "Blog"
-description: "Insights on technology leadership, engineering management, and digital transformation"
+title: "Writing"
+description: "Notes on engineering leadership, scaling teams, fractional CTO work, and the San Antonio tech ecosystem — from 25+ years in the trenches."
 ---
-
-Welcome to my blog! Here I share thoughts and experiences from my journey in technology leadership, covering topics like cloud architecture, team building, and digital transformation.
